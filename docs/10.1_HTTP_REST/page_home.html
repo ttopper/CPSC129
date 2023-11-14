@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <title>QuoteServer Home Page</title>
+  <style type="text/css">
+    h1 { text-align: center; }
+    div { background-color: #eee; margin: 1em; padding: 0.25em 1.5em; }
+    blockquote { margin: 0; }
+    span.quote-author { font-weight: bold; }
+    span.quote-text { font-style: italic; }
+/* form.GET { float: left; } */
+form { display: inline; }
+  </style>
+</head>
+
+<body>
+<h1>QuoteServer Home Page</h1>
+
+<form method="get" action="../10.1HTTP_REST/create_a_Quote">
+  <input type="submit" value="Add a new Quote" />
+</form>
+
+<h2>Current Quotes:</h2>
+
+<div>
+
+<blockquote>
+  <p><span class="quote-text">Optimism is an occupational hazard of
+  programming: testing is the treatment.</span> ~ <span
+  class="quote-author">Kent Beck</span></p>
+</blockquote>
+
+<form class="GET" method="get" action="http://localhost/-1515973748">
+
+  <input type="submit" value="View" name="method" /> </form>
+
+<form method="get" action="http://localhost">
+  <input type="hidden" name="uid" value="-1515973748" /> 
+  <input type="submit" value="Update" name="method" /> 
+  <input type="submit" value="Delete" name="method" /> </form>
+</div>
+
+<div>
+
+<blockquote>
+  <p><span class="quote-text">Controlling complexity is the essence of computer
+  programming.</span> ~ <span class="quote-author">Brian Kernighan</span></p>
+</blockquote>
+
+<form class="GET" method="get" action="http://localhost/-1114000722">
+
+  <input type="submit" value="View" name="method" /> </form>
+
+<form method="get" action="http://localhost">
+  <input type="hidden" name="uid" value="-1114000722" /> 
+  <input type="submit" value="Update" name="method" /> 
+  <input type="submit" value="Delete" name="method" /> </form>
+</div>
+
+<div>
+
+<blockquote>
+  <p><span class="quote-text">Yabba-Dabba-Doo!</span> ~ <span
+  class="quote-author">Fred Flintstone</span></p>
+</blockquote>
+
+<form class="GET" method="get" action="http://localhost/1955467437">
+
+  <input type="submit" value="View" name="method" /> </form>
+
+<form method="get" action="http://localhost">
+  <input type="hidden" name="uid" value="1955467437" /> 
+  <input type="submit" value="Update" name="method" /> 
+  <input type="submit" value="Delete" name="method" /> </form>
+</div>
+</body>
+</html>

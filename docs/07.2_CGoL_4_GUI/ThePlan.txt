@@ -1,0 +1,8 @@
+Review code.
+Make room to display the menu of icons. (Check that display still works).
+Display icons.
+React to mouse clicks on icons:
+    Detect mouse click.
+    Get mouse location.
+    Map from coordinates to icon.
+    Take matching action (invoke function).

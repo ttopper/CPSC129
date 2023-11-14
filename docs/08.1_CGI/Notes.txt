@@ -1,0 +1,7 @@
+CGI
+Let's say we want to provide a web interface to on eof our Python programs. What's involved?
+Software Distribution
+Why would we do this? In the old days of the 80s and 90s most software was distributed 
+
+The files respond.html and respond.py provide an example of an HTML input form and a Python CGI program that uses the form input to create a response. Be sure to save respond.html in the same directory as httpserver.py, and to save respond.py in its cgi-bin directory.
+The files nDemoForm.html and demoform.py show a form using most of the common controls, and a Python script to process it.

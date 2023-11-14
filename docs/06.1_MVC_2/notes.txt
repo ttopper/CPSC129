@@ -1,0 +1,6 @@
+Note changes:
+* Naming: Use File --> "Save Copy As..." to archive at critical points. Submit your archived versions for comments, the version-less versiosn for marking.
+* Convention for objects: One class per file, all in classes/, factory method.
+* coming up try ... except ... for mis-typed class names.
+
+Code Walkthrough [10:51]

@@ -1,0 +1,9 @@
+1 From English to Pseudocode [8:06]
+2 Testing our Pseudocode [14:04]
+3 Revising our pseudocode [13:32]
+4 Data Structures (OOP) [9:27]
+5 Initializing the Maze [11:53]
+6 Add some debugging output [7:36]
+7 Sharing walls [11:47]
+8 Put the pieces together [2:44]
+

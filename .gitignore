@@ -1,0 +1,78 @@
+# Generated files
+site
+
+# Python infrastructure
+venv
+.venv
+__pycache__
+
+# OS generated files (macOS internals)
+.DS_Store
+
+# Temporary files
+tmp
+
+# Utilities
+*.sh
+docs/*.sh
+
+# Confidential files
+CPSC129W15_Exam.docx
+CPSC129W15_Exam.pdf
+
+# File/s that is/are larger than github's limit
+docs/03.1_Recursion/01_Recursion_by_example.mp4
+
+# Temporarily: All mp4's (to get bulk of files uploaded more qickly).
+docs/07.2_CGoL_4_GUI/05_Step_4_Make_room_for_the_menu.mp4
+docs/07.2_CGoL_4_GUI/04_Step_3_Test_existing_code.mp4
+docs/07.2_CGoL_4_GUI/08_Step_7_Map_clicks_to_actions.mp4
+docs/07.2_CGoL_4_GUI/09_Step_8_Merge_ui_and_simulation.mp4
+docs/07.2_CGoL_4_GUI/07_Step_6_Display_menu_icons.mp4
+docs/07.2_CGoL_4_GUI/06_Step_5_Refactoring_interlude.mp4
+docs/07.2_CGoL_4_GUI/02_Step_1_Make_a_plan.mp4
+docs/07.2_CGoL_4_GUI/03_Step_2_Review_existing_code.mp4
+docs/02.1_Searching/03_Linear_Search_Ordered_List.mp4
+docs/02.1_Searching/05_Interpolative_Search.mp4
+docs/02.1_Searching/04_Binary_Search.mp4
+docs/02.1_Searching/06_Test_Harness.mp4
+docs/02.1_Searching/02_Linear_Search_Unordered_List.mp4
+docs/06.2_Mazes_1/04_Step_2_Testing_our_pseudocode.mp4
+docs/06.2_Mazes_1/06_Step_4_OOP.mp4
+docs/06.2_Mazes_1/05_Step_3_Revise_pseudocode.mp4
+docs/06.2_Mazes_1/07_Step_5_Initializing_maze.mp4
+docs/06.2_Mazes_1/09_Step_7_Sharing_walls.mp4
+docs/06.2_Mazes_1/03_Step_1_From_english_to_pseudcode.mp4
+docs/06.2_Mazes_1/10_Step_8_Put_the_pieces_together.mp4
+docs/06.2_Mazes_1/08_Step_6_Debugging_output.mp4
+docs/06.1_MVC_2/07_Code_Walkthrough.mp4
+docs/04.3_PyGame_2_Animation/06_pygame_test_10.py.output.mp4
+docs/04.3_PyGame_2_Animation/05_pygame_test_9.py.output.mp4
+docs/01.2_CGoL_1_Introduction/04_Pseudocode.mp4
+docs/01.2_CGoL_1_Introduction/02_Introduction.mp4
+docs/01.2_CGoL_1_Introduction/03_Algorithm_overview.mp4
+docs/01.2_CGoL_1_Introduction/07_Age.mp4
+docs/01.2_CGoL_1_Introduction/05_Create_and_initialize_U.mp4
+docs/01.2_CGoL_1_Introduction/06_Display.mp4
+docs/10.1_HTTP_REST/18_To_object_server_2.mp4
+docs/10.1_HTTP_REST/20_To_object_server_4.mp4
+docs/10.1_HTTP_REST/19_To_object_server_3.mp4
+docs/10.1_HTTP_REST/17_To_object_server_1.mp4
+docs/02.2_Algorithm_Analysis/06_Algorithm_orders.mp4
+docs/09.1_Median/02_median_by_partn_0.mp4
+docs/09.1_Median/08_median_by_bounding_2.mp4
+docs/09.1_Median/04_median_by_partn_2.mp4
+docs/09.1_Median/09_median_by_bounding_3.mp4
+docs/09.1_Median/07_median_by_bounding_1.mp4
+docs/09.1_Median/03_median_by_partn_1.mp4
+docs/09.1_Median/05_median_by_partn_3.mp4
+docs/09.1_Median/06_median_by_bounding_0.mp4
+docs/03.1_Recursion/01_Recursion_by_example.mp4
+docs/04.2_MVC_1/04_Step_3_The_quote_class.mp4
+docs/04.2_MVC_1/05_Step_4_Model_revisited_for_testing.mp4
+docs/04.2_MVC_1/06_Step_5_Controller_revisited.mp4
+docs/04.2_MVC_1/03_Step_2_Start_the_model.mp4
+docs/04.2_MVC_1/02_Step_1_Identify_model.mp4
+docs/04.2_MVC_1/01_Introduction.mp4
+
+# Got ideas from: https://github.com/squidfunk/mkdocs-material/blob/master/.gitignore

@@ -1,0 +1,36 @@
+1 Make a plan [3:41]
+2 Review existing code [8:58]
+3 Test existing code[11:51]
+4 Make room for the menu [4:35]
+5 Refactoring interlude [12:26]
+6 Display the menu icons [21:19]
+7 Map mouse clicks to actions [20:35]
+8 Merge UI and simulation code [11:09]
+
+Plans for Life's Visual Interface
+
+What we need to do:
+    Make room for the menu; check that display still works.
+    Display icons.
+    Detect mouse clicks in icons.
+        Detect mouse clicks.
+        Get mouse location.
+        Mapping location to icon or cell.
+
+Wiring icon clicks to actions, ideally functions.
+
+Thinking about these commands, there isn't a perfect match between commands and program structure. This is common. The trick here is that lots of commands will involve pausing.
+
+Modifications to the main loop:
+if state != pause:
+    age
+    if state == PLAY_ONE: state = PAUSE
+check for events and handle them
+    open: set state to PAUSE then conduct dialogue
+    save: set state to PAUSE then conduct dialogue
+    pause: set state to PAUSE
+    play: set state to PLAY_ONE
+    fast forward: set state to PLAY
+    edit: set state to PAUSE
+    clear: set state to PAUSE then clear universe
+

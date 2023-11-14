@@ -1,0 +1,40 @@
+Quicksort
+
+From Sorting out Sorting:
+
+Set first element to be the pivot
+Separate all the smaller values from all the larger values by
+   Scanning forward from the front of the list for a larger value
+   Scanning from the back of the list for a smaller value
+   if lo<hi: Interchange the two values
+   Continue until lo>hi (all values are separated)
+Swap pivot with hi value (Move pivot into "middle")
+Call recursively on both sides of list
+
+def quicksort(lst):
+    pivot = lst[0]
+    lo = 1
+    hi = len(lst) - 1
+    while lo < hi:
+        while lst[lo]<pivot: lo = lo + 1
+        while lst[hi]>pivot: hi = hi - 1
+        if lo < hi:
+             (lst[lo], lst[hi]) = (lst[hi], lst[lo])
+    if lst[0] > lst[hi]:
+        (lst[0], lst[hi]) = (lst[hi], lst[0])
+    quicksort(lst[0:hi-1]) # potential bug with list indices
+    quicksort(lst[lo:]) # potential bug with list indices
+
+Other tests:
+* list with all same values e.g. [5, 5, 5]
+* list in ascending order
+* list in descending order
+
+      hi
+ p   lo
+37  56
+ 0    1
+                           hi
+p                                lo    
+29  13   38   34    46   63    72    87   87
+  0   1     2     3     4      5     6      7      8  

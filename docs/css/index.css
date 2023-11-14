@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* index.css
+  Styles for Module index.html pages
+*/
+
+  body { font-family: 'Bitter', 'Trebuchet MS', sans-serif; }
+  p { /*line-height: 125%;*/ }
+  li { line-height: 125%; }
+  ol { list-style-type: none; margin:0; padding: 0; }
+  /*section > section { border: 1px solid lightgrey; border-top: 5px solid lightgrey; }*/
+  /* N.B. The background of an element is the total size of the element, including padding and border (but not the margin). */
+  a[href$=".html"]:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+    url('html_icon.png') no-repeat;
+	}
+  a[href$=".py"]:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+    url('py_icon.png') no-repeat;
+	}
+  a[href$=".pdf"]:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+    url('page_white_acrobat.png') no-repeat;
+	}
+  a[href$=".png"]:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+    url('picture.png') no-repeat;
+	}
+ a[href$="Overview.html"]:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+    url('overview_icon.png') no-repeat;
+	}
+  a.screencast:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+url('television.png') no-repeat;
+	}
+  a.assignment:before {
+    padding: 0 10px 0 10px; content: ""; background:		
+url('cup.png') no-repeat;
+	}
