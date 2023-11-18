@@ -5,20 +5,19 @@
 1.  (*10 marks*) At Yukon College numerical grades are converted to
     letter grades using a conversion chart as follows:
 
-      ----------------- --------------
-      Numerical Grade   Letter Grade
-      95-100            A+
-      86-94             A
-      80-85             A-
-      75-79             B+
-      70-74             B
-      65-69             B-
-      62-64             C+
-      58-61             C
-      55-57             C-
-      50-54             D
-      0-49              F
-      ----------------- --------------
+    | Numerical Grade  | Letter Grade  |
+    |------------------|---------------|
+    | 95-100           | A+            |
+    | 86-94            | A             |
+    | 80-85            | A-            |
+    | 75-79            | B+            |
+    | 70-74            | B             |
+    | 65-69            | B-            |
+    | 62-64            | C+            |
+    | 58-61            | C             |
+    | 55-57            | C-            |
+    | 50-54            | D             |
+    | 0-49             | F             |
 
     Write a Python cgi script that enables the user to enter their
     numerical grade and then displays the equivalent letter grade. For

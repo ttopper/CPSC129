@@ -55,11 +55,11 @@ character to mark the end of each row. So for an r × c universe it uses
 (r × c × 2) + r Bytes. To make this more concrete lets consider a couple
 of specific universe sizes:
 
-  --------------- -----------------
-  Universe size   Storage Space
-  25 x 80         4,025 Bytes
-  1000 x 1000     2,001,000 Bytes
-  --------------- -----------------
+| Universe size | Storage Space   |
+|---------------|-----------------|
+| 25 x 80       | 4,025 Bytes     |
+| 1000 x 1000   | 2,001,000 Bytes |
+
 
 We could cut the storage almost in half just by dropping the spaces we
 store to disk. Does this make it easier to harder to read the file in

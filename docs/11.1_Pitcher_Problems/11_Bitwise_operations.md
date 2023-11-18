@@ -6,12 +6,11 @@ they are not both 1 (i.e. they are 0,0 or 0,1 or 1,0) it will be 0. It
 makes sense if you think of 1 as `True` and 0 as `False` (which Python
 does!).
 
-  Decimal       Binary
-  ------------- --------
-  6             110
-  3             011
-  6 `&` 3 = 2   010
-
+| Decimal       | Binary |
+|---------------|--------|
+| 6             | 110    |
+| 3             | 011    |
+| 6 &amp; 3 = 2 | 010    |
 We can verify that 6 `&` 3 is 2 using the Python shell:
 
     >>> 6 & 3
@@ -46,11 +45,11 @@ Output:
 And here’s how that works, showing the values each time through the
 loop:
 
-  i   subset_num   2\*\*i   subset_num & (2\*\*i)            fullset[i]
-  --- ------------ -------- -------------------------------- --------------
-  0   6            1        110 & 001 = 000 = 0 i.e. False   \-
-  1   6            2        110 & 010 = 010 = 2 i.e. True    B
-  2   6            4        110 & 100 = 100 = 4 i.e. True    C
+| i | subset_num | 2**i | subset_num &amp; (2**i)            | fullset[i] |
+|---|------------|------|------------------------------------|------------|
+| 0 | 6          | 1    | 110 &amp; 001 = 000 = 0 i.e. False | -          |
+| 1 | 6          | 2    | 110 &amp; 010 = 010 = 2 i.e. True  | B          |
+| 2 | 6          | 4    | 110 &amp; 100 = 100 = 4 i.e. True  | C          |
 
 So `&` gives us a way of asking Is the bit corresponding to this
 element set (i.e. 1), or not (i.e. 0)?” And then appending the element

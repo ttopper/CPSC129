@@ -8,9 +8,62 @@ To begin with use IDLE to create a small text test file:
 
 We can visualize this on disk as,
 
-  --- --- --- -- --- --- --- --- --- -- --- --- --- --- --- ----- --- --- --- --- -- --- --- ----- --- --- --- -- --- --- --- --- --- -- --- --- --- -- --- --- --- --- -- --- --- --- --- --- ----- -----
-  T   h   e      f   i   r   s   t      l   i   n   e   .   \\n   L   i   n   e      2   .   \\n   T   h   e      t   h   i   r   d      a   n   d      l   a   s   t      l   i   n   e   .   \\n   EOF
-  --- --- --- -- --- --- --- --- --- -- --- --- --- --- --- ----- --- --- --- --- -- --- --- ----- --- --- --- -- --- --- --- --- --- -- --- --- --- -- --- --- --- --- -- --- --- --- --- --- ----- -----
+<table border="1">
+  <tbody>
+    <tr>
+      <td>T</td>
+      <td>h</td>
+      <td>e</td>
+      <td></td>
+      <td>f</td>
+      <td>i</td>
+      <td>r</td>
+      <td>s</td>
+      <td>t</td>
+      <td></td>
+      <td>l</td>
+      <td>i</td>
+      <td>n</td>
+      <td>e</td>
+      <td>.</td>
+      <td>\n</td>
+      <td>L</td>
+      <td>i</td>
+      <td>n</td>
+      <td>e</td>
+      <td></td>
+      <td>2</td>
+      <td>.</td>
+      <td>\n</td>
+      <td>T</td>
+      <td>h</td>
+      <td>e</td>
+      <td></td>
+      <td>t</td>
+      <td>h</td>
+      <td>i</td>
+      <td>r</td>
+      <td>d</td>
+      <td></td>
+      <td>a</td>
+      <td>n</td>
+      <td>d</td>
+      <td></td>
+      <td>l</td>
+      <td>a</td>
+      <td>s</td>
+      <td>t</td>
+      <td></td>
+      <td>l</td>
+      <td>i</td>
+      <td>n</td>
+      <td>e</td>
+      <td>.</td>
+      <td>\n</td>
+      <td>EOF</td>
+    </tr>
+  </tbody>
+</table>
 
 The only new item here are the `\n` characters These denote new line
 characters which like EOF characters vary between operating sytems.

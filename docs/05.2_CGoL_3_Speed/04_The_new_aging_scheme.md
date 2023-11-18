@@ -4,21 +4,257 @@ Here’s a diagram showing the four arrays we will now be working with
 and showing how they change over the course of one generation for a
 simple blinker.
 
-  ------- --- --- --- --- -- ----------------------- --- --- --- --- --- --------------------- --- --- --- ---
-   **u**                      **next_u** (at start)                       **next_u** (at end)              
-     0     0   0   0   0                0             0   0   0   0                0            0   0   0   0
-     0     0   1   0   0                0             0   1   0   0                0            0   0   0   0
-     0     0   1   0   0                0             0   1   0   0  →             0            1   1   1   0
-     0     0   1   0   0                0             0   1   0   0                0            0   0   0   0
-     0     0   0   0   0                0             0   0   0   0                0            0   0   0   0
-                                                                                                           
-   **n**                      **next_n** (at start)                       **next_n** (at end)              
-     0     1   1   1   0                0             1   1   1   0                0            0   0   0   0
-     0     2   1   2   0                0             2   1   2   0                1            2   3   2   1
-     0     3   2   3   0                0             3   2   3   0  →             1            1   2   1   1
-     0     2   1   2   0                0             2   1   2   0                1            2   3   2   1
-     0     1   1   1   0                0             1   1   1   0                0            0   0   0   0
-  ------- --- --- --- --- -- ----------------------- --- --- --- --- --- --------------------- --- --- --- ---
+<table border="0">
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <col />
+  <tbody>
+    <tr>
+      <td colspan="5"
+        style="text-align:center; width: 150px;"><strong>u</strong></td>
+      <td style="width: 50px;"></td>
+      <td colspan="5"
+        style="text-align:center; width: 150px;"><strong>next_u</strong> (at
+        start)</td>
+      <td style="width: 50px;"></td>
+      <td colspan="5"
+        style="text-align:center; width: 150px;"><strong>next_u</strong> (at
+        end)</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: center;">&rarr;</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="5" style="text-align:center;"><strong>n</strong></td>
+      <td></td>
+      <td colspan="5" style="text-align:center;"><strong>next_n</strong> (at
+        start)</td>
+      <td></td>
+      <td colspan="5" style="text-align:center;"><strong>next_n</strong> (at
+        end)</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>3</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>3</td>
+      <td>0</td>
+      <td style="text-align: center;">&rarr;</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td></td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
 Note well that `u` and `n` do not change over the course of a
 generation, and that all changes are reflected in `next_u` and `next_n`.

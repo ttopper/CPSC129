@@ -8,26 +8,50 @@ bytes are _interpreted_. Consider storing the two dimensional coordinate
 a file (instead of the screen). We can visualize the file contents to
 be,
 
-<pre>
- |---|---|---|---|---|---|
- |1  |2  |,  |3  |1  |EOF|
- |---|---|---|---|---|---|
-</pre>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>,</td>
+      <td>3</td>
+      <td>1</td>
+      <td>EOF</td>
+    </tr>
+  </tbody>
+</table>
 
 where EOF is the character used to mark the end of a file\*. Of course
 what is actually written to disk are the ASCII values of those
 characters, so what is on disk is,
 
-  ---- ---- ---- ---- ---- ----
-  49   50   44   51   49   26
-  ---- ---- ---- ---- ---- ----
-
+<table border="1">
+  <tbody>
+    <tr>
+      <td>49</td>
+      <td>50</td>
+      <td>44</td>
+      <td>51</td>
+      <td>49</td>
+      <td>26</td>
+    </tr>
+  </tbody>
+</table>
 To be even more precise the values will be stored in binary so the disk
 contents will be,
 
-  ---------- ---------- ---------- ---------- ---------- ----------
-  00110001   00110010   00101100   00110011   00110001   00011010
-  ---------- ---------- ---------- ---------- ---------- ----------
+<table border="1">
+  <tbody>
+    <tr>
+      <td>00110001</td>
+      <td>00110010</td>
+      <td>00101100</td>
+      <td>00110011</td>
+      <td>00110001</td>
+      <td>00011010</td>
+    </tr>
+  </tbody>
+</table>
 
 Thank goodness the computer can read it!
 
@@ -36,10 +60,21 @@ binary representations of the numbers 12 and 31 to disk in sequence. The
 number of bytes used to do this on disk varies from 1 to 8, but using
 typical four byte representations we would write the following to disk:
 
-  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
-  00000000   00000000   00000000   00001100   00000000   00000000   00000000   00011111   00011010
-  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
-
+<table border="1">
+  <tbody>
+    <tr>
+      <td>00000000</td>
+      <td>00000000</td>
+      <td>00000000</td>
+      <td>00001100</td>
+      <td>00000000</td>
+      <td>00000000</td>
+      <td>00000000</td>
+      <td>00011111</td>
+      <td>00011010</td>
+    </tr>
+  </tbody>
+</table>
 As you can see both files have binary representations on disk so why do
 we call the first text and only the second binary? Because to be
 meaningful each should be interpreted differently. We call the first a

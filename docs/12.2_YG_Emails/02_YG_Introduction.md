@@ -18,28 +18,59 @@ other. There’s your jargon for the day.)
 
 We can extract records like this from PeopleSoft,
 
-  --------- ------------
-  ID        Name
-  0047281   Tim Topper
-  \...      \...
-  --------- ------------
-
+<table style="margin: 1em auto;" border="1">
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>0047281</td>
+      <td>Tim Topper</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
 and ones like this from Active Directory,
 
-  ------------ ----------------------
-  YNET Login   EMail
-  ttopper      tim.topper@gov.yk.ca
-  \...         \...
-  ------------ ----------------------
-
+<table style="margin: 1em auto;" border="1">
+  <tbody>
+    <tr>
+      <th>YNET Login</th>
+      <th>EMail</th>
+    </tr>
+    <tr>
+      <td>ttopper</td>
+      <td>tim.topper@gov.yk.ca</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
 but we want to generate ones like this that combine a field from each
 table.
 
-  ------------ ----------------------
-  Name         email
-  Tim Topper   tim.topper@gov.yk.ca
-  \...         \...
-  ------------ ----------------------
+<table style="margin: 1em auto;" border="1">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>email</th>
+    </tr>
+    <tr>
+      <td>Tim Topper</td>
+      <td>tim.topper@gov.yk.ca</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
 
 Do you see a pattern? Doesn’t it make you want to automate the solution
 to this problem?

@@ -64,10 +64,9 @@ values with their corresponding indices.
 And now let’s look for patterns! How about from nodes to their left
 children?
 
-  ------------------- --- --- ---
-  parent node index   0   1   2
-  left child index    1   3   5
-  ------------------- --- --- ---
+| parent node index | 0 | 1 | 2 |
+|-------------------|---|---|---|
+| left child index  | 1 | 3 | 5 |
 
 Perhaps you can see the relationship here? The index of a left child is
 twice the index of its parent plus one. Or in Python,
@@ -77,10 +76,10 @@ twice the index of its parent plus one. Or in Python,
 
 Now, how about from nodes to their right children?
 
-  ------------------- --- --- ---
-  parent node index   0   1   2
-  right child index   2   4   6
-  ------------------- --- --- ---
+| parent node index | 0 | 1 | 2 |
+|-------------------|---|---|---|
+| right child index | 2 | 4 | 6 |
+
 
 Most students find this one less obvious, from 0 to 2 looks like we add
 two, from 1 to 4 looks like we multiply by four and from 2 to 6 looks
@@ -95,10 +94,9 @@ greater, i.e. its index will be `(2*node + 1) `**`+ 1`**, which is
 
 And finally child to parent:
 
-  ------------------ ---- --- --- --- --- --- ---
-  child node index   0    1   2   3   4   5   6
-  parent index       \-   0   0   1   1   2   2
-  ------------------ ---- --- --- --- --- --- ---
+| child node index | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|------------------|---|---|---|---|---|---|---|
+| parent index     | - | 0 | 0 | 1 | 1 | 2 | 2 |
 
 This is almost a divide by two pattern which makes sense: since we got
 from parents to children by multiplying by two and adding, we should be

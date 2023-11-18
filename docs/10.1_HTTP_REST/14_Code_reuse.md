@@ -32,8 +32,8 @@ the other hand we we will now need HTML representations of the objects,
 and our current `quote.py` doesn’t provide that. So our scorecard looks
 like this:
 
-  ------------------- --- ---------------------------------------
-  MVC_model.py        →   Reuse without modification (we hope).
-  MVC_controller.py   →   Replace with new HTTP server.
-  quote.py            →   Modify by adding methods.
-  ------------------- --- ---------------------------------------
+| MVC_model.py      | &rarr; | Reuse without modification (we hope). |
+|-------------------|--------|---------------------------------------|
+| MVC_controller.py | &rarr; | Replace with new HTTP server.         |
+| quote.py          | &rarr; | Modify by adding methods.             |
+

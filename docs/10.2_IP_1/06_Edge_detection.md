@@ -18,12 +18,10 @@ In image processing these operations are often described using a _mask_.
 In this case the mask corresponding to measuring vertical edge strength
 would be:
 
-  ---- --- ---
-  -1   0   1
-  -1   0   1
-  -1   0   1
-  ---- --- ---
-
+<table border=1><tr><td>-1</td><td>0</td><td>1</td></tr>
+<tr><td>-1</td><td>0</td><td>1</td></tr>
+<tr><td>-1</td><td>0</td><td>1</td></tr></table
+>
 If the pixel in the center of the mask is `pix[x,y]` then this mask
 tells us to perform this calculation in Python:
 
@@ -36,12 +34,24 @@ an actual program.
 
 A similar mask can be used to measure horizontal edge strength:
 
-  ---- ---- ----
-  -1   -1   -1
-  0    0    0
-  1    1    1
-  ---- ---- ----
-
+<table border=1>
+  <tr>
+    <td>-1</td>
+    <td>-1</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table
+>
 Now as in the game of life where we couldn’t change cell states as we
 ran through the universe aging cells, we can’t change pixel values as
 we go through the image because those changes would affect the results

@@ -32,12 +32,17 @@ how to achieve this.
 
     The mask for the Laplacian filter is,
 
-      ---- ---- ----
-      -1   -1   -1
-      -1   8    -1
-      -1   -1   -1
-      ---- ---- ----
-
+    <table border=1><tr><td>-1</td>
+    <td>-1</td>
+    <td>-1</td></tr>
+    <tr><td>-1</td>
+    <td>8</td>
+    <td>-1</td></tr>
+    <tr><td>-1</td>
+    <td>-1</td>
+    <td>-1</td></tr></table
+    >
+    
     Applying it to the original image produces this image which captures
     both the fine detail and the strong edges from the original image.
 

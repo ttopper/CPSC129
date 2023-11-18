@@ -14,13 +14,12 @@ visualization (AV).”[^*]
 The video describes the operation and performance of nine classic
 sorting algortihms, 3 each in 3 families.
 
-  -------------------- ---------------------- ----------------
-  Families                                    
-  Insertion Sorts      Selection Sorts        Exchange Sorts
-  *Linear insertion*   *Straight selection*   *Bubble sort*
-  Binary Insertion     Tree sort              Shaker sort
-  *Shell sort*         *Heap sort*            *Quicksort*
-  -------------------- ---------------------- ----------------
+|                      |     Families           |                    |
+|----------------------|------------------------|--------------------|
+| **Insertion Sorts**  | **Selection Sorts**    | **Exchange Sorts** |
+| _Linear insertion_   | _Straight selection_   | _Bubble sort_      |
+| Binary Insertion     | Tree sort              | Shaker sort        |
+| _Shell sort_         | _Heap sort_            | _Quicksort_        |
 
 I have italicized the names of the ones we will implement and compare.
 This week we will do the first four. In two weeks we will return to the

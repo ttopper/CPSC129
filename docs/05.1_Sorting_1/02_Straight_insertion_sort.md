@@ -5,9 +5,14 @@ one position at a time, and leaves behind it a sorted list, so that at
 any moment the portion of the list before the current position is
 sorted, and the portion after the current position is unsorted.
 
-  --------------------------------- ----------------
-  These elements have been sorted   These haven’t
-  --------------------------------- ----------------
+<table border="1">
+  <tbody>
+    <tr>
+      <td>These elements have been sorted</td>
+      <td>These haven't</td>
+    </tr>
+  </tbody>
+</table>
 
 At each step it takes the next value, i.e. the first value in the
 unsorted portion, and looks backward to insert it where it should go in

@@ -56,10 +56,10 @@ equal. Assuming a 1,000 × 1,000 universe Option 1 will require 2,001,000
 bytes, Option 2 will require 1,001,000 bytes, and Option 3’s
 requirements will vary with the percentage of live cells:
 
-  ------------------ --- --------- --------- ----------- ----------- -----------
-  \% live cells      0   5         10        15          20          25
-  Storage in bytes   8   400,008   800,008   1,200,008   1,600,008   2,000,008
-  ------------------ --- --------- --------- ----------- ----------- -----------
+| % live cells     | 0 | 5       | 10      | 15        | 20        | 25        |
+|------------------|---|---------|---------|-----------|-----------|-----------|
+| Storage in bytes | 8 | 400,008 | 800,008 | 1,200,008 | 1,600,008 | 2,000,008 |
+
 
 You can see that for this size universe the break even point is around
 25% live cells.

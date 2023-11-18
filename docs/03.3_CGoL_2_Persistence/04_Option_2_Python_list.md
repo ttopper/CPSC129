@@ -80,8 +80,7 @@ So for an r × c universe it uses r × (c-1) × 3 + r + 4 × (r-1) + 2 + 2
 Bytes = (3c-2) × r Bytes. To make this more concrete lets again consider
 a couple of specific universe sizes:
 
-  --------------- -----------------
-  Universe size   Storage Space
-  25 x 80         5,950 Bytes
-  1000 x 1000     2,998,000 Bytes
-  --------------- -----------------
+| Universe size | Storage Space   |
+|---------------|-----------------|
+| 25 x 80       | 5,950 Bytes     |
+| 1000 x 1000   | 2,998,000 Bytes |

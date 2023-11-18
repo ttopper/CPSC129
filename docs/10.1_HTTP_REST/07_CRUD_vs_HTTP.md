@@ -29,13 +29,13 @@ DELETE
 You’ll notice that although the names differ these four operations map
 neatly onto the CRUD model of operations.
 
-  ---------- --------
-  CRUD       HTTP
-  Create     POST
-  Retrieve   GET
-  Update     PUT
-  Delete     DELETE
-  ---------- --------
+| CRUD     | HTTP   |
+|----------|--------|
+| Create   | POST   |
+| Retrieve | GET    |
+| Update   | PUT    |
+| Delete   | DELETE |
+
 
 This is no accident; the engineers who designed HTTP knew what they were
 doing. Modern best practice in web development is to build servers that
