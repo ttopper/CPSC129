@@ -37,7 +37,7 @@ What might a general approach be? Well we need some way of generating
 all possible subsets of the `Pitchers` in `state`. The key to doing that
 is to appreciate the 2-ness of the problem. What 2-ness? Well any given
 subset either does, or does not, include each `Pitcher` in `state`, i.e.
-there are 2 possibilities. Thus for three items there are 2^3^, or 8,
+there are 2 possibilities. Thus for three items there are 2<sup>3</sup>, or 8,
 possible subsets. Here are all possible subsets of the items
 `[A, B, C] `together with a binary list showing which elements of
 `[A, B, C]` are in the subset (using 1 for presence and 0 for absence)

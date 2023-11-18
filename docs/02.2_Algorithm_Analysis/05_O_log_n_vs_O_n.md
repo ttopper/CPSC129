@@ -36,6 +36,6 @@ love to have a O(*n*) solution, but don’t because the best known
 solutions are worse than O(*n*)!
 
 What other orders are there? Order _n_ and order log _n_ are both common
-algorithmic orders, but others include O(1), O(*n*^2^), O(*n*^3^), O(*n*
-log _n_), O(2^*n*^), and O(*n*!). The next page will show you how their
+algorithmic orders, but others include O(1), O(*n*<sup>2</sup>), O(*n*<sup>3</sup>), O(*n*
+log _n_), O(2<sup>*n*</sup>), and O(*n*!). The next page will show you how their
 magnitudes compare.

@@ -25,11 +25,11 @@ guesses  | list length
 
 This pattern of values should be familiar to you. The list length is “2
 to the power of” the number of guesses, or mathematically
-*n*=2^*guesses*^. How do we describe the number of guesses though? If
+*n*=2<sup>*guesses*</sup>. How do we describe the number of guesses though? If
 you think back to Grade 11 math you will recall that the word logarithm
 is used to describe exactly that, i.e. the power to which one number
 must be raised to equal another number. In this case then _guesses_ =
-log~2~*n*. Since the number of guesses is proportional to the time it
+log<sub>2</sub>*n*. Since the number of guesses is proportional to the time it
 takes our code to execute we say in this case that the algorithm is
-O(log~2~*n*) or, because computer scientistis almost always work with
+O(log<sub>2</sub>*n*) or, because computer scientistis almost always work with
 logs to the base 2, we will just write O(log n).

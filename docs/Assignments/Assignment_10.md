@@ -72,7 +72,7 @@
     magnitude of a vector in physics from its horizontal and vertical
     components, and the solution is the same too: the magnitude is the
     root of the sum of the squares of the component magnitudes , i.e. d
-    = sqrt(dx^2^ + dy^2^).
+    = sqrt(dx<sup>2</sup> + dy<sup>2</sup>).
 
     \
 
@@ -111,7 +111,7 @@
     (nonvarying) prairie.
 
     How can we measure variation mathematically? One common measure for
-    the variation in a set of numbers is the *root mean squared error*.
+    the variation in a set of numbers is the _root mean squared error_.
     The name actually says it all though it takes a moment or two to
     parse it. It tells us to take the square _root_ of the _mean_ of the
     _squares_ of the _errors_. The errors” are the differences

@@ -38,9 +38,9 @@ the same id.
 We can improve it by differentiating the id values by using information
 about the positions of the letters in the string, e.g. by raising each
 letter’s index value to the power of its position in the string. In
-this case ’cab’ gets assigned the id 3^1^ + 1^2^ + 2^3^ = 12. Note
+this case ’cab’ gets assigned the id 3<sup>1</sup> + 1<sup>2</sup> + 2<sup>3</sup> = 12. Note
 that this is not the same as any of cab’s anagrams, e.g. the id of
-’abc’ is 1^1^ + 2^2^ + 3^3^ = 32. (Whether all strings are guaranteeed
+’abc’ is 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> = 32. (Whether all strings are guaranteeed
 to have a unique id in this scheme is an interesting, but difficult
 question we will not pursue in this course.)
 

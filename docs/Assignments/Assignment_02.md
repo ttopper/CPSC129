@@ -19,7 +19,7 @@
         of 300 elements. How long will it take to process an array with
         900 elements?
 
-    b.  An O(n^3^) algorithm takes 5 seconds to process a file with
+    b.  An O(n<sup>3</sup>) algorithm takes 5 seconds to process a file with
         3,000 entries. How long will it take it to process a file with
         8,000 entries?
 
@@ -27,10 +27,10 @@
         elements. How long will it take to process a list with 4,000,000
         elements?
 
-    d.  An O(n^2^) algorithm takes 2 minutes to process a 100x100 pixel
+    d.  An O(n<sup>2</sup>) algorithm takes 2 minutes to process a 100x100 pixel
         image. How long will it take to process a 600x600 pixel image?
 
-    e.  An O(2^n^) algorithm takes 4μs (microseconds) to process a list
+    e.  An O(2<sup>n</sup>) algorithm takes 4μs (microseconds) to process a list
         with 100 elements. How long will it take to process a list with
         12,000 elements?
 

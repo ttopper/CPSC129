@@ -55,12 +55,12 @@ number of items in the list, or that the median value may occur more
 than once in the list).
 
 If it is done just as described in the previous paragraph this approach
-is **O(*n*^2^/2)**. ***n*^2^** because we must scan the list of *n*
-values for each of the _n_ values in it, thus making _n_ &times; _n_ or _n_^2^
+is **O(*n*<sup>2</sup>/2)**. ***n*<sup>2</sup>** because we must scan the list of *n*
+values for each of the _n_ values in it, thus making _n_ &times; _n_ or _n_<sup>2</sup>
 operations. **/2** because we will on average find the median halfway
 through the list.
 
-We can do better than _n_^2^/2 if we realize that each value we examine
+We can do better than _n_<sup>2</sup>/2 if we realize that each value we examine
 that fails to be the median provides some information about the actual
 median value. For example, if we check the value 72 and discover that
 there are 11 values smaller than it in the list and 18 values larger

@@ -4,11 +4,11 @@
 
 1.  Another pencil and paper”[^*] exercise on algorithmic complexity.
 
-    a.  A straight selection sort algorithm,O(n^2^), takes 10ms
+    a.  A straight selection sort algorithm,O(n<sup>2</sup>), takes 10ms
         (milliseconds) to sort an array of 100 elements. How long do you
         estimate it will take to sort an array with 2000 elements?
 
-    b.  An O(2^n^) algorithm takes 5 seconds to process a dataset with
+    b.  An O(2<sup>n</sup>) algorithm takes 5 seconds to process a dataset with
         20 entries. How long will it take it to process a dataset with
         300 entries?
 
@@ -52,17 +52,17 @@
     c.  Write a recursive function called `power` that raises a number
         to an exponent. The naive way is to use an explicit loop to
         multiply the number by itself the required number of times, e.g.
-        computing 2^16^ would require 15 multiplications. But we can be
-        more efficient by noting that 2^16^ = 2^8^ × 2^8^, and that 2^8^
-        = 2^4^ × 2^4^ and that 2^4^ = 2^2^ × 2^2^ and finally that 2^2^
-        = 2 × 2. Putting this together we could calculate 2^16^ as
-        (2^2^)^2^)^2^)^2^ and do only 4 multiplications. It doesn’t
+        computing 2<sup>16</sup> would require 15 multiplications. But we can be
+        more efficient by noting that 2<sup>16</sup> = 2<sup>8</sup> × 2<sup>8</sup>, and that 2<sup>8</sup>
+        = 2<sup>4</sup> × 2<sup>4</sup> and that 2<sup>4</sup> = 2<sup>2</sup> × 2<sup>2</sup> and finally that 2<sup>2</sup>
+        = 2 × 2. Putting this together we could calculate 2<sup>16</sup> as
+        (2<sup>2</sup>)<sup>2</sup>)<sup>2</sup>)<sup>2</sup> and do only 4 multiplications. It doesn’t
         work out quite so well if the original number isn’t an even
         power of two, but it’s not terrible even then. The trick is to
-        view 2^9^ as 2^4^× 2^4^ ×2. The general relationship is that
-        a^n^ = a^n/2^ × a^n/2^ if n is even and a^n^ = a^n/2^ × a^n/2^ ×
+        view 2<sup>9</sup> as 2<sup>4</sup>× 2<sup>4</sup> ×2. The general relationship is that
+        a<sup>n</sup> = a<sup>n/2</sup> × a<sup>n/2</sup> if n is even and a<sup>n</sup> = a<sup>n/2</sup> × a<sup>n/2</sup> ×
         a if n is odd. Write a recursive function called `power` that
-        raises a whole number to a whole power (e.g. power(2, 9) using
+        raises a whole number to a whole power (e.g. `power(2, 9)` using
         this method.
 
 3.  ### Persistent Life
