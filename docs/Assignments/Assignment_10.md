@@ -2,7 +2,7 @@
 
 ## Problems
 
-1.  (*20 marks*) Design a new object class that can be created, stored
+1.  (_20 marks_) Design a new object class that can be created, stored
     in, updated in, and/or deleted from the Object Server (formerly
     Quote Server) developed in this module. I recommend using either
     `quote.py` or `hockey_player.py` as a base and modifying to suit
@@ -14,7 +14,7 @@
     (or small hierarchy if you prefer) and zip it all up so you can
     submit a single file: `a10p1.zip`.
 
-2.  (*10 marks*) **Thresholding**. Consider the two images of the Che
+2.  (_10 marks_) **Thresholding**. Consider the two images of the Che
     Guevara below. The one on the left is an actual photograph. The one
     on the right is a manipulated image that has become iconic (even
     more so when it has a red background).
@@ -58,7 +58,7 @@
         thresholded image you can make this thresholding into an
         interactive process).
 
-3.  (*10 marks*) **Improving edge measurement**. In the notes we saw two
+3.  (_10 marks_) **Improving edge measurement**. In the notes we saw two
     masks that could be used to calculate vertical (`dx`) and horizontal
     (`dy`) edge strengths. But what about edges in other orientations?
     For example a diagonal edge will have medium values for both

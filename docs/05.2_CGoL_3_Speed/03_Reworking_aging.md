@@ -39,7 +39,7 @@ each cell’s neighbourhood the only way to find it?
 
 Consider the moment at which we discover that a cell dies. At that
 instant we already know that each of its neighbours will have one fewer
-live neighbour *in the next generation*. If we could record that right
+live neighbour _in the next generation_. If we could record that right
 then so we could remember it next tiem around we wouldn’t need to loop
 over their neighbourhoods in the next generation. Now, where to record
 this information? In a 2-D array of counts of each cell’s neighbours.
@@ -59,7 +59,7 @@ If you’ve thought about that long enough to make it clear in your mind
 there is one complication to keep in mind, but it is not a new one: We
 can’t change the neighbour array as we loop through the universe
 because that could lead to incorrect aging, we have to change the
-neighbour array *for the next generation*. I say this is not a new
+neighbour array _for the next generation_. I say this is not a new
 complication because it is the same issue we faced when changing the
 universe. The solution is also the same: we need two copies of the
 neighbour array, just as we did for the universe array, one current one,

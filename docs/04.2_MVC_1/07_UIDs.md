@@ -22,7 +22,7 @@ generate a number in the desired range, e.g.
 > using carefully chosen mathematical functions. The range (hash
 > value”) is made to be a definite size, 160 bits (which may be either
 > smaller or larger than the domain), through the use of modular
-> division.[[^*]](http://en.wikipedia.org/wiki/Hash_function)
+> division.[[^*](http://en.wikipedia.org/wiki/Hash_function)
 
 (Note that the size of the desired range corresponds to the largest
 number of objects you will be able to uniquely identify. Note also the
@@ -70,7 +70,7 @@ Functions that generate uids are called hash functions:
 > into a (relatively) small number that may serve as a digital
 > fingerprint” of the data. The algorithm chops and mixes” (i.e.,
 > substitutes or transposes) the data to create such
-> fingerprints.[[^*]](http://en.wikipedia.org/wiki/Hash_function)
+> fingerprints.<sup>[*](http://en.wikipedia.org/wiki/Hash_function)</sup>
 
 One common place hash functions are encountered is in checksum’s used
 to validate the contents of downloaded files, e.g. SHA1, SHA2 and md5sum
@@ -84,7 +84,7 @@ checksums.
 > cause its MD5 hash to also change, the MD5 hash is commonly used to
 > verify the integrity of files (i.e., to verify that a file has not
 > changed as a result of file transfer, disk error, meddling,
-> etc.).[[^*]](http://en.wikipedia.org/wiki/Md5sum)
+> etc.).<sup>[*](http://en.wikipedia.org/wiki/Md5sum)</sup>
 
 ## Practical implementation
 

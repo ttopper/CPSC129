@@ -1,6 +1,6 @@
 # Point vs Neighbourhood Processes
 
-Darkening the penguin image was an example of a *point operation*. Point
+Darkening the penguin image was an example of a _point operation_. Point
 operations depend only a single pixel value and affect only that same
 pixel’s value. That means that point operations can process each pixel individually
 without worrying about their neighbours. (It also makes them ideal

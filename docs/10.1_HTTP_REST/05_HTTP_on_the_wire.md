@@ -9,7 +9,7 @@ and the HTTP protocol version, e.g.
     GET /index.html HTTP/1.0
 
 There are four key HTTP
-methods^[\*](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)^,
+methods<sup>[^*](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)</sup>,
 ([all of them](http://en.wikipedia.org/wiki/Http#Request_methods))
 
 GET

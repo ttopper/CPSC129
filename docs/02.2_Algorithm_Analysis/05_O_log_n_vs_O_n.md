@@ -1,12 +1,12 @@
-# O(log _n_) versus O(*n*)
+# O(log _n_) versus O(_n_)
 
 To get a sense of how much better this is let’s compare the rate of
-growth of O(*n*) and O(log _n_) as _n_ goes from 1 to 1,000,000. I’ll
+growth of O(_n_) and O(log _n_) as _n_ goes from 1 to 1,000,000. I’ll
 use a logarithmic scale for _n_ so that the table won’t get too long!
-The ratio in the rightmost column tells us how many times slower O(*n*)
+The ratio in the rightmost column tells us how many times slower O(_n_)
 is than O(log _n_).
 
-  _n_        |O(log<sub>2</sub>*n*)   | O(*n*)     |  O(*n*) / O(log<sub>2</sub>*n*)
+  _n_        |O(log<sub>2</sub>_n_)   | O(_n_)     |  O(_n_) / O(log<sub>2</sub>_n_)
   -----------|---------------|------------|------------------------
   1          | 1             | 2          | 2
   4          | 2             | 4          | 2
@@ -29,13 +29,13 @@ is than O(log _n_).
   1,048,576  | 20            | 1,048,576  | 52,429
 
 The striking result is that for moderate sized problems O(log _n_) is
-**thousands of times faster** than O(*n*)!
+**thousands of times faster** than O(_n_)!
 
 Perhaps more surprising to you will be the news that many problems would
-love to have a O(*n*) solution, but don’t because the best known
-solutions are worse than O(*n*)!
+love to have a O(_n_) solution, but don’t because the best known
+solutions are worse than O(_n_)!
 
 What other orders are there? Order _n_ and order log _n_ are both common
-algorithmic orders, but others include O(1), O(*n*<sup>2</sup>), O(*n*<sup>3</sup>), O(*n*
-log _n_), O(2<sup>*n*</sup>), and O(*n*!). The next page will show you how their
+algorithmic orders, but others include O(1), O(_n_<sup>2</sup>), O(_n_<sup>3</sup>), O(_n_
+log _n_), O(2<sup>_n_</sup>), and O(_n_!). The next page will show you how their
 magnitudes compare.

@@ -20,4 +20,4 @@ to give you the awareness to use your power well.
 
 ------------------------------------------------------------------------
 
-[^*] in the same way that if we want to find the first 5 that occurs in a list after the first 3 we might write the compact expression `lst[lst.index(3):].index(5)` without realizing that that is an O(*n*<sup>2</sup>) operation!
+[^*] in the same way that if we want to find the first 5 that occurs in a list after the first 3 we might write the compact expression `lst[lst.index(3):].index(5)` without realizing that that is an O(_n_<sup>2</sup>) operation!

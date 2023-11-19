@@ -69,7 +69,7 @@ shortened to:
 
 (Note that we are establishing a _convention_ here that our objects will
 be defined one to a module, and that each module will provide a factory
-method. This approach is known as *programming by convention*, in
+method. This approach is known as _programming by convention_, in
 contrast to _configuration_ where we would explicitly say, in for
 example a separate configuration file, what our classes are and what the
 names of each of their factories are, and where they may be found.

@@ -3,8 +3,8 @@
 Well that pseudocode expresses our algorithm, but it is one vague, buggy
 mess at the moment. How to move from there to a clear, correct Python
 program? Let’s start with a bit of OOP, and look for the _nouns_ and
-*verbs* we’ve used in our pseudocode to identify the _objects_ and
-*methods* we need to implement to let us express the algorithm.
+_verbs_ we’ve used in our pseudocode to identify the _objects_ and
+_methods_ we need to implement to let us express the algorithm.
 
 The only objects in sight are `Pitcher`s.
 

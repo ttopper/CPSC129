@@ -1,6 +1,6 @@
 # Heapsort
 
-Start by watching the portion of *Sorting Out Sorting* that covers
+Start by watching the portion of _Sorting Out Sorting_ that covers
 Heapsort again. At first Heapsort may look like some manic game of
 musical chairs with values dancing around a tree”. But if you watch
 carefully (or perhaps enough times!), a general pattern should become
@@ -137,7 +137,7 @@ for last in range(len(lst)-1, -1, -1):
 Which just leaves the puzzle of what heapify the tree” means. In
 retrospect, with the experience we have gained writing reheap, it’s not
 hard to see that heapify just consists of calling reheap on all subtrees
-of the list from *the bottom up*,
+of the list from _the bottom up_,
 
     # heapify.py
 

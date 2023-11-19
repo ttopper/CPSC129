@@ -65,7 +65,7 @@
 
 -   Since they are single-file applications Problems 2 and 3 can use our
     usual naming scheme for program files:,
-    `a`*assignment#*`p`*problem#*`v`*version#*`.py` . For Problem 1 you
+    `a`_assignment#_`p`_problem#_`v`_version#_`.py` . For Problem 1 you
     can use the names `MVC_Model_`*`v`*`.py` and
     `MVC_Controller_`*`v`*`.py` where _v_ shows the version and keep
     using the model file `test_model`.

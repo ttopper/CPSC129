@@ -52,7 +52,7 @@ Output:
 Almost any Python object can be pickled (among the exceptions are odd
 ducks like sockets for network connections and file handles). Given how
 compact it is why would we not just always use it? The answer is that we
-*will* often use it, but not without thinking first. One reason we will
+_will_ often use it, but not without thinking first. One reason we will
 sometimes avoid it is that the pickled representation is neither
 particularly compact nor particularly readable. `pickled_universe.txt`
 above looks like this,

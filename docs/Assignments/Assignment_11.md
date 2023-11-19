@@ -4,7 +4,7 @@
 
 1.  In the notes we developed a working Pitcher Problem” solver
     [pitcher_new_2_succint.py](../11.1_Pitcher_Problems/pitcher_new_2_succint.py).
-    There is a hitch though. Its output does not in fact tell us *how*
+    There is a hitch though. Its output does not in fact tell us _how_
     to solve the problem, only that it _can_ be solved. Modify the code
     developed in the notes so that it outputs instructions on how to
     solve the problem (if it can be), e.g.

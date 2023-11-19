@@ -44,7 +44,7 @@ situations. One is anticipatory, the other is reactive.
     error if one results by catching exceptions”.
 
 Which approach should be preferred is a subject of active debate in the
-programming community\*, but one approach often dominates the other in
+programming community[^*], but one approach often dominates the other in
 particular languages. The anticipatory approach is prevalent in the C
 community, while the reactive approach is more common in the Python
 community. See the next page, [Python
@@ -53,7 +53,7 @@ about working with Python’s exceptions.
 
 ------------------------------------------------------------------------
 
-\* A readable entry to the debate is Joel Spolsky’ spiece titled simply
+[^*] A readable entry to the debate is Joel Spolsky’ spiece titled simply
 [Exceptions](http://www.joelonsoftware.com/items/2003/10/13.html).
 Searching for [reactions to the
 piece](http://www.google.ca/search?q=%22joel+spolsky%22+exceptions) will

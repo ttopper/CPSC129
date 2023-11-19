@@ -22,7 +22,7 @@ how to achieve this.
     [last time around](../10.2_IP_1/06_Edge_detection.md) is the
     Prewitt operator. It’s a first order operator, also called a
     gradient filter, that is a discrete approximation to a first
-    derivative (*discrete* as opposed to _continuous_ since our pixel
+    derivative (_discrete_ as opposed to _continuous_ since our pixel
     values make up a discrete rather than continuous function). The
     Laplacian operator is a second order filter that approximates the
     second derivative. Any image feature with high curvature, i.e. a
@@ -42,13 +42,13 @@ how to achieve this.
     <td>-1</td>
     <td>-1</td></tr></table
     >
-    
+
     Applying it to the original image produces this image which captures
     both the fine detail and the strong edges from the original image.
 
     ![](04_Moon_Laplacian.png)
 
-    (*What could go wrong*? The mask can produce negative values. What
+    (_What could go wrong_? The mask can produce negative values. What
     will PIL do with these when you save them into the image object?)
 
 2.  Next we want to add the features we’ve extracted back into the
@@ -59,7 +59,7 @@ how to achieve this.
 
     ![](04_Moon_Laplacian_Scaled.png)
 
-    (*What could go wrong*? Watch out for integer arithmetic!)
+    (_What could go wrong_? Watch out for integer arithmetic!)
 
 3.  Finally we’re ready to add the filter output back into the original
     image. After adding it and adjusting the dynamic range you should
@@ -67,10 +67,10 @@ how to achieve this.
 
     ![](04_Moon_Sharpened.png)
 
-    (*What could go wrong*? When you add the two images you may get
+    (_What could go wrong_? When you add the two images you may get
     values larger than 255, what will PIL do when you save those into
-    the image? Don’t overlook the phrase *and adjusting the dynamic
-    range*” above.)
+    the image? Don’t overlook the phrase _and adjusting the dynamic
+    range_” above.)
 
 4.  If we look hard we can see that finer detail is more visible in this
     image, but the image as a whole appears lighter than the original.

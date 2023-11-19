@@ -1,6 +1,6 @@
 # Representing a tree using a list
 
-When *Sorting Out Sorting* got to Heapsort your first thought on seeing
+When _Sorting Out Sorting_ got to Heapsort your first thought on seeing
 the tree might be What is that thing?!”
 
 ![.](04_Heapsort_1.png){width="169" height="121"}
@@ -26,7 +26,7 @@ metaphors.
 -   the nodes directly below a node are its _children_.
 
 (There are in fact many types of trees used in Computer Science. This is
-a _balanced_ *binary* tree. _Binary_ because each node has at most two
+a _balanced_ _binary_ tree. _Binary_ because each node has at most two
 children, and _balanced_ because it’s all filled in”, or more
 formally because all paths from root to leaf have the same length.)
 

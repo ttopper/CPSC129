@@ -37,7 +37,7 @@ the storage requirement of this option depends not on the size of the
 universe but on the number of live cells in it. For a universe less than
 11 × 11 in size it uses 4 bytes per live cell (1 for row, 1 for
 separating space, 1 for col and 1 for line end), plus another 4 for the
-universe size. Generalizing: 4*n* + 4 bytes where _n_ gives the number
+universe size. Generalizing: 4_n_ + 4 bytes where _n_ gives the number
 of live cells.
 
 (Note that the memory storage is _affected_ by the size of the universe
@@ -45,7 +45,7 @@ just not solely determined by it. This is because more bytes are
 required to represent the row and column coordinates the larger the
 universe is. In a 1,000 × 1,000 universe most coordinates will be 3
 digit numbers, e.g. (148, 763) so most lines will be 8 bytes long and
-the formula will become 8*n* + 8 bytes).
+the formula will become 8_n_ + 8 bytes).
 
 How does this compare with the first two options? For this specific
 example it uses 24 bytes. As long as the universe is sparse it will be

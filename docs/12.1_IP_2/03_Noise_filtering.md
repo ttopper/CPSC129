@@ -1,7 +1,7 @@
 # Noise Filtering
 
 Real world measurements always contain noise or errors. These errors are
-*random* perturbations of the true signal that occur in the measuring
+_random_ perturbations of the true signal that occur in the measuring
 process. _Systematic_ errors can be modelled and that model used to
 remove them exactly to recover the original measurement or true signal.
 For example if you are using a metre stick to measure things and you

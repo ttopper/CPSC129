@@ -1,7 +1,7 @@
 # The Payoff: An ObjectServer
 
-Solving the issue (remember:* How can we free our controller from having
-to know about the innards of the objects it processes?*) by separating
+Solving the issue (remember:_ How can we free our controller from having
+to know about the innards of the objects it processes?_) by separating
 our controller code from our Quote class will make it easier to work on
 our code by letting us work on each piece independently, but there is
 also a much bigger payoff.

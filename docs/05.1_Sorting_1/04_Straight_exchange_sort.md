@@ -9,7 +9,7 @@ single pass through the list looks like this:
         if lst[current_posn] > lst[current_posn+1]
             swap lst[current_posn], lst[current_posn+1]
 
-*Exercise*: Simulate this loop on the list:
+_Exercise_: Simulate this loop on the list:
 
     lst: 34 11 23 86 51 94 4
 
@@ -31,7 +31,7 @@ into an outer loop that controls the limit of the current scan.
             if lst[current_posn] > lst[current_posn+1]
                 swap lst[current_posn], lst[current_posn+1]
 
-*Exercise*: Simulate the pseudocode above on the list `lst` below. Draw
+_Exercise_: Simulate the pseudocode above on the list `lst` below. Draw
 the state of the list at the end of each iteration of the main loop.
 Does the pseudocode work?
 

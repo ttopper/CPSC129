@@ -2,14 +2,14 @@
 
 ## Problems
 
-1.  (*10 marks*) Write a function called `range_set(im, (lo, hi))` that
+1.  (_10 marks_) Write a function called `range_set(im, (lo, hi))` that
     will return a modified version of `im` whose [dynamic
     range](../12.1_IP_2/02_Dynamic_range.md) is `[lo, hi]`.
 
     Don’t forget to include a `main` section that will demonstrate the
     function on an image, e.g. `dkpenguins.png`.
 
-2.  (*10 marks*) Write a function called `median_filter(im)` that will
+2.  (_10 marks_) Write a function called `median_filter(im)` that will
     apply a 3×3 [median filter](../12.1_IP_2/03_Noise_filtering.md) to
     `im` and return the modified image.
 
@@ -20,14 +20,14 @@
     to write two aditional functions, `salt_and_pepper(im, percent)` and
     `rmse(im1, im2)`, as well as `median_filter`.)
 
-3.  (*10 marks*) Write a function called `sharpen(im)` that implements
+3.  (_10 marks_) Write a function called `sharpen(im)` that implements
     Laplacian-based image sharpening as described in [the
     notes](../12.1_IP_2/04_Sharpening.md). Here’s [the original moon
     image](../12.1_IP_2/04_Moon.jpg).
 
     Your main section should of course test it on an image.
 
-4.  (*30 marks*) Write the name to email matching program described in
+4.  (_30 marks_) Write the name to email matching program described in
     [this week’s notes](../12.2_YG_Emails/00_index.md).
 
 ## Logistics

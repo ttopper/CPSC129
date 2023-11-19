@@ -90,14 +90,14 @@ gives:
             lst[posn] ← lst[posn-1]
         lst[proper_posn] ← tmp
 
-*Exercise*: Simulate the pseudocode above on the list `lst` below. Draw
+_Exercise_: Simulate the pseudocode above on the list `lst` below. Draw
 the state of the list at the end of each iteration of the main loop.
 Does the pseudocode work?
 
      
     lst: 34 11 23 86 51 94 4
 
-*Exercise*: What would happen if we tried to move elements out of the
+_Exercise_: What would happen if we tried to move elements out of the
 way from front to back instead of back to front? That is starting from
 the proper position and moving forward to the current position? In this
 case the moving pseudocode might be:

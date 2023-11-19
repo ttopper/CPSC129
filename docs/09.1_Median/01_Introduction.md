@@ -8,7 +8,7 @@ the set of numbers and sort them, the median will be the number in the
 middle position. For example if your set of numbers is [37, 61, 42, 21,
 19, 86, 95, 78, 54] then the median is 54 because when you sort the
 list you get [19, 21, 37, 42, 54, 61, 78, 86, 95] and 54 is the middle
-entry in that list\*.
+entry in that list[^*].
 
 This suggests one straightforward way of finding the median value: sort
 the list and extract the item at the middle index,
@@ -19,7 +19,7 @@ the list and extract the item at the middle index,
         return l[len(l)/2]
 
 This code is blessedly short, and since the good sorts, e.g. quicksort,
-Shellsort and heapsort, are O(*n* log _n_) so is this algorithm. But can
+Shellsort and heapsort, are O(_n_ log _n_) so is this algorithm. But can
 we do better? Can we find the median without sorting the entire list?
 
 ## Median by partition
@@ -55,7 +55,7 @@ number of items in the list, or that the median value may occur more
 than once in the list).
 
 If it is done just as described in the previous paragraph this approach
-is **O(*n*<sup>2</sup>/2)**. ***n*<sup>2</sup>** because we must scan the list of *n*
+is **O(_n_<sup>2</sup>/2)**. **_n_<sup>2</sup>** because we must scan the list of _n_
 values for each of the _n_ values in it, thus making _n_ &times; _n_ or _n_<sup>2</sup>
 operations. **/2** because we will on average find the median halfway
 through the list.
@@ -86,7 +86,7 @@ handle all possible lists.
 
 ------------------------------------------------------------------------
 
-\* You may be wondering what happens if there an even number of values
+[^*] You may be wondering what happens if there an even number of values
 in the set, since then there may not be a middle value, e.g. [32, 19,
 84, 56] sorted is [19, 32, 56, 84] and there is no middle value.
 Conventional practice is to take the mean (average) of the two values on

@@ -83,7 +83,7 @@
 ## Logistics
 
 -   Use the following naming scheme for your program files:,
-    `a`*assignment#*`p`*problem#*`v`*version#*`.py` . So your first
+    `a`_assignment#_`p`_problem#_`v`_version#_`.py` . So your first
     attempt at problem 1 on this assignment will be named `a3p1v1.py`
     and your second attempt (should there be one) will be named
     `a3p1v2.py` .

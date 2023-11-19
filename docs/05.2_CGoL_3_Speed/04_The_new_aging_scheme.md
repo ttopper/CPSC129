@@ -262,7 +262,7 @@ These changes carry into the next generation because we copy `next_u`
 into `u`, and `next_n` into `n` between generations.
 
 This also helps clarify the aging logic (or it did in my mind) because
-it reminds us that it is *cell changes* we care about. This in turn
+it reminds us that it is _cell changes_ we care about. This in turn
 suggests that we begin each generation with exact copies of our current
 universe and neighbour arrays and then record the changes in one of
 them. At the end of the generation we again make exact copies of them.

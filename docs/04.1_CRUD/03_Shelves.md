@@ -1,6 +1,6 @@
 # Shelves
 
-A shelve\* is like a dictionary that is stored on disk. (The name
+A shelve[^*] is like a dictionary that is stored on disk. (The name
 continues the canning theme begun with pickle). The dictionary values
 can be any object that can be pickled. Retrieval is fast because the
 dictionary keys are hashed for fast retrieval.
@@ -48,7 +48,7 @@ quotefile.close()
 
 The example shows how to store and retrieve data with the shelve, but
 what about deleting a stored item? Just use
-`del `*`dictionary`*`[`*`key`*`]` or in the specific example above we
+`del `_`dictionary`_`[`_`key`_`]` or in the specific example above we
 could use `del quotefile['Beck']` to remove the Kent Beck quote.
 
 ## A small gotcha
@@ -70,5 +70,5 @@ using the shelve’s `has_key` method,
 
 ------------------------------------------------------------------------
 
-\* [Official documentation](http://docs.python.org/library/shelve.html).
+[^*] [Official documentation](http://docs.python.org/library/shelve.html).
 

@@ -21,9 +21,9 @@ does it also include finding entries that match certain criteria?
 Because the latter, searching, is a very complicated task (basically
 it’s the problem Google is being rewarded for solving”).
 
-What we’ll do here is to build a little controller\* that will let us
+What we’ll do here is to build a little controller[^*] that will let us
 work on our database of quotations. The pseudocode for most controllers
-is similar\*\*,
+is similar[^**],
 
     Forever
         Display the possible actions
@@ -223,11 +223,11 @@ What about the other actions? Check out the assignment :-)
 
 ------------------------------------------------------------------------
 
-\* Controllers are ubiquitous in computing. If you have a device or
+[^*] Controllers are ubiquitous in computing. If you have a device or
 server you want to manipulate through software then you need a
 controller.
 
-\*\* Which may have you thinking that it should be possible to build a
+[^**] Which may have you thinking that it should be possible to build a
 universal controller which with some OOP and an MVC architecture it
 pretty much is. OOP will be the subject of the remaining four modules of
 this course. MVC you can either Google or wait to study in NCIT 212.

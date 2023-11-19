@@ -13,7 +13,7 @@ do not have a shared field. This makes it difficult to combine them and
 generate a list of employee names and email addresses. (In relational
 database terms we would like to do a _join_ on the two tables, but
 can’t because they do not have a shared field, specifically one that is
-a *primary key* field in one table and a *foreign key* field in the
+a _primary key_ field in one table and a _foreign key_ field in the
 other. There’s your jargon for the day.)
 
 We can extract records like this from PeopleSoft,

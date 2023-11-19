@@ -2,7 +2,7 @@
 
 You’ve already seen it. Go back to the previous page and look at the
 controller code. See the main loop that awaits an event from the user to
-trigger each action? That’s a *main event loop*. It’s the most common
+trigger each action? That’s a _main event loop_. It’s the most common
 pattern for interactive (as opposed to batch) programs. They wait for
 each event or user action, e.g. a keypress or a mouse movement, and then
 trigger an action based on it. Most office productivity programs (word

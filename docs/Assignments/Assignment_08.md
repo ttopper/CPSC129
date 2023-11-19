@@ -2,7 +2,7 @@
 
 ## Problems
 
-1.  (*10 marks*) At Yukon College numerical grades are converted to
+1.  (_10 marks_) At Yukon College numerical grades are converted to
     letter grades using a conversion chart as follows:
 
     | Numerical Grade  | Letter Grade  |
@@ -30,7 +30,7 @@
 
     [a8p1_output.html](a8p1_output.html)
 
-2.  (*10 marks*) Write a Python cgi script that will return a quote
+2.  (_10 marks_) Write a Python cgi script that will return a quote
     chosen at random from a list of quotes stored in a text file. The
     format of the file should be one quote per line. You can use [this
     sample file](../08.1_CGI/Quotes.txt) if you don’t have a suitable
@@ -40,7 +40,7 @@
     linking to a different style sheet if you want to alter the
     appearance of the page).
 
-3.  (*10 marks*) Write a Python cgi script that allows the user to
+3.  (_10 marks_) Write a Python cgi script that allows the user to
     specify a year and month and extracts and displays the weather data
     for that month in an HTML table. Here is the HTML for [the input
     page](../08.1_CGI/pWeatherServer-input.html) and for [the display
@@ -51,7 +51,7 @@
     sheet](../08.1_CGI/pWeatherServer.css). For weather data you can use
     our old standby [weather.txt](weather.txt).
 
-4.  (*20 marks*) Modify [maze_6.py](../08.2_Mazes_2/maze_6.py) so that
+4.  (_20 marks_) Modify [maze_6.py](../08.2_Mazes_2/maze_6.py) so that
     the user can try to solve the maze by moving an icon through it as
     described in [this week’s
     notes](../08.2_Mazes_2/01_Interactive_Maze.md).
@@ -59,4 +59,4 @@
 ## Logistics
 
 -   Use the following naming scheme for your program files:,
-    `a`*assignment#*`p`*problem#*`v`*version#*`.py` .
+    `a`_assignment#_`p`_problem#_`v`_version#_`.py` .

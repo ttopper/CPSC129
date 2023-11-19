@@ -3,7 +3,7 @@
 Shell sort is a modification of liner insertion sort based on the
 observation that if we move values more than 1 step toward their final
 position at a time they will get there faster. This might allow us to
-make fewer (potentially *far fewer*) movements.
+make fewer (potentially _far fewer_) movements.
 
 Before we embark on the code for it, watch the description of it at the
 4:30 mark of [Sorting Out

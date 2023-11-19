@@ -8,20 +8,20 @@ Items that are crossed out were covered in the course, but will not be examined.
 #### Algorithmics: How? When?
 
 -   **Searching**: exhaustive, linear, binary (with and without
-    recursion), interpolation. *Be able to write the first three. Know
-    the performance of all.*
+    recursion), interpolation. _Be able to write the first three. Know
+    the performance of all._
 -   **Sorting**: straight insertion, selection and exchange (bubble);
-    Shell sort, quicksort (with and without recursion), heapsort. *Be
+    Shell sort, quicksort (with and without recursion), heapsort. _Be
     able to write the first three, read and modify the second three.
-    Know the performance of all six.*
--   **Recursion**. *Be able to step through, and convert to and from
-    recursive solutions.*
+    Know the performance of all six._
+-   **Recursion**. _Be able to step through, and convert to and from
+    recursive solutions._
 -   **Median**. *Remember and be able to adapt the two approaches.*
 -   **~~Indexing~~**~~. Persistent indexes~~.
 -   **Breadth-first tree search**, e.g. pitcher problem. *Remember the
     approach.*
--   **Binary trick** to get all subsets. *Be able to discuss, read and
-    modify (but not write from scratch).*
+-   **Binary trick** to get all subsets. _Be able to discuss, read and
+    modify (but not write from scratch)._
 
 #### Data structures
 

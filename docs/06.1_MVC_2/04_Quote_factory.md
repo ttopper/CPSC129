@@ -35,7 +35,7 @@ class Quote:
 ```
 
 You can see the factory function above the `Quote` class. Function like
-this are called *module methods*, because the notation makes them look
+this are called _module methods_, because the notation makes them look
 like methods of the module when we use them (remember that Python files
 are called _modules_). For example:
 
@@ -53,7 +53,7 @@ because Python convention is to use lower case names for modules that
 define classes. I’ve removed the version information from the module
 name so it is called `quote.py` instead of `quote_1.py`, because when a
 software project grows and is made up of multiple modules it becomes
-tiresome *and error-prone* to have to edit the imports in other modules
+tiresome _and error-prone_ to have to edit the imports in other modules
 each time you update one module and change its name. Instead, the most
 up-to-date version will always have the name `quote.py`, but we will
 archive all versions with version numbers in their names as shown in the

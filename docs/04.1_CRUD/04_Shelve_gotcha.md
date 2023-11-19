@@ -1,6 +1,6 @@
 # A bigger Gotcha: Shelves update on assignment not mutation
 
-> **WTF!?** “*Shelves update on assignment not mutation.*”
+> **WTF!?** “_Shelves update on assignment not mutation._”
 
 Shelves are really very easy to use, but there is one common gotcha to
 be aware of when you use them and that is that “shelves update on
@@ -33,8 +33,8 @@ Consider the following transcript carefully,
 
 The thing to notice here is that `s['bob']` was changed (from `42` to
 `43`), but that `s['liz']` was not (it’s still just `[31]`). **WTF?**
-The reason is that `s['bob']` was *assigned to*, but `s['liz']` was only
-*mutated*, that is the contents of the list `s['liz']` were changed, but
+The reason is that `s['bob']` was _assigned to_, but `s['liz']` was only
+_mutated_, that is the contents of the list `s['liz']` were changed, but
 `s['liz']` itself still refers to the same list object. That object’s
 contents may have changed but Python has no (easy and efficient) way of
 noticing that. So `s['bob']` was assigned to and therefore updated but
@@ -57,7 +57,7 @@ Open the shelve with the option `writeback=True`,
     bob : 43
     liz : [1]
 
-*But* listen to the official documentation:
+_But_ listen to the official documentation:
 
 > If the optional writeback parameter is set to True, all entries
 > accessed are cached in memory, and written back at close time; this
@@ -67,7 +67,7 @@ Open the shelve with the option `writeback=True`,
 > **very slow** since all accessed entries are written back (there is no
 > way to determine which accessed entries are mutable, nor which ones
 > were actually
-> mutated).^[\*](http://docs.python.org/css/module-shelve.html)^
+> mutated).<sup>[\*](http://docs.python.org/css/module-shelve.html)</sup>
 
 ## Solution 2
 

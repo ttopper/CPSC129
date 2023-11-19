@@ -1,11 +1,11 @@
 # Algorithms and Heuristics
 
 This course and its predecessor CPSC 128 have focussed exclusively on
-solving problems using algorithms. An algorithm is a *mechanical*
+solving problems using algorithms. An algorithm is a _mechanical_
 procedure that is guaranteed to find the _correct_ solution in a
-*finite* amount of time. The word _mechanical_ indicates that it
+_finite_ amount of time. The word _mechanical_ indicates that it
 doesn’t rely on magic, or luck, or involve human judgment or intuition;
-*correct* means that it always works; and _finite_ that we won’t have
+_correct_ means that it always works; and _finite_ that we won’t have
 to wait forever to get that answer. Those are all desirable properties
 of a solution methodology, but sometimes they may be overriden by other
 considerations. For example we may need a solution **now** (after all

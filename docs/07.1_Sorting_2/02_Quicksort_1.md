@@ -71,10 +71,10 @@ We can use the old tuple trick” to swap the values,
 
 `Continue this until the scanners cross (which means the values are separated)`
 
-*Continue* and _until_ indicate we need to loop. Python does not
+_Continue_ and _until_ indicate we need to loop. Python does not
     support _until_ loops so we’ll have to reverse the logic to express
     it as a `while` loop. This means that _until_ the scanners cross”
-    becomes, _While_ the scanners *haven’t* crossed”. This while
+    becomes, _While_ the scanners _haven’t_ crossed”. This while
     statement goes at the top of the loop body:
 
     ``` python
