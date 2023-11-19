@@ -67,7 +67,7 @@ _But_ listen to the official documentation:
 > **very slow** since all accessed entries are written back (there is no
 > way to determine which accessed entries are mutable, nor which ones
 > were actually
-> mutated).<sup>[\*](http://docs.python.org/css/module-shelve.html)</sup>
+> mutated).<sup>[*](http://docs.python.org/css/module-shelve.html)</sup>
 
 ## Solution 2
 

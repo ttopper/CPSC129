@@ -4,6 +4,6 @@
 
 Select the type of object you would like to create:
 
-Quote Hockey Player\
+Quote Hockey Player
 
 </div>

@@ -21,7 +21,7 @@ be,
   </tbody>
 </table>
 
-where EOF is the character used to mark the end of a file\*. Of course
+where EOF is the character used to mark the end of a file[^*]. Of course
 what is actually written to disk are the ASCII values of those
 characters, so what is on disk is,
 
@@ -149,6 +149,6 @@ file you can see some text content).
 
 ------------------------------------------------------------------------
 
-\* The character used for the end of file marker is operating system
+[^*] The character used for the end of file marker is operating system
 dependent. Windows uses Ctrl-Z, ASCII 26, to mark end of file.
 

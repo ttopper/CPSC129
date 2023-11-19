@@ -36,6 +36,6 @@
   31     16.7
   ------ -------------
 
-  : Daily Maximum Temperature (deg C)\
-  Whitehorse Airport\
+  : Daily Maximum Temperature (deg C)
+  Whitehorse Airport
   May 1942

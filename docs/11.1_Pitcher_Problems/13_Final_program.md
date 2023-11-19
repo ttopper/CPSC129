@@ -122,7 +122,7 @@ def solve_it(pitchers, goal):
             pitcher = new_state[i]
             if not pitcher.is_full():
                 pitcher.fill()
-                if new_state not in tried_states \
+                if new_state not in tried_states 
                    and new_state not in state_list:
                     state_list.append(new_state)
 

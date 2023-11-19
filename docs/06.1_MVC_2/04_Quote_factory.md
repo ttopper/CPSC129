@@ -58,7 +58,7 @@ each time you update one module and change its name. Instead, the most
 up-to-date version will always have the name `quote.py`, but we will
 archive all versions with version numbers in their names as shown in the
 comments above. Python makes the archiving easy to do using the **File →
-Save Copy As\...** menu command.
+Save Copy As...** menu command.
 
 Using the `Quote` factory the Create portion of our controller now looks
 like this (changed code highlighted in [yellow]{.change}):

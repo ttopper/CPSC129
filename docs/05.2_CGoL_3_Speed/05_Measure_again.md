@@ -16,7 +16,7 @@ Are the changes worth making? No guessing! Here are the measurements,
 That’s around 8 times faster or an 800% speed increase. Well worth
 doing. Which you will on the current assignment :-)
 
-(Hmm\...I see that while we sped up the aging block we also slowed down
+(Hmm...I see that while we sped up the aging block we also slowed down
 the copying block. This is because we truly _do_ copy now, whereas
 before we were renaming and then just allocating new blank memory (see
 the footnote on the previous page) without the requirement to loop over

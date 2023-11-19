@@ -111,7 +111,7 @@ def equalize(input_image, model_image):
     # 1. Get the grey level histograms for each image.
     input_histogram = input_image.histogram()
     model_histogram = model_image.histogram()
-    # print input_histogram, '\n', model_histogram # DEBUG
+    # print input_histogram, 'n', model_histogram # DEBUG
     # Minimal error checking to avoid annoying failures.
     if len(input_histogram) != len(model_histogram):
         print 'Error: Histograms do not have same length!'

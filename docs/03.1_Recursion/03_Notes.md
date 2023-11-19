@@ -13,7 +13,7 @@
 
     b.  can tell when there’s no point in trying.
 
--   b\. above is the **stopping condition** and without one you may well
+-   b. above is the **stopping condition** and without one you may well
     create an infinite loop. See e.g. the first example in
     [recursion.py](02_recursion.md).
 
@@ -36,7 +36,7 @@
 
 -   Recursion can be direct in which a function calls itself, or
     indirect in which one function, say A, calls another, B, which then
-    calls A, which calls B, which calls A,\...
+    calls A, which calls B, which calls A,...
 
 -   We are seeing recursion now because it simplifies the implementation
     of some algorithms we are about to encounter, i.e. quicksort and

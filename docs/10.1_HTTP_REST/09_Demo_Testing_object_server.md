@@ -6,7 +6,7 @@ and the Python-based client [RESTClient](http://restclient.org/).
 
 Demonstrate using curl.
 
--   curl localhost \# Issue GET for homepage
+-   curl localhost # Issue GET for homepage
 -   curl -X method url, e.g. curl -X GET localhost is equivalent to
     above.
 

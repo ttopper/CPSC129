@@ -2,6 +2,6 @@
 
 <div>
 
-> [Yabba-Dabba-Doo!]{.quote-text} \~ [Fred Flintstone]{.quote-author}
+> [Yabba-Dabba-Doo!]{.quote-text} ~ [Fred Flintstone]{.quote-author}
 
 </div>

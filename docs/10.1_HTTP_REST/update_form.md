@@ -4,8 +4,8 @@
 
 Text:
 
-\
-Author:\
+
+Author:
  
 
 </div>

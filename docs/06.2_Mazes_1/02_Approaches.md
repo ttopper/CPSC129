@@ -2,7 +2,7 @@
 
 # Approaches
 
-Not surprisingly there’s more than one approach\...
+Not surprisingly there’s more than one approach...
 
 1.  Here’s one:
 
@@ -40,7 +40,7 @@ Not surprisingly there’s more than one approach\...
 3.  And yet another from SlickCow:
 
     > To draw a maze, first create some kind of outer shell with two
-    > holes\--one that will function as a start and another as a finish.
+    > holes--one that will function as a start and another as a finish.
     > This shell determines the overall shape of your maze, so make it
     > something interesting to look at.
     >
@@ -52,14 +52,14 @@ Not surprisingly there’s more than one approach\...
     > This forces your first line to be connected to some part of your
     > outer shell, but your second line could be connected to either the
     > shell or the first line. Your third line could be connected to
-    > either the shell, first, or second line\...
+    > either the shell, first, or second line...
     >
     > Go ahead and go crazy drawing lines. The more lines there are, the
     > harder the maze becomes. A very fine tipped pencil or pen will
     > allow for extremely complex mazes. It helps to leave the open end
     > of lines at places people are likely to come to traversing the
     > maze. This forces them to make a decision between at least two
-    > corridors\... one is correct, the others must be wrong.
+    > corridors... one is correct, the others must be wrong.
     >
     > Using this one rule, there will always be one and only one pathway
     > from the start to the finish. Any line you draw without

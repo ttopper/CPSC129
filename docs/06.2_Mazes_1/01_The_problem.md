@@ -2,7 +2,7 @@
 
 # The Problem
 
-Something to think about\...
+Something to think about...
 
 Consider the maze up above and the one below. How could one have a computer
 create more mazes like these?

@@ -128,4 +128,4 @@ example,
     business is changing things so that there always remains some path
     to the exit (it’s easy to block your player in).
 
--   \...your imagination is the only limit!
+-   ...your imagination is the only limit!

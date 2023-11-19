@@ -3,12 +3,12 @@
 Of course: you can tell where you are in a text file by using its `tell`
 method, i.e. `f.tell()`, you can seek to a particular location in a file
 using `f.seek(`*`offset`*`)`, tell if a file is open by checking its
-`closed` attribute. There is always more\...but this is enough for
-now\*.
+`closed` attribute. There is always more...but this is enough for
+now[^*].
 
 ------------------------------------------------------------------------
 
-\* If it is not enough for you, you can [read more
+[^*] If it is not enough for you, you can [read more
 online](http://docs.python.org/library/stdtypes.html#file-objects) or
 explore via the Python Shell, e.g.
 

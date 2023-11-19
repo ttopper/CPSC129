@@ -8,17 +8,17 @@ upload, edit and delete resoruces as well.
 Consider again the guidelines for using those methods:
 
 GET
-:   The GET method means retrieve whatever information \... is
+:   The GET method means retrieve whatever information ... is
     identified by the Request-URI. If the Request-URI refers to a
     data-producing process, it is the produced data which shall be
-    returned as the entity in the response\...”
+    returned as the entity in the response...”
 
 PUT
 :   The PUT method requests that the enclosed entity be stored under
     the supplied Request-URI.”
 
 POST
-:   The POST method is used to \... [provide] a block of data, such
+:   The POST method is used to ... [provide] a block of data, such
     as the result of submitting a form, to a data-handling process;
     extend a database though an append operation.”
 

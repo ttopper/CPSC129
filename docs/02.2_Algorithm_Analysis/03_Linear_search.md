@@ -19,7 +19,7 @@ will take. Similarly if we triple or quadruple the length of the list,
 we triple or quadruple the time it will take to discover that an item is
 not in the list. Because the time it takes is directly proportional to
 the length of the list (_n_) we say that this algorithm is “_order
-n_\”, for which we write **O(_n_)**. (There’s the Big O.)
+n_”, for which we write **O(_n_)**. (There’s the Big O.)
 
 What about an item that _is_ in the list? Assuming the items we look for
 are randomly distributed in the list then we will find some near the

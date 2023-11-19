@@ -1,4 +1,4 @@
-# Something we’re not doing\... \...but I thought you might notice, and so should explain.
+# Something we’re not doing... ...but I thought you might notice, and so should explain.
 
 The eagle-eyed among you with good memories as well might recall seeing
 earlier a placeholder labelled Automatically building the object

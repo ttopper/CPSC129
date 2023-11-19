@@ -80,8 +80,8 @@ possible starting positions of the lists,
 ```
 
 And to ensure the list is completely sorted we have to make the step
-size decline from something large \-- to get large efficient initial
-movements \-- to something small to ensure the list eventually gets
+size decline from something large — to get large efficient initial
+movements — to something small to ensure the list eventually gets
 sorted completely,
 
 ``` python

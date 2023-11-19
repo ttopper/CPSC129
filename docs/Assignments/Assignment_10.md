@@ -64,7 +64,7 @@
     For example a diagonal edge will have medium values for both
     horizontal and vertical measures even if it is a strong edge.
 
-    a\) To better measure edge strength we should combine the horizontal
+    a) To better measure edge strength we should combine the horizontal
     and vertical values to get a single measure of edge strength. The
     key to doing this is to realize that `dx` and `dy` measure
     components of edge strength. The problem of finding the ’true’
@@ -74,13 +74,13 @@
     root of the sum of the squares of the component magnitudes , i.e. d
     = sqrt(dx<sup>2</sup> + dy<sup>2</sup>).
 
-    \
+    
 
     Write a function that is passed an image and returns an image whose
     pixel values are the edge strength at each location in the original
     image.
 
-    b\) This edge strength measure is objective, but it may not be
+    b) This edge strength measure is objective, but it may not be
     perceptually accurate. There is lots of evidence that the human
     visual system judges things relative to their surroundings. For a
     dramatic example consider the optical illusion below in which
@@ -102,7 +102,7 @@
     location by the local average pixel value (where local” means
     3x3 pixel neighbourhood”).
 
-    c\) It’s also possible that we judge edge strength relative not to
+    c) It’s also possible that we judge edge strength relative not to
     the local luminance or pixel value, but to the local _variation_ in
     luminance. In topographic terms this explains why a 10 meter cliff
     on the prairie is more striking than a 10 m cliff in the mountains:
