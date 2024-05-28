@@ -1,13 +1,9 @@
-# Algorithm Development Case Study: Life 1: Conway’s Game of Life (aka CGoL)
+# Algorithm Development Case Study: Life 1: Conway’s Game of Life
 
-1.  [Overview](01_Overview.md)
-2.  [Introduction [16:35]](02_Introduction.md){.screencast}
-3.  [Algorithm Overview
-    [7:32]](03_Algorithm_overview.md){.screencast}
-4.  [Pseudocode [4:09]](04_Pseudocode.md){.screencast}
-5.  [Create and Initialize the Universe
-    [11:59]](05_Create_and_initialize_U.md){.screencast}
-6.  [Display the Universe [6:56]](06_Display.md){.screencast}
-7.  [Age the Universe [21:35]](07_Age.md){.screencast}
-8.  [life_v0.py.png](life_v0.py.png)
+1.  [Introduction](01_Introduction.md)
+2.  [Algorithm Overview and Pseudocode](02_Algorithm_overview.md)
+3.  [Create and Initialize the Universe](03_Create_and_initialize_U.md)
+4.  [Display the Universe](04_Display.md)
+5.  [Age the Universe](05_Age.md)
+6.  [conway_v0.py.png](conway_v0.py.png)
 

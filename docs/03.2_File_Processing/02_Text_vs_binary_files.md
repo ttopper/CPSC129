@@ -3,55 +3,29 @@
 Files on disk are always just sequences of bytes so how can there be two
 types, text and binary? The difference between text and binary files is
 not a physical difference on disk, but a difference in the way those
-bytes are _interpreted_. Consider storing the two dimensional coordinate
-(12, 31) to disk. Storing it as text would be in essence to print it to
-a file (instead of the screen). We can visualize the file contents to
-be,
+bytes are_interpreted_
 
-<table border="1">
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>,</td>
-      <td>3</td>
-      <td>1</td>
-      <td>EOF</td>
-    </tr>
-  </tbody>
-</table>
+Consider storing the two dimensional coordinate (12, 31) to disk.
+Storing it as text would be in essence to print it to a file (instead of
+the screen). We can visualize the file contents to be,
 
-where EOF is the character used to mark the end of a file[^*]. Of course
-what is actually written to disk are the ASCII values of those
+<pre>   -------------------------
+  | 1 | 2 | , | 3 | 1 | EOF |
+   -------------------------</pre>
+
+where EOF is the character used to mark the end of a file. (The actual character
+used for the end of file marker is operating system dependent.) Of
+course what is actually written to disk are the ASCII values of those
 characters, so what is on disk is,
 
-<table border="1">
-  <tbody>
-    <tr>
-      <td>49</td>
-      <td>50</td>
-      <td>44</td>
-      <td>51</td>
-      <td>49</td>
-      <td>26</td>
-    </tr>
-  </tbody>
-</table>
+
+  49   50   44   51   49   26
+ 
+
 To be even more precise the values will be stored in binary so the disk
 contents will be,
 
-<table border="1">
-  <tbody>
-    <tr>
-      <td>00110001</td>
-      <td>00110010</td>
-      <td>00101100</td>
-      <td>00110011</td>
-      <td>00110001</td>
-      <td>00011010</td>
-    </tr>
-  </tbody>
-</table>
+  00110001   00110010   00101100   00110011   00110001   00011010
 
 Thank goodness the computer can read it!
 
@@ -60,41 +34,30 @@ binary representations of the numbers 12 and 31 to disk in sequence. The
 number of bytes used to do this on disk varies from 1 to 8, but using
 typical four byte representations we would write the following to disk:
 
-<table border="1">
-  <tbody>
-    <tr>
-      <td>00000000</td>
-      <td>00000000</td>
-      <td>00000000</td>
-      <td>00001100</td>
-      <td>00000000</td>
-      <td>00000000</td>
-      <td>00000000</td>
-      <td>00011111</td>
-      <td>00011010</td>
-    </tr>
-  </tbody>
-</table>
+  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+  00000000   00000000   00000000   00001100   00000000   00000000   00000000   00011111   00011010
+  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
 As you can see both files have binary representations on disk so why do
 we call the first text and only the second binary? Because to be
-meaningful each should be interpreted differently. We call the first a
+meaningful each should be _interpreted_ differently. We call the first a
 text file because its bits should be interpreted as giving the ASCII
-values of text characters. We call the second binary because its bits
+values of **text** characters. We call the second binary because its bits
 should be read in four bytes at a time and interpreted as integer
-values. Notice that it doesn’t say this inside the files. That
-knowledge has to be built into the suite of progams that create and
+values. Notice that it doesn't say this inside the files. That
+knowledge has to be built into the suite of programs that create and
 manipulate the files.
 
 Note that either representation could be read in as either text, i.e. a
 sequence of bytes corresponding to ASCII codes of characters, or binary,
 i.e. a pair of 4-byte wide integers, but that in each case the wrong
-interpretation produces nonsense. SO knowing the correct interpretation
-is crucial. In everyday computing you can often tell which
-interpretation is correct by displaying some of the file to a terminal,
-or opening it in a ’pure’ text editor, e.g. the IDLE editor. Here’s a
-dump of a small Python program to a terminal,
+interpretation produces nonsense. _So_ knowing the correct
+interpretation is crucial. In everyday computing you can often tell
+which interpretation is correct by displaying some of the file to a
+terminal, or opening it in a 'pure' text editor, e.g. the IDLE editor.
+Here's a dump of a small Python program to a terminal,
 
-    ttopper@D1JWYSB1:~/Present/NCIT210.W09/M08_Persistence
+    ttopper@D1JWYSB1:~/Present/CPSC128.W13/08_Persistence
     $ cat s2bin.py
     # s2bin.py
     # Converts from a string to its binary representation.
@@ -105,13 +68,13 @@ dump of a small Python program to a terminal,
     s = '112,31'
     for c in s:
         n = ord(c)
-        print "".join([HEXBIN[i] for i in '%X'%n]),
-    ttopper@D1JWYSB1:~/Present/NCIT210.W09/M08_Persistence
+        print() "".join([HEXBIN[i] for i in '%X'%n]) )
+    ttopper@D1JWYSB1:~/Present/CPSC128.W13/08_Persistence
     $
 
-And here’s a partial dump of a Word document,
+And here's a partial dump of an MS Word document,
 
-    ttopper@D1JWYSB1:~/Present/NCIT210.W09/M08_Persistence
+    ttopper@D1JWYSB1:~/Present/CPSC128.W13/08_Persistence
     $ cat MSWordFile.doc
     DI◄à¡±→á                > ♥ _ÿ   ♠           ☺   *        ►  ,   ☺   _ÿÿÿ    ) ÿ
     ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
@@ -147,8 +110,4 @@ As you can see it is easy to tell which file is a text file and which
 binary (though if you look toward the bottom of the dump of the word
 file you can see some text content).
 
-------------------------------------------------------------------------
-
-[^*] The character used for the end of file marker is operating system
-dependent. Windows uses Ctrl-Z, ASCII 26, to mark end of file.
 

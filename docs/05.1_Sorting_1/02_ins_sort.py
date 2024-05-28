@@ -17,24 +17,24 @@ def ins_sort(lst):
 
 if __name__=='__main__':
     l = [ 8, 3, 1, 9, 5, 6, 2, 4 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ 8, 3 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ 8 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ 8, 3, 8, 9, 8, 6, 3, 3 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
 
 

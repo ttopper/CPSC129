@@ -10,10 +10,9 @@ for coord in coords:
 It’s straightforward enough, but it feels like busywork converting
 numbers to strings and bundling the strings together into lines. In fact
 it feels like such straightforward busywork that our intuitions suggest
-it could be automated, and if your memories are sharp we may remember
-pickling from CPSC 128. Pickling is provided by a Python module that
-automatically converts Python built-in types to strings that can be
-stored in text files.
+it could be automated, and it can be done with pickling. Pickling is 
+provided by a Python module that automatically converts Python built-in 
+types to strings that can be stored in text files.
 
 The module is whimsically called `pickle` (because it preserves the
 objects). Its use is straightforward:
@@ -38,7 +37,7 @@ f.close()
 f = open('pickled_universe.txt', 'r')
 u = pickle.load(f)
 f.close()
-print u
+print(u)
 ```
 
 Output:

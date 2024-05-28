@@ -21,13 +21,15 @@ pygame.draw.circle(screen, YELLOW, (100,100), 50, 2)
 pygame.display.flip()
 
 radius = 20
-for r in range(1, SCREEN_HEIGHT/radius):
-    for c in range(1, SCREEN_WIDTH/radius):
+for r in range(1, SCREEN_HEIGHT//radius):
+    for c in range(1, SCREEN_WIDTH//radius):
         pygame.draw.circle(screen, SILVER, (c*radius, r*radius), radius, 1)
 pygame.display.flip()
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+            
+pygame.quit()

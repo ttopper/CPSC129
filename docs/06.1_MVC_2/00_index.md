@@ -10,5 +10,4 @@
 7.  [MVC_controller.py](MVC_controller.py)
 8.  [MVC_model.py](MVC_model.py)
 9.  [quote.py](quote.py)
-10. [Sample model: test_model (Right-click and Save as)](test_model)
 

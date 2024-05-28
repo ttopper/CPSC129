@@ -1,9 +1,7 @@
 # pygame_test_10.py
-# Tim Topper NCIT 212 Winter 2010
-#
 # How about a real ball?
+# Tim Topper edited by Kate Chatfield-Reed May 2024
 import pygame
-import sys
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -30,11 +28,12 @@ pygame.display.flip()
 ball = pygame.image.load("Aqua-Ball-icon.png")
 ball_size = 16 # We'l see how to extract this from the bitmap later.
 
-x = SCREEN_WIDTH/2
-y = SCREEN_HEIGHT/2
+x = SCREEN_WIDTH//2
+y = SCREEN_HEIGHT//2
 speed_x = 2
 speed_y = 2
-while True:
+running = True
+while running:
     # Note: ball_size replaces 5 here:
     pygame.draw.rect(screen, BLACK, (x, y, ball_size, ball_size))
     x += speed_x
@@ -51,6 +50,7 @@ while True:
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+            
+pygame.quit()
 

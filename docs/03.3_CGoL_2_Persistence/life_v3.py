@@ -104,58 +104,58 @@ if __name__ == '__main__':
     '''
 
     # Welcome the user
-    print BANNER
+    print(BANNER)
 
     # Initialize the universe
-    init_type = raw_input('Initialize randomly (r) or from file (f)? ')
+    init_type = input('Initialize randomly (r) or from file (f)? ')
 
     if init_type == 'r':
-        u_rows = int(raw_input('Number of rows in universe? '))
-        u_cols = int(raw_input('Number of columns in universe? '))
+        u_rows = int(input('Number of rows in universe? '))
+        u_cols = int(input('Number of columns in universe? '))
         u = Universe(u_rows, u_cols)
-        live_pct = int(raw_input('Initial percentage of live cells? '))
+        live_pct = int(input('Initial percentage of live cells? '))
         u.randomly_seed(live_pct)
                     
     elif init_type == 'f':
         u = Universe() # Create empty universe.
-        fname = raw_input('Name of file to read from? ')
+        fname = input('Name of file to read from? ')
         u.load(fname)
 
     else:
-        print 'Fatal Error: Choice not recognized. Universe not created.'
+        print('Fatal Error: Choice not recognized. Universe not created.')
         sys.exit(1)
 
     # Display the initial universe
-    print u
+    print(u)
 
     # Main event loop:
     done = False
     while not done:
         # Get user command
-        print MENU
-        command = raw_input('Command (a|m|s|l|q): ')
+        print(MENU)
+        command = input('Command (a|m|s|l|q): ')
 
         # Age universe one or more generations
         if command == 'a' or command == 'm':
             if command == 'a':
                 generations = 1
             else:
-                generations = int(raw_input('How many generations? '))
+                generations = int(input('How many generations? '))
 
             for generation in range(0, generations):
                 u.age()
-                print u
+                print(u)
 
         # Save state of universe to a file
         elif command == 's':
-            fname = raw_input('Name of file to save to? ')
+            fname = input('Name of file to save to? ')
             u.save(fname)
 
         # Load a saved  universe from a file
         elif command == 'l':
-            fname = raw_input('Name of file to load from? ')
+            fname = input('Name of file to load from? ')
             u.load(fname)
-            print u
+            print(u)
 
         # Quit
         elif command == 'q':
@@ -163,4 +163,4 @@ if __name__ == '__main__':
 
         # PEBKAC
         else:
-            print 'Command not recognized. Please try again.'
+            print('Command not recognized. Please try again.')

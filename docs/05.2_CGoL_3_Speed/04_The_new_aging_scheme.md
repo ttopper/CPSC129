@@ -272,6 +272,7 @@ now[^*].
 
 The framework to make all this happen looks like this,
 
+```python
     # Construct initial neighbours array n by looping over whole universe and counting neighbours.
     # This is just like the original doubly nested loop we used to have to count neighbours in the aging block.
      ...
@@ -303,8 +304,7 @@ The framework to make all this happen looks like this,
                     ...
         
         # display(u)
-
-�
+```
 
 ------------------------------------------------------------------------
 

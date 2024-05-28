@@ -30,7 +30,7 @@ in which the gears have to mesh *just so*.
     simplest to write, but also the least efficient.
 
 2.  The second is a linear search of an ordered list[^***]. This is
-    faster than the the first because it can make use of the fact that
+    faster than the first because it can make use of the fact that
     the list is sorted.
 
 3.  The third is a binary search of an ordered list. This uses the fact

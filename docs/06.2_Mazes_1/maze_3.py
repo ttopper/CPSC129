@@ -3,7 +3,7 @@
 # A Maze is an array of Cells, each of which has four Walls,
 # and may or may not have been visited.
 
-(INT, EXT, DOOR) = range(3)
+(INT, EXT, DOOR) = list(range(3))
 class Wall:
     def __init__(self, s):
         self.state = s
@@ -39,7 +39,6 @@ class Cell:
         s += str(self.west)
         if self.visited: s += 'V'
         else: s += 'U'
-        s += ' '
         return s
 
 class Maze:
@@ -82,6 +81,7 @@ class Maze:
         for r in range(self.height):
             for c in range(self.width):
                 s += str(self.cells[r][c])
+                s += ' '
             s += '\n'
         return s
 
@@ -114,7 +114,7 @@ class Maze:
 
 if __name__ == '__main__':
     m = Maze(5,5)
-    print m
+    print(m)
 
     # Now check that wall references are truly shared between cells
     # we'll manually create this:
@@ -132,10 +132,9 @@ if __name__ == '__main__':
     m.cells[1][1].east.state = DOOR
     m.cells[0][2].north.state = DOOR
     m.cells[2][3].south.state = DOOR
-    print m
+    print(m)
     
     m = Maze(25, 25)
     m.carve()
     m.display() # Using Pygame.
-   
-        
+    

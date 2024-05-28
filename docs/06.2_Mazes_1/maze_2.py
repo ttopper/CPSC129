@@ -2,7 +2,7 @@
 #
 # A Maze an array of Cells, each of which has four Walls, and may or may not have been visited.
 
-(INT, EXT, DOOR) = range(3)
+(INT, EXT, DOOR) = list(range(3))
 class Wall:
     def __init__(self, s):
         self.state = s
@@ -87,11 +87,11 @@ if __name__ =='__main__':
     m = Maze(5,5)
     m.carve()
     m.display()
-    print m
+    print(m)
     m.cells[1][1].east.state = DOOR
     m.cells[0][2].north.state = DOOR
     m.cells[2][3].south.state = DOOR
-    print m
+    print(m)
    
         
 ##  ==============

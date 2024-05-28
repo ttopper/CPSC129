@@ -4,19 +4,18 @@
 
 ### Course Information
 
-1. [Course Description (PDF)](01.1_Course_Information/CPSC129W15.pdf)
-2. [Addendum: Marking Scheme](01.1_Course_Information/01_Marking_scheme.md)
+1. [Course Description (PDF)](01.1_Course_Information/CPSC129F24.pdf)
+2. [Schedule](01.1_Course_Information/01_Course_schedule.md)
+3. [Addendum: Marking Scheme](01.1_Course_Information/02_Marking_scheme.md)
 
 ### Algorithm Development Case Study: Life 1: Conway's Game of Life (aka CGoL)
 
-1. [Overview](01.2_CGoL_1_Introduction/01_Overview.md)
-2. [Introduction [16:35]](01.2_CGoL_1_Introduction/02_Introduction.md)
-3. [Algorithm Overview [7:32]](01.2_CGoL_1_Introduction/03_Algorithm_overview.md)
-4. [Pseudocode [4:09]](01.2_CGoL_1_Introduction/04_Pseudocode.md)
-5. [Create and Initialize the Universe [11:59]](01.2_CGoL_1_Introduction/05_Create_and_initialize_U.md)
-6. [Display the Universe [6:56]](01.2_CGoL_1_Introduction/06_Display.md)
-7. [Age the Universe [21:35]](01.2_CGoL_1_Introduction/07_Age.md)
-8. [life_v0.py.png](01.2_CGoL_1_Introduction/life_v0.py.png)
+1. [Introduction](01.2_CGoL_1_Introduction/01_Introduction.md)
+2. [Algorithm Overview and Pseudocode](01.2_CGoL_1_Introduction/02_Algorithm_overview.md)
+3. [Create and Initialize the Universe](01.2_CGoL_1_Introduction/03_Create_and_initialize_U.md)
+4. [Display the Universe](01.2_CGoL_1_Introduction/04_Display.md)
+5. [Age the Universe](01.2_CGoL_1_Introduction/05_Age.md)
+6. [conway_v0.py.png](01.2_CGoL_1_Introduction/conway_v0.py.png)
 
 ### [Assignment 1](Assignments/Assignment_01.md)
 
@@ -25,12 +24,10 @@
 ### Searching
 
 1. [Introduction](02.1_Searching/01_Introduction.md)
-2. [Linear search, unordered list [9:05]](02.1_Searching/02_Linear_Search_Unordered_List.md)
-3. [Linear search, ordered list [9:13]](02.1_Searching/03_Linear_Search_Ordered_List.md)
-4. [Binary search [25:10]](02.1_Searching/04_Binary_Search.md)
-5. [Interpolative search [13:25]](02.1_Searching/05_Interpolative_Search.md)
-6. [Test harness [16:42]](02.1_Searching/06_Test_Harness.md)
-7. [searches.py](02.1_Searching/searches.py)
+2. [Linear search, unordered list](02.1_Searching/02_Linear_Search_Unordered_List.md)
+3. [Linear search, ordered list](02.1_Searching/03_Linear_Search_Ordered_List.md)
+4. [Binary search](02.1_Searching/04_Binary_Search.md)
+5. [Interpolative search](02.1_Searching/05_Interpolative_Search.md)
 
 ### Algorithm Analysis
 
@@ -59,9 +56,13 @@
 
 ### Recursion
 
-1. [Recursion by example](03.1_Recursion/01_Recursion_by_example.md) [32:38]
-2. [recursion.py: Recursion examples](03.1_Recursion/02_recursion.md)
-3. [Summary notes](03.1_Recursion/03_Notes.md)
+1. [Recursion by example](03.1_Recursion/01_Recursion_by_example.md)
+2. [Recursion Through a List](03.1_Recursion/02_Recursion_through_a_list.md)
+3. [Calculating Factorials](03.1_Recursion/03_Calculating_factorials.md)
+4. [Recursve Binary Search](03.1_Recursion/04_Recursive_binary_search.md)
+5. [Recursive Data Structure](03.1_Recursion/05_Recursive_data_structures.md)
+6. [recursion.py: Recursion examples](03.1_Recursion/06_recursion.md)
+7. [Summary Notes](03.1_Recursion/07_Notes.md)
 
 ### Working with Text Files
 
@@ -100,17 +101,17 @@
 
 ### MVC Architecture (Model, View, Controller)
 
-1. [Introduction [17:46]](04.2_MVC_1/01_Introduction.md)
-2. [Step 1: Separating the Model from the Controller [9:21]](04.2_MVC_1/02_Step_1_Identify_model.md)
-3. [Step 2: The Model [7:54]](04.2_MVC_1/03_Step_2_Start_the_model.md)
-4. [Step 3: The Quote Class [12:47]](04.2_MVC_1/04_Step_3_The_quote_class.md)
-5. [Step 4: The Model Revisited (for testing) [6:35]](04.2_MVC_1/05_Step_4_Model_revisited_for_testing.md)
-6. [Step 5: Controller revisited [6:35]](04.2_MVC_1/06_Step_5_Controller_revisited.md)
-7. [UIDs](04.2_MVC_1/07_UIDs.md)
-8. [MVC_Controller_0.py](04.2_MVC_1/06_MVC_Controller_0.py)
-9. [MVC_Model_0.py](04.2_MVC_1/05_MVC_Model_0.py)
-10. [Quote_0.py](04.2_MVC_1/04_Quote_0.py)
-11. [test_model (shelve file containing sample Model containing 3 Quotes)](04.2_MVC_1/test_model)
+1. [Introduction](04.2_MVC_1/01_Introduction.md)
+2. [Step 1: Separating the Model from the Controller](04.2_MVC_1/02_Step_1_Identify_model.md)
+3. [Step 2: The Model](04.2_MVC_1/03_Step_2_Start_the_model.md)
+4. [Step 3: The Quote Class](04.2_MVC_1/04_Step_3_The_quote_class.md)
+5. [UIDs](04.2_MVC_1/05_UIDs.md)
+6. [Step 4: The Model Revisited (for testing)](04.2_MVC_1/06_Step_4_Model_revisited_for_testing.md)
+7. [Step 5: Controller revisited](04.2_MVC_1/07_Step_5_Controller_revisited.md)
+8.  Support file: [Quote_0.py](04.2_MVC_1/04_Quote_0.py)
+9.  Support file: [MVC_Model_0.py](04.2_MVC_1/06_MVC_Model_0.py)
+10. Support file: [MVC_Controller_0.py](04.2_MVC_1/07_MVC_Controller_0.py)
+
 
 ###PyGame 2: Animation
 
@@ -157,20 +158,19 @@
 7. [MVC_controller.py](06.1_MVC_2/MVC_controller.py)
 8. [MVC_model.py](06.1_MVC_2/MVC_model.py)
 9. [quote.py](06.1_MVC_2/quote.py)
-10. [Sample model: test_model (Right-click and Save as)](06.1_MVC_2/test_model)
 
 ###Creating Mazes: A case study in OOP and algorithm development
 
 1. [The Problem](06.2_Mazes_1/01_The_problem.md)
 2. [Approaches](06.2_Mazes_1/02_Approaches.md)
-3. [From English to Pseudocode [8:06]](06.2_Mazes_1/03_Step_1_From_english_to_pseudcode.md)
-4. [Testing our Pseudocode [14:04]](06.2_Mazes_1/04_Step_2_Testing_our_pseudocode.md)
-5. [Revising our pseudocode [13:32]](06.2_Mazes_1/05_Step_3_Revise_pseudocode.md)
-6. [Data Structures (OOP) [9:27]](06.2_Mazes_1/06_Step_4_OOP.md)
-7. [Initializing the Maze [11:53]](06.2_Mazes_1/07_Step_5_Initializing_maze.md)
-8. [Add some debugging output [7:36]](06.2_Mazes_1/08_Step_6_Debugging_output.md)
-9. [Sharing walls [11:47]](06.2_Mazes_1/09_Step_7_Sharing_walls.md)
-10. [Put the pieces together [2:44]](06.2_Mazes_1/10_Step_8_Put_the_pieces_together.md)
+3. [From English to Pseudocode](06.2_Mazes_1/03_Step_1_From_english_to_pseudcode.md)
+4. [Testing our Pseudocode](06.2_Mazes_1/04_Step_2_Testing_our_pseudocode.md)
+5. [Revising our pseudocode](06.2_Mazes_1/05_Step_3_Revise_pseudocode.md)
+6. [Data Structures (OOP)](06.2_Mazes_1/06_Step_4_OOP.md)
+7. [Initializing the Maze](06.2_Mazes_1/07_Step_5_Initializing_maze.md)
+8. [Add some debugging output](06.2_Mazes_1/08_Step_6_Debugging_output.md)
+9. [Sharing walls](06.2_Mazes_1/09_Step_7_Sharing_walls.md)
+10. [Put the pieces together](06.2_Mazes_1/10_Step_8_Put_the_pieces_together.md)
 11. [A starting point: maze_3.py](06.2_Mazes_1/maze_3.py)
 
 ###[Assignment 6](Assignments/Assignment_06.md)

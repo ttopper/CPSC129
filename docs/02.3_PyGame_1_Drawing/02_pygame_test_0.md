@@ -1,17 +1,20 @@
 # Getting started with Pygame
 
-1.  Go get and install pygame from
-    <http://www.pygame.org/download.shtml>
+You only need to install pygame once. It should already be installed on 
+the lab computers.
 
-    If you’re on Windows choose the MSI file that matches the version
-    of Python you run, e.g.
+1.  Open the Command Prompt in Windows (or the terminal on Mac and linux).
+    The easiest way to open the Command Prompt is to open the Windows 
+    menu and start typing Command Prompt, when it appears as the top 
+    option hit enter.
 
-    `pygame-1.9.1.win32-py2.7.msi` if you are running Python 2.7.x
+2.  We can now install pygame using the **p**ackage **i**nstaller for 
+    **p**ython or **pip** for short. You can do that by typing 
+    `pip install pygame` in the terminal window and hitting enter.
 
-2.  Executing it should install pygame.
+3.  You can check that pygame has been properly installed by opening 
+    your preferred editor and importing the library with `import pygame`.
 
-3.  You can check that pygame has been properly installed by running
-    pygame_test_0.py:
+This is what my test looked like in IDLE. 
 
-    ![Image of pygame_test_0.py source
-    code.](02_pygame_test_0.py.png){width="475" height="161"}
+![Testing pygame import in IDLE.](02_pygame_test.png)

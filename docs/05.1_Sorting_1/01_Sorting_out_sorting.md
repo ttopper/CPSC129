@@ -1,15 +1,14 @@
 # Sorting Out Sorting
 
 This week the heavy lifting in terms of presenting material is going to
-be done by a historical set of videos instead of screencasts by me. The
-video was originally a single production called **Sorting out Sorting**.
-It was created by Ronald Baecker at the University of Toronto in 1981.
-This was early days for both computer animation and *algorithm
-visualization*. The video’s animation (and sound) techniques were
-quickly superceded by Hollywood, but the visualizations are still very
-helpful in understanding how the algorithms work and indeed set the
-stage for much of what has followed in the evolution of algorithm
-visualization (AV).”[^*]
+be done by a historical set of videos. The video was originally a single 
+production called **Sorting out Sorting**. It was created by Ronald 
+Baecker at the University of Toronto in 1981. This was early days for 
+both computer animation and *algorithm visualization*. The video’s 
+animation (and sound) techniques were quickly superceded by Hollywood, 
+but the visualizations are still very helpful in understanding how the 
+algorithms work and indeed set the stage for much of what has followed 
+in the evolution of algorithm visualization (AV).”[^*]
 
 The video describes the operation and performance of nine classic
 sorting algortihms, 3 each in 3 families.

@@ -1,4 +1,4 @@
-# Review: From Pickles on Shelves to CRUD
+# From Pickles on Shelves to CRUD
 
 1.  [Context: Persistence](01_Persistence.md)
 2.  [Python helps out: Pickling](02_Pickling.md)

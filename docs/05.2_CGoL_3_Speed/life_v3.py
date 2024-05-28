@@ -9,8 +9,8 @@ import random
 import time
 
 # Get size of universe.
-# u_rows = int(raw_input('Number of rows in universe? '))
-# u_cols = int(raw_input('Number of columns in universe? '))
+# u_rows = int(input('Number of rows in universe? '))
+# u_cols = int(input('Number of columns in universe? '))
 u_rows = u_cols = 100
 # Initialize empty arrays.
 u = []
@@ -24,7 +24,7 @@ for row in range(u_rows):
     next_n.append(u_cols*[0])
 
 # Initialize random state of universe.
-# live_pct = int(raw_input('Initial percentage of live cells? '))
+# live_pct = int(input('Initial percentage of live cells? '))
 live_pct = 42
 for row in range(u_rows):
     for col in range(u_cols):
@@ -43,7 +43,7 @@ for row in range(0, u_rows):
         n[row][col] = neighbours
 
 # Length of simulation?
-# generations = int(raw_input('How many generations to time? '))
+# generations = int(input('How many generations to time? '))
 generations = 100
 
 aging_time = 0.0
@@ -96,11 +96,11 @@ for generation in range(0, generations):
     # display(u)
 
 total_time = aging_time + copying_time
-print 'u_rows =', u_rows
-print 'u_cols =', u_cols
-print 'generations =', generations
-print 'live_pct =', live_pct
-print
-print 'total_time    : %5.2f' % total_time
-print 'copying_time  : %5.2f = %5.2f%%' % (copying_time, copying_time*100.0/total_time)
-print 'aging_time    : %5.2f = %5.2f%%' % (aging_time, aging_time*100.0/total_time)
+print('u_rows =', u_rows)
+print('u_cols =', u_cols)
+print('generations =', generations)
+print('live_pct =', live_pct)
+print()
+print(f'total_time    : {total_time:5.2f}')
+print(f'copying_time  : {copying_time:5.2f} = {copying_time*100.0/total_time:5.2f}%')
+print(f'aging_time    : {aging_time:5.2f} = {aging_time*100.0/total_time:5.2f}%')

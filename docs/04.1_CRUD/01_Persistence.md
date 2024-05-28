@@ -27,6 +27,4 @@ There are several choices for the persistence medium
 -   Local or remote database servers
 -   Remote storage, e.g. across the internet
 
-In this module we will consider the first two, while in CPSC 129 we will
-consider the latter two.
-
+It is time to talk about binary files.

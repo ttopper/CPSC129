@@ -1,10 +1,10 @@
 # Drawing something
 
-![Image of pygame_test_3.py source code.](05_pygame_test_3.py.png)
+![Image of pygame_test_3.py source code.](05_pygame2.png)
 
 ## Sample output:
 
-![Sample output.](05_pygame_test_3.py.output.png){width="606"
+![Sample output.](05_pygame2_output.png){width="606"
 height="425"}
 
 ## Note

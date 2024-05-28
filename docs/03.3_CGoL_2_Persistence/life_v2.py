@@ -65,25 +65,25 @@ class Universe:
 if __name__ == '__main__':
 
     # Welcome the user
-    print "====================="
-    print "Conway's Game of Life"
-    print "---------------------"
+    print("=====================")
+    print("Conway's Game of Life")
+    print("---------------------")
 
     # Initialize the universe
-    u_rows = int(raw_input('Number of rows in universe? '))
-    u_cols = int(raw_input('Number of columns in universe? '))
+    u_rows = int(input('Number of rows in universe? '))
+    u_cols = int(input('Number of columns in universe? '))
     u = Universe(u_rows, u_cols)
-    live_pct = int(raw_input('Initial percentage of live cells? '))
+    live_pct = int(input('Initial percentage of live cells? '))
     u.randomly_seed(live_pct)
 
     # Display the initial state of the universe
-    print u
+    print(u)
 
     # Main event loop:
     while True:
-        command = raw_input('Age universe or quit (a|q)? ')
+        command = input('Age universe or quit (a|q)? ')
         if command == 'a' or command == 'A':
             u.age() # Age universe
-            print u # Display universe               
+            print(u) # Display universe               
         else:
             break

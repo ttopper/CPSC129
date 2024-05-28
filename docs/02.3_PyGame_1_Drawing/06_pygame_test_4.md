@@ -8,9 +8,9 @@ point of Problem 3 on the assignment).
 Be sure to try the change suggested in the comment. Try some others of
 your own too.
 
-![Image of pygame_test_4.py source code.](06_pygame_test_4.py.png)
+![Image of pygame3.py source code.](06_pygame3.png)
 
 ## Sample output:
 
-![Sample output.](06_pygame_test_4.py.output.png){width="606"
+![Sample output.](06_pygame3_output.png){width="606"
 height="425"}

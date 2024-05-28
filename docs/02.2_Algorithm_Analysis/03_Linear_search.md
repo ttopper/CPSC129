@@ -38,9 +38,9 @@ Without knowing the relative frequency of hits and misses likely to
 occur we would probably say that overall this algorithm is O(n).
 
 One of the beauties of big O notation is that it allows for quick mental
-estimates. For example if linear searches of a 20,000 item dataset take
+estimates. For example if linear searches of a 20,000 item dataset takes
 3.6 seconds on average, you would estimate that searches of a 100,000
-item database would average 5 ✖️ 3.6 = 18 seconds. Nifty eh?
+item database would average 5 x 3.6 = 18 seconds. Nifty eh?
 
 What about our algorithm for searching ordered lists? It takes the same
 time searching for targets that are present since on average it will

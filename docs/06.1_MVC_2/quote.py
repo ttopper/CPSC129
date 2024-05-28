@@ -19,8 +19,8 @@
 # - Initial roughing out.
 
 def factory():
-    author = raw_input('Who is the author of the quote? ')
-    text = raw_input('What did they say or write? ')
+    author = input('Who is the author of the quote? ')
+    text = input('What did they say or write? ')
     return Quote(author, text)
     
 class Quote:
@@ -30,7 +30,7 @@ class Quote:
         self.uid = str(hash('Quote' + self.author + self.text))
 
     def __str__(self):
-        return '[%s] %s said "%s"' % (self.uid, self.author, self.text)
+        return f'[{self.uid:s}] {self.author:s}] ~ {self.text:s}'
 
     #
     # Your Assignment 6 code here.
@@ -40,9 +40,9 @@ if __name__ == '__main__':
     
     q = Quote( 'Kent Beck', 'Optimism is an occupational hazard of programming: testing is the treatment.')
     r = Quote( 'Brian Kernighan', 'Controlling complexity is the essence of computer programming.')
-    print q
-    print r
-    print 'Testing new factory function:'
+    print(q)
+    print(r)
+    print('Testing new factory function:')
     s = factory()
-    print type(s) == type(q) # Checks that factory is returning a Quote object.
-    print s
+    print(type(s) == type(q)) # Checks that factory is returning a Quote object.
+    print(s)

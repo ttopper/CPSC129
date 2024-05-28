@@ -12,30 +12,31 @@ def exch_sort(lst):
     while change_made:
         change_made = False
         for here in range(len(lst)-1):
+            print(here)
             if lst[here]>lst[here+1]:
                 lst[here], lst[here+1] = lst[here+1], lst[here]
                 change_made = True
 
 if __name__=='__main__':
     l = [ 8, 3, 1, 9, 5, 6, 2, 4 ]
-    print 'Before: ', l
+    print('Before: ', l)
     exch_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ 8, 3 ]
-    print 'Before: ', l
+    print('Before: ', l)
     exch_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ 8 ]
-    print 'Before: ', l
+    print('Before: ', l)
     exch_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ ]
-    print 'Before: ', l
+    print('Before: ', l)
     exch_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
     l = [ 8, 3, 8, 9, 8, 6, 3, 3 ]
-    print 'Before: ', l
+    print('Before: ', l)
     exch_sort( l )
-    print 'After: ', l
+    print('After:  ', l)
 
 

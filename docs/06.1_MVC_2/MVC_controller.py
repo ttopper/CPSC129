@@ -56,53 +56,52 @@ object_menu = '''
     (Tip: For the time being you _have_ to choose quote).
 '''
 
-model_name = raw_input('What model would you like to work with? ')
+model_name = input('What model would you like to work with? ')
 model = Model(model_name)
 
 over = False
 while not over:
-    print action_menu
-    action = raw_input()
-    
+    print(action_menu)
+    action = input()
     if action == 'c':
         # Display menu of object choices:
-        print object_menu
+        print(object_menu)
         # Get the user's choice:
-        obj_type = raw_input('? ')
+        obj_type = input('? ')
         # Call the appropriate object factory:
         obj = eval(obj_type+".factory()") # e.g. quote.factory()
         model.create(obj)
         
     elif action == 'r':
-        uid = raw_input( 'What is the uid of the object you wish to retrieve? ')
+        uid = input( 'What is the uid of the object you wish to retrieve? ')
         if model.retrieve(uid):
-            print model.retrieve(uid)
+            print(model.retrieve(uid))
         else:
-            print 'Sorry your collection does not contain an object with that uid.'
+            print('Sorry your collection does not contain an object with that uid.')
     
     elif action == 'u':
-        uid = raw_input( 'What is the uid of the object you wish to update? ')
+        uid = input( 'What is the uid of the object you wish to update? ')
         #
         # Your Assignment 6 code here.
         #
     
     elif action == 'd':
-        uid = raw_input( 'What is the uid of the object you wish to delete? ')
+        uid = input( 'What is the uid of the object you wish to delete? ')
         if model.delete(uid):
-            print 'Object %s successfully deleted.' % (uid)
+            print(f'Object {uid:s} successfully deleted.')
         else:
-            print 'Object %s could not be deleted.' % (uid)
+            print(f'Object {uid:s} could not be deleted.')
     
     elif action == 'l':
-        print 'Here are the contents of the model', model_name, ':'
+        print('Here are the contents of the model', model_name, ':')
         obj_set = model.listall()
         for obj in obj_set:
-            print obj
+            print(obj)
             
     elif action == 'q':
         over = True
         
     else:
-        print 'Not a valid choice!'
+        print('Not a valid choice!')
         
 model.close()

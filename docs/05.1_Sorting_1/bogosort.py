@@ -17,13 +17,13 @@ def bogosort(lst):
 
 REPNS = 10
 MAXLEN = 12
-print 'N', 'Average Time'
+print('N', 'Average Time')
 for length in range(1,MAXLEN):
     total_time = 0
     for repn in range(REPNS):
-        lst = range(length,0,-1)
-        start = time.clock()
+        lst = list(range(length,0,-1))
+        start = time.time()
         bogosort( lst )
-        end = time.clock()
+        end = time.time()
         total_time += end-start
-    print length, total_time/REPNS
+    print(length, total_time/REPNS)

@@ -1,11 +1,8 @@
 # pygame_test_9.py
-# Tim Topper NCIT 212 Winter 2010
-#
 # All four walls and forever.
-#
 # BUG: Not bouncing quite right off top and left. (Look carefully).
+# Tim Topper edited by Kate Chatfield-Reed May 2024
 import pygame
-import sys
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -24,14 +21,15 @@ pygame.init()
 screen = pygame.display.set_mode( (SCREEN_WIDTH, SCREEN_HEIGHT) )
 screen.fill( BLACK )
 
-x = SCREEN_WIDTH/2
-y = SCREEN_HEIGHT/2
+x = SCREEN_WIDTH//2
+y = SCREEN_HEIGHT//2
 speed_x = 2
 speed_y = 2
 
 # To bounce forever we move our movement code into the main event loop --
 # straight copy and paste.
-while True:
+running = True
+while running:
     pygame.draw.rect(screen, BLACK, (x, y, 5, 5))
     x += speed_x
     y += speed_y
@@ -47,10 +45,10 @@ while True:
     pygame.draw.rect(screen, YELLOW, (x, y, 5, 5))
     pygame.display.flip()
     pygame.time.delay(10) # Try 2 for arcade speed. Comment it out for max speed.
-
     
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+            
+pygame.quit()
 

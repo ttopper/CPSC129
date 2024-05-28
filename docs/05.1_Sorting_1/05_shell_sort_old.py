@@ -23,7 +23,7 @@ def shell_sort_alt(lst):
                     lst[j+step] = lst[j]
                     j = j-step
                 lst[j+step] = tmp
-        step = (step-1)/3
+        step = (step-1)//3
 
 
 def shell_sort(lst):
@@ -34,7 +34,7 @@ def shell_sort(lst):
     where it belongs.
     Uses step pattern ..., 16, 8, 4, 2, 1
     '''
-    step = len(lst)/2
+    step = len(lst)//2
     while step >=1:
         for start in range(step):
             for i in range(start+step, len(lst), step):
@@ -44,14 +44,14 @@ def shell_sort(lst):
                     lst[j+step] = lst[j]
                     j = j-step
                 lst[j+step] = tmp
-        step = step/2
+        step = step//2
 
 
 if __name__ == '__main__':
     l = [ 8, 3, 1, 9, 5, 6, 2, 4, 3, 11, 9, 5, 2, 7, 12, 3, 8, 9, 13, 1 ]
-    print 'Before: ', l
+    print('Before: ', l)
     shell_sort( l )
-    print 'After: ', l
+    print('After: ', l)
 
 ##    from time import time
 ##    from random import randint

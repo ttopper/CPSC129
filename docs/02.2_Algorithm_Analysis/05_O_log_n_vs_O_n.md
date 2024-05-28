@@ -37,5 +37,5 @@ solutions are worse than O(_n_)!
 
 What other orders are there? Order _n_ and order log _n_ are both common
 algorithmic orders, but others include O(1), O(_n_<sup>2</sup>), O(_n_<sup>3</sup>), O(_n_
-log _n_), O(2<sup>_n_</sup>), and O(_n_!). The next page will show you how their
-magnitudes compare.
+log _n_), O(2<sup>_n_</sup>), and O(_n_!). This [spreadsheet](AlgorithmOrders.xls) helps 
+illustrate the differences.

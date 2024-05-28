@@ -1,9 +1,8 @@
 # pygame_test_6.py
-# Tim Topper NCIT 212 Winter 2010
-#
 # Enough with the art, make something move.
+# Tim Topper edited by Kate Chatfield-Reed May 2024
+
 import pygame
-import sys
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -23,12 +22,12 @@ screen = pygame.display.set_mode( (SCREEN_WIDTH, SCREEN_HEIGHT) )
 screen.fill( BLACK )
 
 # Starting x and y coordinates for our shape.
-x = SCREEN_WIDTH/2
-y = SCREEN_HEIGHT/2
+x = SCREEN_WIDTH//2
+y = SCREEN_HEIGHT//2
 
 pygame.draw.rect(screen, SILVER, (x, y, 5, 5))
 pygame.display.flip()
-
+pygame.time.delay(10000)
 for step in range(0,50):
     # Move the shape by changing the x and y coordinates.
     x += 2
@@ -38,9 +37,14 @@ for step in range(0,50):
     # Assign the speed at which we want things to happen.
     pygame.time.delay(20)
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
+        # Handle the click
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+
+    
+# Close the window
+pygame.quit()
 

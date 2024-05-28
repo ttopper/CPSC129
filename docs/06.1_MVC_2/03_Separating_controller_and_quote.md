@@ -3,63 +3,63 @@
 Back to the immediate issue: *How can we free our controller from having
 to know about the innards of the objects it processes?* Look again at
 our controller with the Quote-specific parts highlighted in
-[yellow]{.change}.
+are noted in the comments.
 
 ``` python
 # MVC_controller_0.py
 from MVC_Model_0 import *
 from Quote_0 import *
 
-model_name = raw_input('What model would you like to work with? ')
+model_name = input('What model would you like to work with? ')
 model = Model(model_name)
 
 over = False
 while not over:
-    print '''
+    print('''
     Actions
     -------
-    c - create a quote to add to the collection
-    r - retrieve a quote from the collection and display it
-    u - update a quote in the collection
-    d - delete a quote from the collection
+    c - create a quote to add to the collection             # REFERENCES QUOTE
+    r - retrieve a quote from the collection and display it # REFERENCES QUOTE
+    u - update a quote in the collection                    # REFERENCES QUOTE
+    d - delete a quote from the collection                  # REFERENCES QUOTE
     l - list all the items in the collection
     q - exit
 
-    Your choice?'''
-    choice = raw_input()
+    Your choice?''')
+    choice = input()
     
     if choice == 'c': # Create
-        author = raw_input('Who is the author of the quote? ')
-        text = raw_input('What did they say or write? ')
-        obj = Quote(author, text)
+        author = input('Who is the author of the quote? ')  # REFERENCES QUOTE
+        text = input('What did they say or write? ')        # REFERENCES QUOTE
+        obj = Quote(author, text)                           # QUOTE OBJECT
         model.create(obj)
         
     elif choice == 'r': # Retrieve
-        uid = raw_input( 'What is the uid of the object you wish to retrieve? ')
+        uid = input( 'What is the uid of the object you wish to retrieve? ')
         if model.retrieve(uid):
-            print model.retrieve(uid)
+            print(model.retrieve(uid))
         else:
-            print 'Sorry your collection does not contain an object with that uid.'
+            print('Sorry your collection does not contain an object with that uid.')
     
     elif choice == 'u': # Update
         pass
     
     elif choice == 'd': # Delete
-        uid = raw_input( 'What is the uid of the object you wish to delete? ')
+        uid = input( 'What is the uid of the object you wish to delete? ')
         if model.delete(uid):
-            print 'Object %s successfully deleted.' % (uid)
+            print(f'Object {uid:s} successfully deleted.')
         else:
-            print 'Object %s could not be deleted.' % (uid)
+            print(f'Object {uid:s} could not be deleted.')
     
     elif choice == 'l': # List
-        print 'Here are the contents of the model', model_name, ':'
+        print('Here are the contents of the model', model_name, ':')
         model.listall()
             
     elif choice == 'q': # Quit
         over = True
         
     else:
-        print 'Not a valid choice!'
+        print('Not a valid choice!')
         
 model.close()
 ```
@@ -73,13 +73,13 @@ require a uid and no specific object properties to get their jobs done.
 (The only other place the quote class is referenced is in the user
 prompts and those we can quickly change to ’object’.)
 
-So we want to remove the highlighted code here from
-`MVC_Controller_0.py` to somewhere else.
+So we want to remove the following code from `MVC_Controller_0.py` to 
+somewhere else.
 
 ``` python
     if choice == 'c': # Create
-        author = raw_input('Who is the author of the quote? ')
-        text = raw_input('What did they say or write? ')
+        author = input('Who is the author of the quote? ')
+        text = input('What did they say or write? ')
         obj = Quote(author, text)
         model.create(obj)
 ```

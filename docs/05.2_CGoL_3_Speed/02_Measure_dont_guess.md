@@ -52,13 +52,13 @@ for generation in range(0, generations):
     # display(u)
 
 total_time = creation_time + aging_time + copying_time
-print 'total_time    : %5.2f' % total_time
-print 'creation_time : %5.2f = %5.2f%%' % (creation_time, creation_time*100.0/total_time)
-print 'aging_time    : %5.2f = %5.2f%%' % (aging_time, aging_time*100.0/total_time)
-print 'copying_time  : %5.2f = %5.2f%%' % (copying_time, copying_time*100.0/total_time)
+print(f'total_time    : {total_time:5.2f}')
+print(f'creation_time : {creation_time:5.2f} = {creation_time*100.0/total_time:5.2f}%')
+print(f'aging_time    : {aging_time:5.2f} = {aging_time*100.0/total_time:5.2f}%')
+print(f'copying_time  : {copying_time:5.2f} = {copying_time*100.0/total_time:5.2f}%')
 ```
 
-And here’s the output it produces (100 generations of a 100�100
+And here’s the output it produces (100 generations of a 100x100
 universe with random initialization of 42% live cells),
 
 ``` python

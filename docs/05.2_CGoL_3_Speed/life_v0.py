@@ -19,7 +19,7 @@
 import random
 
 def load():
-    fname = raw_input('Name of file to read from? ')
+    fname = input('Name of file to read from? ')
     infile = open(fname, 'r')
     u = eval(infile.read())
     infile.close()
@@ -31,27 +31,27 @@ def display(u):
     for row in range(len(u)):
         for col in range(len(u[0])):
             if u[row][col] == 1:
-                print LIVE_CELL,
+                print(LIVE_CELL,end = ' ')
             elif u[row][col] == 0:
-                print DEAD_CELL,
-        print
-    print
+                print(DEAD_CELL,end = ' ')
+        print()
+    print()
     
-print '''
+print('''
 ================================
 Welcome to Conway's Game of Life
 --------------------------------
-'''
+''')
 # Initialize the universe
-init_type = raw_input('Initialize (r) randomly or (f) from file? ')
+init_type = input('Initialize (r) randomly or (f) from file? ')
 
 if init_type == 'r':
-    u_rows = int(raw_input('Number of rows in universe? '))
-    u_cols = int(raw_input('Number of columns in universe? '))
+    u_rows = int(input('Number of rows in universe? '))
+    u_cols = int(input('Number of columns in universe? '))
     u = []
     for row in range(u_rows):
         u.append(u_cols*[0])
-    live_pct = int(raw_input('Initial percentage of live cells? '))
+    live_pct = int(input('Initial percentage of live cells? '))
     for row in range(u_rows):
         for col in range(u_cols):
             if random.randint(1,100) <= live_pct:
@@ -75,14 +75,14 @@ MENU = '''Options:
 
 done = False
 while not done:
-    print MENU
-    command = raw_input('Command (a|m|s|l|q): ')
+    print(MENU)
+    command = input('Command (a|m|s|l|q): ')
 
     if command == 'a' or command == 'm':
         if command == 'a':
             generations = 1
         else:
-            generations = int(raw_input('How many generations? '))
+            generations = int(input('How many generations? '))
 
         for generation in range(0, generations):
 
@@ -129,7 +129,7 @@ while not done:
 
             
     elif command == 's':
-        fname = raw_input('Name of file to save to? ')
+        fname = input('Name of file to save to? ')
         outfile = open(fname, 'w')
         outfile.write(str(u))
         outfile.close()
@@ -145,4 +145,4 @@ while not done:
         done = True
         
     else:
-        print 'Command not recognized. Please try again.'
+        print('Command not recognized. Please try again.')

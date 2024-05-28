@@ -20,8 +20,8 @@ Here’s what a `Quote` factory looks like:
 # - Initial version from module 4.2 MVC 1 earlier in course.
 
 def factory():
-    author = raw_input('Who is the author of the quote? ')
-    text = raw_input('What did they say or write? ')
+    author = input('Who is the author of the quote? ')
+    text = input('What did they say or write? ')
     return Quote(author, text)
     
 class Quote:
@@ -31,7 +31,7 @@ class Quote:
         self.uid = str(hash('Quote' + self.author + self.text))
 
     def __str__(self):
-        return '[%s] %s said "%s"' % (self.uid, self.author, self.text)
+        return f'[{self.uid:s}] {self.author:s}] ~ {self.text:s}'
 ```
 
 You can see the factory function above the `Quote` class. Function like
@@ -61,13 +61,13 @@ comments above. Python makes the archiving easy to do using the **File →
 Save Copy As...** menu command.
 
 Using the `Quote` factory the Create portion of our controller now looks
-like this (changed code highlighted in [yellow]{.change}):
+like this:
 
 ``` python
-    choice = raw_input()
+    choice = input()
     
     if choice == 'c': # Create
-        obj = quote.factory()
+        obj = quote.factory()   # CHANGED
         model.create(obj)
         
     elif choice == 'r': # Retrieve

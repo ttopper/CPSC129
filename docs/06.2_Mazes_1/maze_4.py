@@ -12,7 +12,7 @@ BORDER_WIDTH = 20
 WALL_COLOUR = WHITE
 BACKGROUND_COLOUR = BLACK
 
-(INT, EXT, DOOR) = range(3)
+(INT, EXT, DOOR) = list(range(3))
 class Wall:
     def __init__(self, s):
         self.state = s
@@ -213,22 +213,23 @@ class Maze:
 
 if __name__ =='__main__':
     m = Maze(25,25)
-    print m
+    #print(m)
 ##    m.cells[1][1].east.state = DOOR
 ##    m.cells[0][2].north.state = DOOR
 ##    m.cells[2][3].south.state = DOOR
     
     #m = Maze(25, 25)
     m.carve()
-    print m
+    #print(m)
     m.display() # Using Pygame.
     
     # Begin interactive portion of program.
-    while True:
+    running = True
+    while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
+                running = False
+    pygame.quit()
    
         
 ##  ==============

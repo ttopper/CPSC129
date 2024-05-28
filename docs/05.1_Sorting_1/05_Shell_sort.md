@@ -1,13 +1,13 @@
 # Shell Sort
 
-Shell sort is a modification of liner insertion sort based on the
+Shell sort is a modification of linear insertion sort based on the
 observation that if we move values more than 1 step toward their final
 position at a time they will get there faster. This might allow us to
 make fewer (potentially *far fewer*) movements.
 
 Before we embark on the code for it, watch the description of it at the
 4:30 mark of [Sorting Out
-Sorting](http://video.google.com/videoplay?docid=3970523862559774879#)
+Sorting](https://youtu.be/YvTW7341kpA?t=279)
 again. Notice that Shellsort does multiple linear insertion sorts of the
 list with different gaps between the values being sorted. _All_ we need
 to do then is to modify our linear insertion sort to apply itself to the
@@ -85,7 +85,7 @@ movements — to something small to ensure the list eventually gets
 sorted completely,
 
 ``` python
-    step = len(lst)/2
+    step = len(lst)//2
     while step>=1:
         for start in range(step):
             for i in range(start+step, len(lst), step):
@@ -95,7 +95,7 @@ sorted completely,
                     lst[j+step] = lst[j]
                     j = j-step
                 lst[j+step] = tmp
-        step = step/2
+        step = step//2
 ```
 
 Here I have begun with a step size equal to half the list size and then
@@ -113,7 +113,7 @@ def shell_sort(lst):
     It does this by using Shell's algorithm:
     http://en.wikipedia.org/wiki/Shell_sort.
     '''
-    step = len(lst)/2
+    step = len(lst)//2
     while step>=1:
         for start in range(step):
             for i in range(start+step, len(lst), step):
@@ -123,31 +123,31 @@ def shell_sort(lst):
                     lst[j+step] = lst[j]
                     j = j-step
                 lst[j+step] = tmp
-        step = step/2
+        step = step//2
 
 if __name__=='__main__':
     lst = [ 11, 89, 32, 42, 56, 78, 81, 39, 92, 16, 43, 57, 73]
-    print 'Before: ', lst
+    print('Before: ', lst)
     shell_sort( lst )
-    print 'After: ', lst
+    print('After: ', lst)
     
     lst = [ 8, 3 ]
-    print 'Before: ', lst
+    print('Before: ', lst)
     shell_sort( lst )
-    print 'After: ', lst
+    print('After: ', lst)
 
     lst = [ 8 ]
-    print 'Before: ', lst
+    print('Before: ', lst)
     shell_sort( lst )
-    print 'After: ', lst
+    print('After: ', lst)
 
     lst = [ ]
-    print 'Before: ', lst
+    print('Before: ', lst)
     shell_sort( lst )
-    print 'After: ', lst
+    print('After: ', lst)
 
     lst = [ 8, 3, 8, 9, 8, 6, 3, 3 ]
-    print 'Before: ', lst
+    print('Before: ', lst)
     shell_sort( lst )
-    print 'After: ', lst
+    print('After: ', lst)
 ```

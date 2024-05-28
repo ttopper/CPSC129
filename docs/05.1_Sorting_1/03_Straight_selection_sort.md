@@ -1,6 +1,6 @@
 # Straight Selection Sort
 
-Like insertion sort straight selection sort proceeds through the list
+Like insertion sort, straight selection sort proceeds through the list
 one position at a time, and like linear insertion it leaves a sorted
 list behind it as it proceeds. However it behaves quite differently at
 each position. Where linear insertion sort asks,

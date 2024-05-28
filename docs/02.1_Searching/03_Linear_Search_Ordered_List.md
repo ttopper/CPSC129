@@ -1,11 +1,15 @@
-# Linear search: Ordered list
+# Linear Search: Ordered list
 
-<video controls width="100%">
-    <source src="../03_Linear_Search_Ordered_List.mp4" type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
-</video>
-<p>Playback speed:
-    <button onclick="OneX()">1.0x</button>
-    <button onclick="OnePointFiveX()">1.5x</button>
-    <button onclick="TwoX()">2.0x</button>
-</p>
+The second method is a linear search of an ordered list. This is faster 
+than the first because it can make use of the fact that the list is sorted. 
+We still search through the list from the beginning to the end, but we can 
+stop looking once we 'pass' the target. This doesn't save us any time if 
+we what we are looking for is the last element of the list, but it does 
+let us stop searching sooner in many cases.
+
+![.](search2.png)
+
+In this solution we make use of the python keyword `continue`. This tells 
+the program to continue with the next iteration of the loop immediately. 
+If there was additional code inside the loop, but after the `if-elif` block, 
+it would not run because of the `continue`.

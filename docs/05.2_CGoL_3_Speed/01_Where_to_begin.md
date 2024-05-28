@@ -15,7 +15,7 @@ functions) and removed class mechanisms to make the structure of the
 algorithm as brief and clear as possible.
 
 ``` python
-generations = int(raw_input('How many generations to time? '))
+generations = int(input('How many generations to time? '))
 
 for generation in range(0, generations):
 

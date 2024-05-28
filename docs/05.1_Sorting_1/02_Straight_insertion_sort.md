@@ -27,7 +27,7 @@ complete. A minor correction, and an expansion are required.
 
 -   The minor correction is that we do not need to consider the first
     position in the list because there is no sorted list preceding it.
-    Instead we begin with the second element, asking if it is in the
+    Instead, we begin with the second element, asking if it is in the
     correct position relative to the first, and then continue on from
     there.
 
@@ -38,8 +38,7 @@ complete. A minor correction, and an expansion are required.
     this revised description:
 
     for each position in the list after the first
-        find out where this value should be in
-            the already sorted portion of the list
+        find out where this value should be in the already sorted portion of the list
         place it there
 
 Now the location of the current value we are considering should be
@@ -121,7 +120,7 @@ the front of the list) and then insert the current value.
 
 The resulting Python program is:
 
-``` python
+```python
 # ins_sort.py
 # Sorts list into ascending order.
 
@@ -141,27 +140,27 @@ def ins_sort(lst):
 
 if __name__=='__main__':
     l = [ 8, 3, 1, 9, 5, 6, 2, 4 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After: ', l)
 
     l = [ 8, 3 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After: ', l)
 
     l = [ 8 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After: ', l)
 
     l = [ ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After: ', l)
 
     l = [ 8, 3, 8, 9, 8, 6, 3, 3 ]
-    print 'Before: ', l
+    print('Before: ', l)
     ins_sort( l )
-    print 'After: ', l
+    print('After: ', l)
 ```

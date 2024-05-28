@@ -1,4 +1,5 @@
 # Course Information
 
-1.  [Course Description (PDF)](CPSC129W15.pdf)
-2.  [Addendum: Marking Scheme](01_Marking_scheme.md)
+1.  [Course Description (PDF)](CPSC129F24.pdf)
+2.  [Schedule](01_Course_schedule.md)
+3.  [Addendum: Marking Scheme](02_Marking_scheme.md)

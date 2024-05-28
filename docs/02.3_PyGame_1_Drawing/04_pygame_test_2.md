@@ -1,3 +1,3 @@
 # Exiting Pygame more gracefully
 
-![Image of pygame_test_2.py source code.](04_pygame_test_2.py.png)
+![Image of pygame with a loop to sense X for quit.](04_pygame1.png)

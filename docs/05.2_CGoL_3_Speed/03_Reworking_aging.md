@@ -40,7 +40,7 @@ each cell’s neighbourhood the only way to find it?
 Consider the moment at which we discover that a cell dies. At that
 instant we already know that each of its neighbours will have one fewer
 live neighbour _in the next generation_. If we could record that right
-then so we could remember it next tiem around we wouldn’t need to loop
+then so we could remember it next time around we wouldn’t need to loop
 over their neighbourhoods in the next generation. Now, where to record
 this information? In a 2-D array of counts of each cell’s neighbours.
 We’d have to initialize this neighbour array before beginning the main

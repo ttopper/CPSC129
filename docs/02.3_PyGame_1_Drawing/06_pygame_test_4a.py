@@ -23,9 +23,9 @@ screen.fill(BLACK)
 pygame.display.flip()
 
 size = 20
-for r in range(0, SCREEN_HEIGHT/size):
+for r in range(0, SCREEN_HEIGHT//size):
     pygame.draw.line(screen, SILVER, (0, r*size), (SCREEN_WIDTH, r*size))
-for c in range(0, SCREEN_WIDTH/size):
+for c in range(0, SCREEN_WIDTH//size):
     pygame.draw.line(screen, SILVER, (c*size, 0), (c*size, SCREEN_WIDTH))
 pygame.display.flip()
 

@@ -31,7 +31,7 @@ so if you just edit each file to create the next one in the sequence you
 won’t have to do much typing, and doing so should be instructive.
 
 As you work your way through the examples look for the bright red
-comments each time you get to a new program . I have tried to make the
+comments each time you get to a new program. I have tried to make the
 code self-explanatory, and have commented each significant addition.
 Comments are not repeated to keep the code spare, so a feature is only
 described the first time it is added to the code. You will have to pay a

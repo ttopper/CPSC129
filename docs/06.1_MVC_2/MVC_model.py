@@ -29,7 +29,7 @@ class Model:
         self.datastore[item.uid] = item
 
     def retrieve(self, uid):
-        if self.datastore.has_key(uid):
+        if uid in self.datastore:
             return self.datastore[uid]
         else:
             return False
@@ -41,7 +41,7 @@ class Model:
         pass
         
     def delete(self, uid):
-        if self.datastore.has_key(uid):
+        if uid in self.datastore:
             del self.datastore[uid]
             return True
         else:
@@ -59,29 +59,29 @@ class Model:
 if __name__ == '__main__':   
     import quote
     model = 'test_model'
-    print 'Opening the model %s.' % (model)
+    print(f'Opening the model {model:s}.')
     m = Model('test_model')
-    print
-    print 'Creating two Quotes.'
+    print()
+    print('Creating two Quotes.')
     q = quote.Quote( 'Kent Beck', 'Optimism is an occupational hazard of programming: testing is the treatment.')
     r = quote.Quote( 'Brian Kernighan', 'Controlling complexity is the essence of computer programming.')
-    print
-    print 'Adding them to the model.'
+    print()
+    print('Adding them to the model.')
     m.create(q)
     m.create(r)
-    print
-    print 'Displaying all objects in the model.'
+    print()
+    print('Displaying all objects in the model.')
     for obj in m.listall():
-        print obj
-    print
-    print 'Deleting one of the objects from the model.'
+        print(obj)
+    print()
+    print('Deleting one of the objects from the model.')
     m.delete(q.uid)
-    print
-    print 'Displaying all objects in the model for verification.'
+    print()
+    print('Displaying all objects in the model for verification.')
     for obj in m.listall():
-        print obj
-    print
-    print 'Closing the model.'
+        print(obj)
+    print()
+    print('Closing the model.')
     m.close()
-    print
-    print 'Done.'
+    print()
+    print('Done.')

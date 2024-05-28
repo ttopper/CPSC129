@@ -1,9 +1,7 @@
 # pygame_test_7.py
-# Tim Topper NCIT 212 Winter 2010
-#
 # Could you make the movement more convincing?
+# Tim Topper edited by Kate Chatfield-Reed May 2024
 import pygame
-import sys
 
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 400
@@ -19,12 +17,10 @@ GREY = (128,128,128)
 SILVER = (192, 192, 192)
 
 pygame.init()
-
 screen = pygame.display.set_mode( (SCREEN_WIDTH, SCREEN_HEIGHT) )
 screen.fill( BLACK )
-
-x = SCREEN_WIDTH/2
-y = SCREEN_HEIGHT/2
+x = SCREEN_WIDTH//2
+y = SCREEN_HEIGHT//2
 
 pygame.draw.rect(screen, SILVER, (x, y, 5, 5))
 pygame.display.flip()
@@ -44,9 +40,13 @@ for step in range(0, 75):
     pygame.display.flip()
     pygame.time.delay(20)
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
+        # Handle the click
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+    
+# Close the window
+pygame.quit()
 

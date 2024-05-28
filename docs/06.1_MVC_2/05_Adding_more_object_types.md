@@ -9,28 +9,28 @@ then branch to code to handle the creation of that type of object, so
 something like this would do the trick:
 
 ``` python
-    choice = raw_input()
+    choice = input()
     
     if choice == 'c':
-        print 'Object types:'
-        print '1. Quotation'
-        print '2. Riddle'
-        print '3. Famous Programmer'
-        obj_type = raw_input('What type of object would you like to create? ')
+        print('Object types:')
+        print('1. Quotation')
+        print('2. Riddle')
+        print('3. Famous Programmer')
+        obj_type = input('What type of object would you like to create? ')
 
         if obj_type == '1':
-            author = raw_input('Who is the author of the quote? ')
-            text = raw_input('What did they say or write? ')
+            author = input('Who is the author of the quote? ')
+            text = input('What did they say or write? ')
             obj = Quote(author, text)
         elif obj_type == '2':
-            text = raw_input('What is the text of the riddle? ')
-            answer = raw_input('What is the answer to the riddle? ')
+            text = input('What is the text of the riddle? ')
+            answer = input('What is the answer to the riddle? ')
             obj = Riddle(text, answer)
         elif obj_type == '3':
-            first_name = raw_input('What is their first name? ')
-            last_name = raw_input('What is their last name? ')
-            nationality = raw_input('What is their nationality? ')
-            source_of_fame = raw_input('What are they famous for? ')
+            first_name = input('What is their first name? ')
+            last_name = input('What is their last name? ')
+            nationality = input('What is their nationality? ')
+            source_of_fame = input('What are they famous for? ')
             obj = FamousProgrammer(first_name, last_name, nationality, source_of_fame)
 
         model.create(obj)
@@ -45,14 +45,14 @@ FamousProgrammers would also be outfitted with factories the code can be
 shortened to:
 
 ``` python
-    choice = raw_input()
+    choice = input()
     
     if choice == 'c':
-        print 'Object types:'
-        print '1. Quotation'
-        print '2. Riddle'
-        print '3. Famous Programmer'
-        obj_type = raw_input('What type of object would you like to create? ')
+        print('Object types:')
+        print('1. Quotation')
+        print('2. Riddle')
+        print('3. Famous Programmer')
+        obj_type = input('What type of object would you like to create? ')
 
         if obj_type == '1':
             obj = quote.factory()
@@ -84,13 +84,13 @@ like this:
 ``` python
     if choice == 'c':
         # Display menu of object choices:
-        print 'Which type of object do you want to create:'
-        print 'quote'
-        print 'riddle'
-        print 'famous_programmer'
-        print 'Hint: For the moment you _have_ to choose quote.'
+        print('Which type of object do you want to create:')
+        print('quote')
+        print('riddle')
+        print('famous_programmer')
+        print('Hint: For the moment you _have_ to choose quote.')
         # Get the user's choice:
-        obj_type = raw_input('? ')
+        obj_type = input('? ')
 
         # Call the appropriate object factory:
         obj = eval(obj_type+".factory()") # e.g. quote.factory()

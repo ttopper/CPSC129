@@ -7,12 +7,9 @@ their matching numerical values in the universe array, i.e. 0 or 1. One
 alternative is to take advantage of Python’s built-in machinery for
 doing this.
 
-Remember when we began CPSC 128 that we used `input` rather than
-`raw_input` for reading values because input would evaluate the
-expression it read and return a python object. Look at the transcript
-below carefully and note that Python is able to figure out the type of
-the value entered and translate the input string into an object of the
-necessary type.
+Look at the transcript below carefully and note that Python is able to 
+figure out the type of the value entered and translate the input string 
+into an object of the necessary type.
 
     >>> x = input('Gimme a value: ')
     Gimme a value: 4
@@ -44,7 +41,7 @@ u = [
      [0, 0, 0, 0, 0],
     ]
 
-fname = raw_input('Name of file to store universe in: ')
+fname = input('Name of file to store universe in: ')
 outfile = open(fname, 'w')
 outfile.write(str(u))
 outfile.close()
@@ -53,8 +50,8 @@ infile = open(fname, 'r')
 input_line = infile.read()
 u = eval(input_line)
 
-print u
-print type(u)
+print(u)
+print(type(u))
 ```
 
 which produces this as output when it is run,

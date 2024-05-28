@@ -27,10 +27,10 @@ much like the code to display it onscreen, but has to open the file and
 then use `write` instead of `print` for output.
 
 ``` python
-fname = raw_input('Name of file to store universe in: ')
+fname = input('Name of file to store universe in: ')
 outfile = open(fname, 'w')
-for row in range(u_rows):
-    for col in range(u_cols):
+for row in range(U_ROWS):
+    for col in range(U_COLS):
         if u[row][col] == 1:
             outfile.write(LIVE_CELL+' ')
         elif u[row][col] == 0:
@@ -49,8 +49,8 @@ You will have to evaluate how easy it is to write code to read it from
 disk once you have completed the assignment.
 
 How about the size of the representation on disk? For each cell in the
-universe it stores two Bytes to disk, one for the cell and one for the
-space separating it from the next cell. In addition it stores a newline
+universe, it stores two Bytes to disk, one for the cell and one for the
+space separating it from the next cell. In addition, it stores a newline
 character to mark the end of each row. So for an r × c universe it uses
 (r × c × 2) + r Bytes. To make this more concrete lets consider a couple
 of specific universe sizes:
