@@ -24,10 +24,6 @@ import model # Was named MVC_model
 
 HTML5_template = open('HTML5_template.html','r').read()
 
-# This will not be a CGI app, but we will use the CGI module's
-# facilities for parsing form data.
-import cgi
-
 # We will modify BaseHTTPServer to create our server.
 import BaseHTTPServer
 

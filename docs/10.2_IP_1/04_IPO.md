@@ -1,10 +1,10 @@
 # IPO Programming
 
-With PIL installed and some test images to play with we can move on to
-image processing. In its overall structure image processing turns out to
-be a throwback to the beginning of CPSC 128 where we did IPO or Input,
-Processing, Output, programming. We’ll need to input images, process
-them and then output the processed result.
+With pillow installed and some test images to play with we can move on
+to image processing. In its overall structure image processing turns out
+to be a throwback to the beginning of CPSC 128 where we did IPO or
+Input, Processing, Output, programming. We’ll need to input images,
+process them, and then output the processed result.
 
 ## Input
 
@@ -42,8 +42,8 @@ in the upper left corner of the image:
 # x measuring across the image, and y down the image.
 for x in range(10):
     for y in range(10):
-        print pix[x,y],
-    print
+        print(pix[x,y], end= ' ')
+    print()
 ```
 
 The key thing to notice is that we have to use the notation `pix[x, y]`
@@ -64,7 +64,7 @@ The output from the code above is:
     160 158 158 164 168 171 177 168 140 145
 
 (This might remind you of [the topography problem in CPSC
-128](http://ttopper.yukoncollege.yk.ca/CPSC128.F12/M07_Dictionaries/M07_Assignment.md),
+128](https://ttopper.github.io/CPSC128/07_Dictionaries/90_Assignment_7/),
 and indeed in mathematical terms it is the same.)
 
 ## Output
@@ -72,26 +72,26 @@ and indeed in mathematical terms it is the same.)
 Having read our image in, let’s process it and output the result.
 
 ``` python
-print im.size # im.size is a tuple giving the size of image (cols,rows)
+print(im.size) # im.size is a tuple giving the size of image (cols,rows)
 
 for x in range(im.size[0]):
     for y in range(im.size[1]):
-        pix[x,y] = pix[x,y]/4
+        pix[x,y] = tuple(num//2 for num in pix[x,y])
         
 im.save("dkpenguins.png")
 
-print 'Done.'
+print('Done.')
 ```
 
-Note that PIL will try to guess the file format to write based on the
+Note that pillow will try to guess the file format to write based on the
 filename suffix (in this case png). You can also provide a format
 argument to specify the desired format.
 
 Here are the before and after images:
 
-![](penguins.png){width="230"} ![](dkpenguins.png){width="230"}
+![](penguins.png) ![](dkpenguins.png)
 
-As you can see, the effect of dividing each pixel value by 4 was to
+As you can see, the effect of dividing each pixel value by 2 was to
 decrease all the pixel values and thus darken the image.
 
  

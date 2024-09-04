@@ -138,7 +138,7 @@ class Maze:
                 # Always check for North and West doors.
                 # Door in North wall?
                 if self.cells[r][c].north.state == DOOR:
-                    # print 'Found a North door at:', r, ',', c # Debug
+                    # print('Found a North door at:', r, ',', c) # Debug
                     # Draw a BACKGROUND_COLOUR line segment over the WALL_COLOUR wall line.
                     pygame.draw.line(self.screen, BACKGROUND_COLOUR,
                                      (BORDER_WIDTH+c*self.grid_size + 1, BORDER_WIDTH+r*self.grid_size),
@@ -146,7 +146,7 @@ class Maze:
                                      )
                     
                 if self.cells[r][c].west.state == DOOR:
-                    # print 'Found a West door at:', r, ',', c # Debug
+                    # print('Found a West door at:', r, ',', c) # Debug
                     # Draw a BACKGROUND_COLOUR line segment over the WALL_COLOUR wall line.
                     pygame.draw.line(self.screen, BACKGROUND_COLOUR,
                                      (BORDER_WIDTH+c*self.grid_size, BORDER_WIDTH+r*self.grid_size + 1),
@@ -157,7 +157,7 @@ class Maze:
                 # above that are North doors for some higher cell).
                 if r == self.height - 1:
                     if self.cells[r][c].south.state == DOOR:
-                        # print 'Found a South door at:', r, ',', c # Debug
+                        # print('Found a South door at:', r, ',', c) # Debug
                         # Draw a BACKGROUND_COLOUR line segment over the WALL_COLOUR wall line.
                         pygame.draw.line(self.screen, BACKGROUND_COLOUR,
                                          (BORDER_WIDTH+c*self.grid_size + 1, BORDER_WIDTH+(r+1)*self.grid_size),
@@ -184,10 +184,10 @@ class Maze:
         
         # while visited_path is not empty:
         while visited_path:
-            # print 'visited_path =', visited_path #  Debug
+            # print('visited_path =', visited_path) #  Debug
             
             current_r, current_c = visited_path[-1]
-            # print 'Current cell is', current_r, current_c # Debug
+            # print('Current cell is', current_r, current_c) # Debug
             
             # Build list of current cell's visitable neighbours
             # Check four neighbours
@@ -204,13 +204,13 @@ class Maze:
                    and not self.cells[r][c].visited:
                     # Add cell to visitable list
                     visitable.append([r, c])
-            # print 'visitable =', visitable # Debug
+            # print('visitable =', visitable) # Debug
             
             # if visitable list is not empty:
             if visitable:
                 # Pick a cell randomly from the list
                 new_r, new_c = random.choice(visitable)
-                # print 'Moving into', new_r, new_c # Debug
+                # print('Moving into', new_r, new_c) # Debug
                 # Break wall between cells [TT: moved upwards] 
                 if (new_r, new_c) == (current_r-1, current_c):
                     self.cells[current_r][current_c].north.state = DOOR
@@ -221,7 +221,7 @@ class Maze:
                 elif (new_r, new_c) == (current_r+1, current_c):
                     self.cells[current_r][current_c].south.state = DOOR
                 else:
-                    print 'BIG error: Invalid coords!'
+                    print('BIG error: Invalid coords!')
                 # make chosen cell be the current cell
                 # add this cell [TT: was "previous cell"] to visited list
                 visited_path.append([new_r, new_c])
@@ -263,7 +263,7 @@ if __name__ =='__main__':
     # Prepare maze.
     m = Maze(25, 25)
     # break_walls(m) # Debug: Break a few walls for testing.
-    # print m # Debug
+    # print(m) # Debug
     m.carve()
     m.display()
     

@@ -16,6 +16,6 @@ response = '''
 '''
 
 form = cgi.FieldStorage()
-print 'Content-type: text/html\n'
-print template % (form['user'].value)
+print('Content-type: text/html\n')
+print(first_time % (form['user'].value))
 

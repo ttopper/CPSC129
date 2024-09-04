@@ -5,4 +5,4 @@ storyboard form. The arrows below show the possible paths from one
 display to another in response to HTML button clicks.
 
 ![Storyboard showing transitions between web page
-templates.](13_Storyboard.png){width="624"}
+templates.](13_Storyboard.png)

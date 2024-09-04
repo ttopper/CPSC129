@@ -9,10 +9,10 @@
 # but then to further partition only the portion that will contain the median.
 #
 def median(lst):
-    return _median(lst, len(lst)/2)
+    return _median(lst, len(lst)//2)
 
 def _median(lst, posn):
-    print lst, posn # Debugging
+    print(lst, posn) # Debugging
     pivot = lst[0]
     smaller = []
     larger = []
@@ -32,5 +32,5 @@ def _median(lst, posn):
 
 if __name__ == '__main__':
     lst = [37, 61, 42, 21, 19, 86, 95, 78, 54]
-    print lst
-    print median(lst)
+    print(lst)
+    print(median(lst))

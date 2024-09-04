@@ -2,8 +2,8 @@
 
 The focus this week is on a single function: `median()`. `median`’s job
 is to find the median value in a list of numbers. The median is defined
-to be the number in a set of numbers that separates the larger half”
-of the values from the lower half” of the values, i.e. if you take
+to be the number in a set of numbers that separates the larger “half”
+of the values from the lower “half” of the values, i.e. if you take
 the set of numbers and sort them, the median will be the number in the
 middle position. For example if your set of numbers is [37, 61, 42, 21,
 19, 86, 95, 78, 54] then the median is 54 because when you sort the
@@ -16,7 +16,7 @@ the list and extract the item at the middle index,
      
     def median(l):
         l.sort()
-        return l[len(l)/2]
+        return l[len(l)//2]
 
 This code is blessedly short, and since the good sorts, e.g. quicksort,
 Shellsort and heapsort, are O(_n_ log _n_) so is this algorithm. But can
@@ -28,10 +28,10 @@ One possibility is to do just enough sorting to identify the median. The
 idea would be not to sort the whole list, but just to sort the area in
 the middle. But how can we identify that area before beginning? The
 quicksort provides one approach if we successively partition just the
-partitions that contain the median. For example if our first
+partitions that contain the median. For example, if our first
 partitioning of the list produces two ranges one with 60% of the list
 and other with the remaining 40% we know the median must be in 60%
-portion so we then repartition just that half” and ignore the 40%
+portion, so we then repartition just that “half” and ignore the 40%
 portion. We continue in this way until we have worked our way down to a
 single element partition containing the median. Thus we very partially
 sort the entire list as we partition and only ever completely sort the
@@ -44,12 +44,12 @@ which could take time, and it will scramble the list which might not be
 allowable in some applications. Perhaps the whole sorting approach was a
 wrong turn. Looking back to the original definition The median is
 defined to be the number in a set of numbers that separates the larger
-half” of the values from the lower half” of the values” another
+“half” of the values from the lower “half” of the values, so another
 possibility suggests itself. The median will be the value in the list
 that has the same number of values larger than it as smaller than it. So
 we could find the median by considering each value in the list and
 counting the number of values smaller than it and the number of values
-larger that it. If they are equal then this value is the median.
+larger that it. If they are equal, then this value is the median.
 (Excluding **temporarily** the possibilities that there are an even
 number of items in the list, or that the median value may occur more
 than once in the list).
@@ -90,7 +90,7 @@ handle all possible lists.
 in the set, since then there may not be a middle value, e.g. [32, 19,
 84, 56] sorted is [19, 32, 56, 84] and there is no middle value.
 Conventional practice is to take the mean (average) of the two values on
-either side of the middle”, i.e. in this case we say the median is
+either side of the “middle”, i.e. in this case we say the median is
 (32 + 56)/2 = 44, even though 44 isn’t even a value in the set. Note
 that sets with an even number of values may have a median value that
 does occur in the set when it contains duplicate values, e.g. [42, 19,

@@ -9,7 +9,6 @@
 # Good thing I did, it revealed several bugs.
 
 import pygame
-import sys
 import time
 import random
 
@@ -51,14 +50,15 @@ for x in range(0, CELL_COLS+1):
 pygame.display.flip()
 
 # time.sleep(1)
-for i in range(1,CELL_ROWS*CELL_COLS/10):
+for i in range(1,CELL_ROWS*CELL_COLS//10):
     screen.blit(live_cell, (random.randint(0, CELL_COLS-1)*grid_size+1+BORDER_WIDTH,
                             random.randint(0, CELL_ROWS-1)*grid_size+1+BORDER_WIDTH))
     # time.sleep(0.2)
 pygame.display.flip()
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+pygame.quit()

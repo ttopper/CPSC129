@@ -7,5 +7,4 @@ of image creation commands.
 
 ## Sample output:
 
-![Sample output.](07_pygame4_output.png){width="606"
-height="425"}
+![Sample output.](07_pygame4_output.png)

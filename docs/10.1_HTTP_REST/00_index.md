@@ -15,7 +15,7 @@ Creating a specialized webserver:
 
 8. [A minimal HTTP server in
     Python](08_A_minimal_HTTP_server_in_python.md)
-9. [Demo: Testing object_server.py](09_Demo_Testing_object_server.md) (Need a video here!)
+9. [Testing object_server.py](09_Demo_Testing_object_server.md)
 10. [An ugly truth about
     browsers](10_The_ugly_truth_about_browsers.md)
 11. [Translating MVC + CRUD to
@@ -31,13 +31,10 @@ Creating a specialized webserver:
 
 Towards an Object Server:
 
-17. [1. Identify couplings to quote.py
-    [6:10]](17_To_object_server_1.md)
-18. [2. Object creation menu requirements
-    [5:00]](18_To_object_server_2.md)
-19. [3. Object creation menu Python code
-    [9:05]](19_To_object_server_3.md)
-20. [4. Final steps [6:10]](20_To_object_server_4.md)
+17. [1. Identify couplings to quote.py](17_To_object_server_1.md)
+18. [2. Object creation menu requirements](18_To_object_server_2.md)
+19. [3. Object creation menu Python code](19_To_object_server_3.md)
+20. [4. Final steps](20_To_object_server_4.md)
 21. [(A thing we’re not doing.)](21_Something_we_re_not_doing.md)
 22. [Summary](22_Summary.md)
 

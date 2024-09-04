@@ -12,7 +12,7 @@ subdirectory (’`./cgi-bin`’) will be served dynamically, i.e. it will
 attempt to run them as Python programs and return the program’s output
 to the client (i.e. browser). So things should be organized like this:
 
-![.](07_HTTPServerFileLayout.gif){width="596" height="223"}
+![.](07_HTTPServerFileLayout.gif)
 
 Go ahead:
 
@@ -20,7 +20,7 @@ Go ahead:
     in the `cgi-bin` directory.
 
     ``` python
-    print '''Content-type: text/html
+    print('''Content-type: text/html
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,13 +33,10 @@ Go ahead:
     <body>
     <h1>This is it! That's all.</h1>
     </body>
-    </html>'''
+    </html>''')
     ```
 
-2.  Navigate to `http://localhost/cgi-bin/testcgi.py`. (Note that as
-    long as you use localhost and are serving on port 80 you shouldn’t
-    specify the absolute path to the file. Instead the path will be
-    relative to the server root which is the directory `httpserver.py`
-    is in). You should see this display in your browser:
+2.  Navigate to `http://localhost:8080/cgi-bin/testcgi.py`. You should
+    see this display in your browser:
 
-![.](07_testcgi.output.png){width="300" height="77"}
+![.](07_testcgi.output.png)

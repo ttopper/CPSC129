@@ -18,8 +18,8 @@ def median(lst):
                     count_smaller += 1
                 elif value > item:
                     count_larger += 1
-            if count_smaller <= len(lst)/2 and count_larger <= len(lst)/2:
-                print 'Considered =', considered, 'Skipped =', skipped, 'Median =', 
+            if count_smaller <= len(lst)//2 and count_larger <= len(lst)//2:
+                print('Considered =', considered, 'Skipped =', skipped, 'Median =', end = ' ')
                 return item
             elif count_smaller > count_larger:
                 hi = item
@@ -29,12 +29,12 @@ def median(lst):
             skipped += 1
 
 if __name__ == '__main__':
-    print median([37, 61, 42, 21, 19, 86, 95, 78, 54])
-    print median([1])
-    print median([1, 42, 99])
-    print median([1, 42, 42, 42, 99])
-    print median([1, 5, 42, 42, 99])
-    print median([42, 42, 42, 42, 99])
+    print(median([37, 61, 42, 21, 19, 86, 95, 78, 54]))
+    print(median([1]))
+    print(median([1, 42, 99]))
+    print(median([1, 42, 42, 42, 99]))
+    print(median([1, 5, 42, 42, 99]))
+    print(median([42, 42, 42, 42, 99]))
     # < < < = = = >
     #       M
     # < < < = > > >
@@ -45,5 +45,5 @@ if __name__ == '__main__':
         lst = []
         for i in range(1000):
             lst.append(random.randint(1, 10000))
-        print median(lst)
+        print(median(lst))
     

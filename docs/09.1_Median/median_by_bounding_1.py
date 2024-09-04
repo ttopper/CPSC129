@@ -29,11 +29,12 @@ def median(lst):
         # < < < = = = = > >
         # in which case the <s and >s each account for less than half
         # the values.
-        if count_smaller <= len(lst)/2 and count_larger <= len(lst)/2:
+        if count_smaller <= len(lst)//2 and count_larger <= len(lst)//2:
             return item
 
 if __name__ == '__main__':
-    print median([37, 61, 42, 21, 19, 86, 95, 78, 54])
-    print median([1])
-    print median([1, 42, 42, 42, 99])
-    print median([42, 42, 42, 99])
+    print(median([37, 61, 42, 21, 19, 86, 95, 78, 54]))
+    print(median([1]))
+    print(median([1, 42, 99]))
+    print(median([1, 5, 42, 42, 42, 99]))
+    print(median([42, 42, 42, 99]))

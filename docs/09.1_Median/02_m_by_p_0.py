@@ -21,5 +21,5 @@ def median(lst):
 
 if __name__ == '__main__':
     lst = [37, 61, 42, 21, 19, 86, 95, 78, 54]
-    print lst
-    print median(lst)
+    print(lst)
+    print(median(lst))

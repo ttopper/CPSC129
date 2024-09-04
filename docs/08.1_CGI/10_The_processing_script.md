@@ -19,9 +19,9 @@ template = '''<!DOCTYPE html>
 </html>'''
 
 form = cgi.FieldStorage()
-print 'Content-type: text/html'
-print
-print template % (form['user'].value)
+print('Content-type: text/html')
+print()
+print(template % (form['user'].value))
 ```
 
 There’s not much to see. We import the `cgi` module so we can have it
@@ -55,7 +55,7 @@ There are several things to note about this program and process:
 
 The output in the browser should look something like this,
 
-![.](10_respond.py.output.png){width="106" height="35"}
+![.](10_respond.py.output.png)
 
 Still nothing to look at, but as programmers you realize that now we
 have input to our program, and output from it, we have all the tools we

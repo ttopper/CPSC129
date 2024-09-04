@@ -1,4 +1,4 @@
-CPSC 129: Object-oriented programming II. Winter 2012.
+CPSC 129: Object-oriented programming II. Fall 2024.
 
 # Convert miles to kilometres or vice versa!
 

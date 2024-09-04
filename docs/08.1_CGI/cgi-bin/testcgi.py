@@ -1,4 +1,4 @@
-print '''Content-type: text/html
+print('''Content-type: text/html
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -11,4 +11,4 @@ print '''Content-type: text/html
 <body>
 <h1>This is it! That's all.</h1>
 </body>
-</html>'''
+</html>''')

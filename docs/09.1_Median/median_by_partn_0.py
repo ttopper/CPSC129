@@ -12,7 +12,7 @@
 # 0 - Just partitioning the list into smaller and larger.
 
 def median(lst):
-    return _median(lst, len(lst)/2)
+    return _median(lst, len(lst)//2)
 
 def _median(lst, posn):
     # Re the leading underscore:
@@ -34,5 +34,5 @@ def _median(lst, posn):
 
 if __name__ == '__main__':
     lst = [37, 61, 42, 21, 19, 86, 95, 78, 54]
-    print lst
-    print median(lst)
+    print(lst)
+    print(median(lst))

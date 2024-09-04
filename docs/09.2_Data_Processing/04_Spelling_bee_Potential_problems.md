@@ -18,16 +18,16 @@ for example that each record in the contestant file does contain the
 number fields you expect it to, not more, and not less. Let’s say you
 opt to split a line to get the field values, e.g. running
 
-    (number, last_name, first_name) = split(line)
+    (number, last_name, first_name) = line.split(',')
 
 will produce an error if the value of `line` is `"Topper,Tim"`,
 
     >>> (number, first_name, last_name) = 'Topper,Tim'.split(',')
 
     Traceback (most recent call last):
-      File "<           pyshell#1>", line 1, in <              module>
-        (number, first_name, last_name) = 'Topper,Tim'.split(',')
-    ValueError: need more than 2 values to unpack
+      File "<pyshell#0>", line 1, in <module>
+        (number, last_name, first_name) = line.split(',')
+    ValueError: not enough values to unpack (expected 3, got 2)
     >>> 
 
 But a naive” user should not be confronted with a Python error

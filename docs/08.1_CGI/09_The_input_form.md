@@ -27,7 +27,7 @@ form values and returns some output. Here’s our input form
 
 Viewed in the browser it will look something like this,
 
-![.](09_respond.html.output.png){width="276" height="136"}
+![.](09_respond.html.output.png)
 
 Everything is set up by the lines of the form element:
 

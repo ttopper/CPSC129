@@ -2,7 +2,7 @@
 
 Edge detection is a first step in many machine vision systems. The idea
 is to identify the edges in the image and to use these edges as the
-basis for object recognition algorithms. What does edge” mean in this
+basis for object recognition algorithms. What does “edge” mean in this
 context? It means the visual edge between two regions of an image.
 Thinking back to the topography assignment in CPSC 128, edges are
 cliffs. At the visual boundary of a penguin’s back against the
@@ -84,7 +84,7 @@ for x in range(1, im.size[0]-1): # Q: Why does this start at 1 and not 0?
 dx.save('dx.png')
 dy.save('dy.png')
 
-print 'Done.'
+print('Done.')
 ```
 
 And here’s the result for a new image (chosen because it has strong

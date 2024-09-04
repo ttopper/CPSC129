@@ -13,5 +13,4 @@ Here we take our first step and move a shape down and across the screen.
 
 ## Sample output:
 
-![Sample output.](02_pygame_test_6.py.output.png){width="606"
-height="425"}
+![Sample output.](02_pygame_test_6.py.output.png)

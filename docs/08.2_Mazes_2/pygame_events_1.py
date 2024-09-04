@@ -22,3 +22,5 @@ while running:
     blueval += bluedir
     if blueval == 255 or blueval == 0: bluedir *= -1
     pygame.display.flip()
+
+pygame.quit()

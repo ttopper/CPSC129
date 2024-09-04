@@ -12,5 +12,4 @@ your own too.
 
 ## Sample output:
 
-![Sample output.](06_pygame3_output.png){width="606"
-height="425"}
+![Sample output.](06_pygame3_output.png)

@@ -11,10 +11,12 @@ Go ahead:
     since we want it to keep running daemon-style while we work on our
     other code. Double-clicking the icon for `httpserver.py` in Windows
     Explorer (NOT Internet Explorer) will start it running and display
-    its log messages in a console window. Stop it by closing the console
-    window.
+    its log messages in a console window.
 
-3.  Type the URL `http://localhost/yourhtmlfilename.html` in your
+3.  Type the URL `http://localhost:8080/yourhtmlfilename.html` in your
     browser address bar. The contents of the HTML file should be
     displayed in your browser. If not, get in touch and we’ll try to
     debug it.
+
+4.  When you are finished, stop the program by closing the console
+    window.

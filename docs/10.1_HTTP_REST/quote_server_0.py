@@ -66,14 +66,10 @@ test_form = '''<!DOCTYPE HTML>
 </html>
 '''
 
-# This will not be a CGI app, but we will use the CGI module's
-# facilities for parsing form data.
-import cgi
-
 # We will modify BaseHTTPServer to create our server.
-import BaseHTTPServer
+import http.server
 
-class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+class myHTTPHandler(http.server.BaseHTTPRequestHandler):
     # BaseHTTPRequestHandler will call do_XXX when receiving
     # a request specifying method XXX.
     #
@@ -83,26 +79,26 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         title = 'GET response'
         if self.path != '/':
             body = '<h1>Got a GET request.</h1><p>' + self.path + '</p>'
-            self.wfile.write( HTML5_template % (title, body))
+            self.wfile.write((HTML5_template % (title, body)).encode('utf-8'))
         else:
-            self.wfile.write( test_form )
+            self.wfile.write(test_form.encode('utf-8') )
             
     def do_POST(self):
         title = 'POST response'
         body = '<h1>Got a POST request.</h1>'
-        self.wfile.write( HTML5_template % (title, body))
+        self.wfile.write((HTML5_template % (title, body)).encode('utf-8'))
         
     def do_PUT(self):
         title = 'PUT response'
         body = '<h1>Got a PUT request.</h1>'
-        self.wfile.write( HTML5_template % (title, body))
+        self.wfile.write((HTML5_template % (title, body)).encode('utf-8'))
         
     def do_DELETE(self):
         title = 'DELETE response'
         body = '<h1>Got a DELETE request.</h1>'
-        self.wfile.write( HTML5_template % (title, body)) 
+        self.wfile.write((HTML5_template % (title, body)).encode('utf-8')) 
       
 if __name__ == '__main__':
     server_address= ('', 80)
-    httpd = BaseHTTPServer.HTTPServer(server_address, myHTTPHandler)
+    httpd = http.server.HTTPServer(server_address, myHTTPHandler)
     httpd.serve_forever()

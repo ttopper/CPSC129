@@ -1,9 +1,9 @@
 # object_server.py
 #
 # We will modify BaseHTTPServer to create our custom server.
-import BaseHTTPServer
+import http.server
 
-class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+class myHTTPHandler(http.server.BaseHTTPRequestHandler):
     # BaseHTTPRequestHandler will call do_XXX when receiving
     # a request specifying method XXX.
     #
@@ -116,7 +116,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 if __name__ == '__main__':
     PORT = 80
     server_address= ('', PORT)
-    httpd = BaseHTTPServer.HTTPServer(server_address, myHTTPHandler)
-    print 'Serving on port', PORT, '...'
+    httpd = http.server.HTTPServer(server_address, myHTTPHandler)
+    print('Serving on port', PORT, '...')
     httpd.serve_forever()
 

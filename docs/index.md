@@ -188,14 +188,14 @@
 ###Life 4: Renovations
 
 1. [A graphical interface to go with our graphical display](07.2_CGoL_4_GUI/01_The_goal.md)
-2. [Step 1: Make a plan [3:41]](07.2_CGoL_4_GUI/02_Step_1_Make_a_plan.md)
-3. [Step 2: Review existing code [8:58]](07.2_CGoL_4_GUI/03_Step_2_Review_existing_code.md)
-4. [Step 3: Test existing code [11:51]](07.2_CGoL_4_GUI/04_Step_3_Test_existing_code.md)
-5. [Step 4: Make room for the menu [4:35]](07.2_CGoL_4_GUI/05_Step_4_Make_room_for_the_menu.md)
-6. [Step 5: Refactoring interlude [12:26]](07.2_CGoL_4_GUI/06_Step_5_Refactoring_interlude.md)
-7. [Step 6: Display the menu icons [21:19]](07.2_CGoL_4_GUI/07_Step_6_Display_menu_icons.md)
-8. [Step 7: Map mouse clicks to actions [20:35]](07.2_CGoL_4_GUI/08_Step_7_Map_clicks_to_actions.md)
-9. [Step 8: Merge the UI and the simulation [11:09]](07.2_CGoL_4_GUI/09_Step_8_Merge_ui_and_simulation.md)
+2. [Step 1: Make a plan](07.2_CGoL_4_GUI/02_Step_1_Make_a_plan.md)
+3. [Step 2: Review existing code](07.2_CGoL_4_GUI/03_Step_2_Review_existing_code.md)
+4. [Step 3: Test existing code](07.2_CGoL_4_GUI/04_Step_3_Test_existing_code.md)
+5. [Step 4: Make room for the menu](07.2_CGoL_4_GUI/05_Step_4_Make_room_for_the_menu.md)
+6. [Step 5: Refactoring interlude](07.2_CGoL_4_GUI/06_Step_5_Refactoring_interlude.md)
+7. [Step 6: Display the menu icons](07.2_CGoL_4_GUI/07_Step_6_Display_menu_icons.md)
+8. [Step 7: Map mouse clicks to actions](07.2_CGoL_4_GUI/08_Step_7_Map_clicks_to_actions.md)
+9. [Step 8: Merge the UI and the simulation](07.2_CGoL_4_GUI/09_Step_8_Merge_ui_and_simulation.md)
 10. [life_gui_6.py: Ending point of the presentation; starting point for the assignment](07.2_CGoL_4_GUI/life_gui_6.py)
 
 ###[Assignment 7](Assignments/Assignment_07.md)
@@ -233,16 +233,14 @@
 ###Two Approaches to Median Finding: An Algorithm Development Case Study
 
 1. [Introduction](09.1_Median/01_Introduction.md)
-2. [Median by Partitioning v0 [4:30]](09.1_Median/02_median_by_partn_0.md)
-3. [Median by Partitioning v1 [8:20]](09.1_Median/03_median_by_partn_1.md)
-4. [Median by Partitioning v2 [6:10]](09.1_Median/04_median_by_partn_2.md)
-5. [Median by Partitioning v3 [2:25]](09.1_Median/05_median_by_partn_3.md)
-6. median_by_partition_3.py:[terse (just the code)](09.1_Median/05_m_by_p_3_terse.py.png),[verbose (includes explanations)](09.1_Median/05_m_by_p_3_verbose.py.png)
-7. [Median by Bounding v0 [5:35]](09.1_Median/06_median_by_bounding_0.md)
-8. [Median by Bounding v1 [5:00]](09.1_Median/07_median_by_bounding_1.md)
-9. [Median by Bounding v2 [3:50]](09.1_Median/08_median_by_bounding_2.md)
-10. [Median by Bounding v3 [6:25]](09.1_Median/09_median_by_bounding_3.md)
-11. [median_by_bounding_3.py](09.1_Median/09_m_by_b_3.py.png)
+2. [Median by Partitioning v0](09.1_Median/02_median_by_partn_0.md)
+3. [Median by Partitioning v1](09.1_Median/03_median_by_partn_1.md)
+4. [Median by Partitioning v2](09.1_Median/04_median_by_partn_2.md)
+5. [Median by Partitioning v3](09.1_Median/05_median_by_partn_3.md)
+6. [Median by Bounding v0 [5:35]](09.1_Median/06_median_by_bounding_0.md)
+7. [Median by Bounding v1 [5:00]](09.1_Median/07_median_by_bounding_1.md)
+8. [Median by Bounding v2 [3:50]](09.1_Median/08_median_by_bounding_2.md)
+9. [Median by Bounding v3 [6:25]](09.1_Median/09_median_by_bounding_3.md)
 
 ###Data Processing
 
@@ -277,10 +275,10 @@
 16. [Mapping to HTTP + URL pairs](10.1_HTTP_REST/15_Mapping_actions_to_HTTP_method_URL_pairs.md)
 17. [Actual Code (](10.1_HTTP_REST/16_Actual_code.md)Source files:[quote_server.py](10.1_HTTP_REST/quote_server_5.py),[quote.py](10.1_HTTP_REST/quote_3.py))
 18. Towards an Object Server:
-19. [1. Identify couplings to quote.py [6:10]](10.1_HTTP_REST/17_To_object_server_1.md)
-20. [2. Object creation menu requirements [5:00]](10.1_HTTP_REST/18_To_object_server_2.md)
-21. [3. Object creation menu Python code [9:05]](10.1_HTTP_REST/19_To_object_server_3.md)
-22. [4. Final steps [6:10]](10.1_HTTP_REST/20_To_object_server_4.md)
+19. [1. Identify couplings to quote.py](10.1_HTTP_REST/17_To_object_server_1.md)
+20. [2. Object creation menu requirements](10.1_HTTP_REST/18_To_object_server_2.md)
+21. [3. Object creation menu Python code](10.1_HTTP_REST/19_To_object_server_3.md)
+22. [4. Final steps](10.1_HTTP_REST/20_To_object_server_4.md)
 23. [(A thing we're not doing.)](10.1_HTTP_REST/21_Something_we_re_not_doing.md)
 24. [Summary](10.1_HTTP_REST/22_Summary.md)
 

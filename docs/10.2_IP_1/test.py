@@ -1,24 +1,37 @@
 # http://stackoverflow.com/questions/12798885/python-image-library-convert-pixels-to-2d-list
 
-#from PIL import Image
+from PIL import Image
 ##image = Image.open("3blks1.png")
 ##image.show()
 ##image.size
 ##dir(image)
 ##image.histogram()
 ##pix = image.load()
-##pix[0,0] --> (211, 211, 211, 255) RGBA
+###pix[0,0] --> (211, 211, 211, 255) RGBA
 ##
 ##
-##image = im.convert("L")
+##image = image.convert("L")
 ##pix = image.load() # pix is a pixel map access object
 ##pix[0,0]
 ##for i in range(10):
 ##	for j in range(10):
-##		print pix[i,j],
-##	print
-##im_copy = im.copy()
-##im.save('new.png') # im.save(outfile,format,options)
+##		print(pix[i,j], end = ' ')
+##	print()
+##im_copy = image.copy()
+##image.save('new.png') # im.save(outfile,format,options)
+
+##im = Image.open("faces1.png")
+##pix = im.load()
+##
+##print(im.size) # im.size is a tuple giving the size of image (cols,rows)
+##
+##for x in range(im.size[0]):
+##    for y in range(im.size[1]):
+##        #pix[x,y] = (pix[x,y][0]//2,pix[x,y][1]//2,pix[x,y][2]//2,pix[x,y][3]//2)
+##        pix[x,y] = tuple(num//2 for num in pix[x,y])
+##im.save("dkfaces.png")
+##
+##print('Done.')
 
 # load returns an access object that's attached to the image; to modify 
 # the image, just assign to the object
@@ -111,4 +124,4 @@ for x in range(1, im.size[0]-1): # Q: Why does this start at 1 and not 0?
 dx.save('dx.png')
 dy.save('dy.png')
 
-print 'Done.'
+print('Done.')

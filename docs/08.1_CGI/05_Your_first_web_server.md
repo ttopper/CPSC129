@@ -17,13 +17,13 @@ on your desktop. Here’s the code for the one we’ll use:
 # http://localhost/somepage.html
 # http://localhost/cgi-bin/somescript.py
 import os, sys
-from BaseHTTPServer import HTTPServer
-from CGIHTTPServer import CGIHTTPRequestHandler
+from http.server import HTTPServer
+from http.server import CGIHTTPRequestHandler
 
 webdir = '.'
-port = 80
+port = 8080
 
-print 'web directory "%s", port %s' % (webdir, port)
+print(f'web directory "{webdir:s}", port {port:d}')
 
 # Because Windows is brain dead ...
 if sys.platform[:3] == 'win':
@@ -37,6 +37,6 @@ server = HTTPServer( serveraddr, CGIHTTPRequestHandler)
 server.serve_forever()
 ```
 
-As you can see from the code it will serve over port 80. If you are
-already running a web server on that port just change the number to
-something unused, e.g. to 8080.
+As you can see from the code it will serve over port 8080. Port numbers
+less than 1024 require admin access, so they won't work well on the 
+University's computers.

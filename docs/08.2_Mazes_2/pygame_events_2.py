@@ -1,5 +1,6 @@
 # pygame_mouse_2.py
 import pygame
+import os
 
 BLACK = (0, 0, 0)
 SCREEN_WIDTH = 640
@@ -10,11 +11,12 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 screen.fill(BLACK)
 pygame.display.flip()
 
-while True:
+done = False
+while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            done = True
         elif event.type == pygame.MOUSEBUTTONUP:
-            print "mouse at (%d, %d)" % event.pos
+            print("mouse at", event.pos)
  
+pygame.quit()

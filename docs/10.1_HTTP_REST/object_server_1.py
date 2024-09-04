@@ -13,7 +13,6 @@
 # - Based on quote_server_5.py
 
 import quote
-import hockey_player
 import model # Was named MVC_model
 
 HTML5_template = open('HTML5_template.html','r').read()
@@ -38,14 +37,14 @@ style="text-align: center;">
 </form> 
 </div> 
 '''
-# This will not be a CGI app, but we will use the CGI module's
-# facilities for parsing form data.
-import cgi
 
-# We will modify BaseHTTPServer to create our custom server.
-import BaseHTTPServer
+# We will modify http.server to create our server.
+import http.server
 
-class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+# Needed to parse the arguments
+import urllib.parse
+
+class myHTTPHandler(http.server.BaseHTTPRequestHandler):
     # BaseHTTPRequestHandler will call do_XXX when receiving
     # a request specifying method XXX.
     #
@@ -53,7 +52,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     # self contains all the request information in its instance attributes.
     
     def do_GET(self):
-        print 'GET for', self.path
+        print('GET for', self.path)
         # HTML forms will append a ? to the URL,
         # remove it when present to standardize URLs.
         self.path = self.path.rstrip('?')
@@ -62,7 +61,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         #   1) GET /
         #       => return a page displaying all objects in the datastore.
         #   2) GET /object_creation_menu
-        #       => return the menu for creating objects.
+        #       => return the menu for selecting objects.
         #   3) GET /object_creation_form
         #       => return the form for creating objects.
         #   4) GET /uid/HTML_update_form
@@ -73,14 +72,14 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # 1) GET /
         #    => return a page displaying all objects in the datastore.
         if self.path == '/':
-            print 'Handling /'
+            print('Handling /')
             # Open the datastore and get a list of all the objects in it.
             m = model.Model('test_model')
             obj_set = m.listall()
             m.close()
             
             # Build the output page:            
-            title = 'Objectserver Home Page'
+            title = 'Ojectserver Home Page'
             title_block = '''
                 <h1>ObjectServer Home Page</h1> 
                  
@@ -106,15 +105,15 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.end_headers()
             
             # Return the page.
-            self.wfile.write(page)
+            self.wfile.write(page.encode('utf-8'))
             
         # 2) GET /object_creation_menu
-        #    => return the form for choosing an object type to create.
+        #    => return the form for creating objects.
         elif self.path == '/object_creation_menu':
             
             # Build the output page:
-            title = 'Quote creation menu'
-            body = CREATION_MENU
+            title = 'Object creation form'
+            body = quote.CREATION_FORM # Because at the moment we only have Quotes.
             # Inject the page body into the page template.
             page = HTML5_template % (title, body)
             
@@ -123,18 +122,15 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.end_headers()
             
             # Return the page.
-            self.wfile.write(page)
+            self.wfile.write(page.encode('utf-8'))
 
         # 3) GET /object_creation_form
         #    => return the form for creating objects.
-        elif self.path.startswith('/object_creation_form'):
-            # Parse query string (e.g. /object_creation_form?obj_type=quote)
-            # to get value of obj_type.
-            self.path, self.query_string = self.path.split('?', 1)
-            dummy, obj_type = self.query_string.split('=', 1)
+        elif self.path == '/object_creation_form':
+            
             # Build the output page:
-            title = '%s creation form' % (obj_type)
-            body = eval(obj_type + '.CREATION_FORM')
+            title = 'Object creation form'
+            body = quote.CREATION_FORM # Because at the moment we only have Quotes.
             # Inject the page body into the page template.
             page = HTML5_template % (title, body)
             
@@ -143,7 +139,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.end_headers()
             
             # Return the page.
-            self.wfile.write(page)
+            self.wfile.write(page.encode('utf-8'))
 
         # 4) GET /uid/HTML_update_form
         #    => return the update form for object uid.
@@ -162,11 +158,11 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.end_headers()
                 
-                self.wfile.write(page)
+                self.wfile.write(page.encode('utf-8'))
             else:
                 self.send_response(404) # Not found.
                 self.end_headers()                
-                print 'Error: Object %s not found!' % (uid)
+                print('Error: Object %s not found!' % (uid))
         
         # 5) GET /uid
         #    => return HTML representation of object uid.
@@ -188,11 +184,11 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.end_headers()
                 
-                self.wfile.write(page)
+                self.wfile.write(page.encode('utf-8'))
             else:
                 self.send_response(404) # Not found.
                 self.end_headers()
-                print 'Error: Object %s not found!' % (uid)
+                print('Error: Object %s not found!' % (uid))
             
     def do_POST(self):
         # There are three legitimate possible uses of POST we have to
@@ -224,11 +220,11 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # Parse the query string to get method field which means first
         # parsing the form arguments into a dictionary.
         self.query_string = self.rfile.read(int(self.headers['Content-Length']))
-        self.args = dict(cgi.parse_qsl(self.query_string))
+        self.args = dict(urllib.parse.parse_qsl(self.query_string))
         
         # 1) Is it a genuine POST?
-        if self.args['_method'] == 'POST':
-            print 'Got a genuine POST'
+        if self.args[b'_method'] == b'POST':
+            print('Got a genuine POST')
             # Check that it is posting to a credible URL,
             # i.e. one with form /create/obj_type,
             # i.e. one that at least begins with /create/
@@ -236,7 +232,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 # The type of object to create is given by the suffix after /create/
                 obj_type = self.path[len('/create/'):]
                                  
-                # Now try to create the object, e.g. .HTML_factory(self.args)
+                # Now try to create the object, e.g. objtype.HTML_factory(self.args)
                 obj = eval(obj_type + '.HTML_factory(self.args)')
 
                 # If creation was successful:         
@@ -254,27 +250,27 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 else:
                     self.send_response(500) # Internal server error.
                     self.end_headers()
-                    print 'POST Error: obj not created!'
+                    print('POST Error: obj not created!')
 
             # Otherwise POSTing to a disallowed URL.         
             else:
                 self.send_response(405) # Method not allowed by that resource.
                 self.end_headers()
-                print 'Error: Tried to POST to %s!' % (self.path)
+                print('Error: Tried to POST to %s!' % (self.path))
                     
         # 2) Is this POST tunneling a PUT?
-        elif self.args['_method'] == 'PUT':
+        elif self.args[b'_method'] == b'PUT':
             self.do_PUT()
             
         # 3) Is this POST tunneling a DELETE?
-        elif self.args['_method'] == 'DELETE':
+        elif self.args[b'_method'] == b'DELETE':
             self.do_DELETE()
 
         # 4) Got a bogus method.
         else:
             self.send_response(405) # Method not allowed.
             self.end_headers()
-            print 'POST Error: method %s not recognized!' % (self.args['_method'])
+            print('POST Error: method %s not recognized!' % (self.args[b'_method']))
                     
     def do_PUT(self):
         # Check if the query string has already been parsed
@@ -282,7 +278,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # If it wasn't then parse it now.
         if not self.args:
             self.query_string = self.rfile.read(int(self.headers['Content-Length']))
-            self.args = dict(cgi.parse_qsl(self.query_string))
+            self.args = dict(urllib.parse.parse_qsl(self.query_string))
                                  
         # Get the uid.  
         old_uid = self.path[1:] # Ignore the initial /
@@ -313,7 +309,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         else:
             self.send_response(500) # Internal server error.
             self.end_headers()
-            print 'UPDATE Error: obj not created!'
+            print('UPDATE Error: obj not created!')
             
     def do_DELETE(self):
         # Get the uid of the object to delete.
@@ -333,13 +329,13 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         else:
             self.send_response(500) # Internal server error.
             self.end_headers()
-            print 'DELETE failed'
+            print('DELETE failed')
         # In any event close the datastore.
         m.close()
       
 if __name__ == '__main__':
     PORT = 80
     server_address= ('', PORT)
-    httpd = BaseHTTPServer.HTTPServer(server_address, myHTTPHandler)
-    print 'Serving on port', PORT, '...'
+    httpd = http.server.HTTPServer(server_address, myHTTPHandler)
+    print('Serving on port', PORT, '...')
     httpd.serve_forever()

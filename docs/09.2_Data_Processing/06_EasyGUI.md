@@ -10,12 +10,10 @@ use GUI components for user interaction instead of the Python
 console[^*].
 
 EasyGUI is very easy to get started with. Its [brief
-tutorial](http://easygui.sourceforge.net/tutorial/index.html) explains
+tutorial](https://easygui.sourceforge.net/tutorial.html) explains
 almost all the language features. Here’s an artificial program
 ilustrating some of them. Copy and run it to see how it looks when it
-runs (don’t forget to [download and
-install](http://easygui.sourceforge.net/download/index.html) EasyGUI
-first).
+runs (don’t forget to install EasyGUI with pip first).
 
 ``` python
 # easygui_eg.py
@@ -55,9 +53,9 @@ for line in infile:
 
 # Prepare an appropriate output message...
 if found:
-    msg = 'No worries %s %s is registered.' % (first_name, last_name)
+    msg = f'No worries {first_name:s} {last_name:s} is registered.'
 else:
-    msg = '%s %s hasn’t registered yet.' % (first_name, last_name)
+    msg = f'{first_name:s} {last_name:s} hasn’t registered yet.'
 # ...and output it.
 easygui.msgbox(msg)
 ```

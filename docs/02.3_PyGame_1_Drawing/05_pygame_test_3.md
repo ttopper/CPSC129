@@ -4,8 +4,7 @@
 
 ## Sample output:
 
-![Sample output.](05_pygame2_output.png){width="606"
-height="425"}
+![Sample output.](05_pygame2_output.png)
 
 ## Note
 
@@ -15,7 +14,7 @@ that runs horizontally to the right, and a y-axis that runs vertically
 downward.
 
 ![The pygame coordinate
-system.](05_pygame_coordinate_system.png){width="600" height="400"}
+system.](05_pygame_coordinate_system.png)
 
 This means that a pygame coordinate (x,y) refers to column x and row y
 which is the opposite of the way lists of lists are addressed which is

@@ -23,16 +23,16 @@ if 'miles' in form:
     miles = float( form['miles'].value )
     km = miles * 1.609
     # and display the output.
-    print 'Content-type: text/html\n'
-    print output_template % (miles, km)
-elif form.has_key('km'):
+    print('Content-type: text/html\n')
+    print(output_template % (miles, km))
+elif 'km' in form:
     # If they filled in the km field, convert km to miles,
     km = float( form['km'].value )
     miles = km / 1.609
     # and display the output.
-    print 'Content-type: text/html\n'
-    print output_template % (miles, km)
+    print('Content-type: text/html\n')
+    print(output_template % (miles, km))
 else:
     # They filled in neither field so give them an input form to fill out.
-    print 'Content-type: text/html\n'
-    print input_template
+    print('Content-type: text/html\n')
+    print(input_template)

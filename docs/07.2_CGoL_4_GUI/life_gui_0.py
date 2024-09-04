@@ -2,7 +2,6 @@
 #
 # Graphical user interface for Conway's Game of Life.
 import pygame
-import sys
 import time
 import random
 
@@ -55,8 +54,10 @@ for i in range(1,100):
                             random.randint(0, U_ROWS)*grid_size+1))
 pygame.display.flip()
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
+pygame.quit()
+

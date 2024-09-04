@@ -6,5 +6,4 @@ It looks more like it’s moving if it doesn’t leave a trail behind it:
 
 ## Sample output:
 
-![Sample output.](03_pygame_test_7.py.output.png){width="605"
-height="424"}
+![Sample output.](03_pygame_test_7.py.output.png)

@@ -42,8 +42,8 @@ enough you might know those as BBS systems).
     preference. The server consults a list of formats in which it can
     provide the resource and picks the one most favoured by the client.
     The MIME specification describes how this content negotiation takes
-    place. Around [700 media
-    types](http://www.webmaster-toolkit.com/mime-types.shtml) are
+    place. [Many media
+    types](https://www.w3-tools.com/mime_types_list.html) are
     registered.
 
 These qualities enable HTTP to support several interrelated technologies

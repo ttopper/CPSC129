@@ -1,6 +1,7 @@
 # Heapsort
 
-Start by watching the portion of _Sorting Out Sorting_ that covers
+Start by watching the portion of 
+[_Sorting Out Sorting_](https://youtu.be/gtdfW3TbeYY?t=70) that covers 
 Heapsort again. At first Heapsort may look like some manic game of
 musical chairs with values dancing around a tree”. But if you watch
 carefully (or perhaps enough times!), a general pattern should become
@@ -83,7 +84,7 @@ not to bother starting with a do nothing branch,
 def reheap(lst, node):
     lc = left_child(node)
     rc = right_child(node)
-    if lst[lc] > lst[node] and lst[lc] >lst[rc]:
+    if lst[lc] > lst[node] and lst[lc] > lst[rc]:
         (lst[lc], lst[node]) = (lst[node], lst[lc])
         reheap(lst, lc)
     elif lst[rc] > lst[node]:
@@ -117,9 +118,9 @@ def reheap(lst, node, stop):
         reheap(lst, rc, stop)
 
 lst = [48, 32, 68, 18, 29, 71, 41]
-print 'Before:', lst
+print('Before:', lst)
 reheap(lst, 0, len(lst)-1)
-print 'After:', lst
+print('After:', lst)
 ```
 
 This works on a full tree, but it does assume that nodes always have
@@ -139,19 +140,21 @@ retrospect, with the experience we have gained writing reheap, it’s not
 hard to see that heapify just consists of calling reheap on all subtrees
 of the list from _the bottom up_,
 
-    # heapify.py
+```python
+# heapify.py
 
-    def parent(node):
-        return (node-1)/2
+def parent(node):
+    return (node-1)//2
 
-    def heapify(lst):
-        for node in range(parent(len(lst)-1), -1, -1):
-            reheap(lst, node, len(lst)-1)
+def heapify(lst):
+    for node in range(parent(len(lst)-1), -1, -1):
+        reheap(lst, node, len(lst)-1)
 
-    lst = [48, 32, 68, 18, 29, 71, 41]
-    print 'Before:', lst
-    heapify(lst)
-    print 'After:', lst
+lst = [48, 32, 68, 18, 29, 71, 41]
+print('Before:', lst)
+heapify(lst)
+print('After:', lst)
+```
 
 Now we just need to combine these to get a working Python heapsort:
 
@@ -165,7 +168,7 @@ def right_child( node ):
     return 2*node + 2
 
 def parent(node):
-    return (node-1)/2
+    return (node-1)//2
 
 
 def reheap(lst, node, stop):
@@ -173,7 +176,7 @@ def reheap(lst, node, stop):
     rc = right_child(node)
     if lc >= stop:
         return
-    if lst[lc] > lst[node] and lst[lc] >lst[rc]:
+    if lst[lc] > lst[node] and lst[lc] > lst[rc]:
         (lst[lc], lst[node]) = (lst[node], lst[lc])
         reheap(lst, lc, stop)
     elif lst[rc] > lst[node]:
@@ -186,16 +189,16 @@ def heapify(lst):
 
 def heapsort(lst):
     heapify(lst)
-    print 'Heaped:', lst
+    print('Heaped:', lst)
     for last in range(len(lst)-1, -1, -1):
         (lst[0], lst[last]) = (lst[last], lst[0])
         reheap(lst, 0, last-1)
-        print lst
+        print(lst)
         
 lst = [48, 32, 68, 18, 29, 71, 41]
-print 'Before:', lst
+print('Before:', lst)
 heapsort(lst)
-print 'After:', lst
+print('After:', lst)
 ```
 
 Which works on many but not all lists. Problem 2 on the assignment is to

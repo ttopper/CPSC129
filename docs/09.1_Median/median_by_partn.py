@@ -14,14 +14,14 @@
 # 2 - Add equal list and refine code.
 
 def median(lst):
-    return _median(lst, len(lst)/2)
+    return _median(lst, len(lst)//2)
 
 def _median(lst, posn):
     # Re the leading underscore:
     # According to PEP 8 [http://www.python.org/dev/peps/pep-0008/]
     # we should use one leading underscore in the names of non-public methods,
     # i.e. ones that are for internal use only.
-    print lst, posn # Debugging
+    print(lst, posn) # Debugging
 
     # Start by partitioning the list into a list of values smaller
     # than the pivot, a list of values equal to the pivot,
@@ -63,7 +63,7 @@ def _median(lst, posn):
 
 if __name__ == '__main__':
     lst = [37, 61, 42, 21, 19, 86, 95, 78, 54]
-    print median(lst)
-    print median([1])
-    print median([1, 42, 42, 42, 99])
+    print(median(lst))
+    print(median([1]))
+    print(median([1, 42, 42, 42, 99]))
     

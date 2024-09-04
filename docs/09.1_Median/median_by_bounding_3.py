@@ -29,7 +29,7 @@ def median(lst):
                     count_smaller = count_smaller + 1
                 elif value > item:
                     count_larger = count_larger + 1
-            if count_smaller <= len(lst)/2 and count_larger <= len(lst)/2:
+            if count_smaller <= len(lst)//2 and count_larger <= len(lst)//2:
                 return item, considered, skipped
             elif count_smaller > count_larger:
                 hi = item
@@ -39,10 +39,12 @@ def median(lst):
             skipped += 1
 
 if __name__ == '__main__':
-    print median([37, 61, 42, 21, 19, 86, 95, 78, 54])
-    print median([1])
-    print median([1, 42, 42, 42, 99])
-    print median([42, 42, 42, 99])
+    print(median([37, 61, 42, 21, 19, 86, 95, 78, 54]))
+    print(median([1]))
+    print(median([1, 42, 99]))
+    print(median([1, 42, 42, 42, 99]))
+    print(median([1, 5, 42, 42, 99]))
+    print(median([42, 42, 42, 42, 99]))
 
     # Build a big random list to get sense of how many computations
     # our bounding trick is saving us.
@@ -50,4 +52,4 @@ if __name__ == '__main__':
     lst = []
     for i in range(1000):
         lst.append(random.randint(1,100000))
-    print median(lst)
+    print(median(lst))

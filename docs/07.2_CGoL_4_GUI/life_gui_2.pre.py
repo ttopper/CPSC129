@@ -58,7 +58,7 @@ screen.fill(BLACK)
 draw_grid()
 # pygame.display.flip()
 # Randomly place some live cells.
-for i in range(1, U_ROWS*U_COLS/5):
+for i in range(1, U_ROWS*U_COLS//5):
     draw_cell(live_cell, random.randint(0, U_ROWS-1),
                           random.randint(0, U_COLS-1))
 pygame.display.flip()

@@ -15,8 +15,10 @@
 def HTML_factory(form_dict):
     '''Builds a Quote from the data returned in the form
     CREATION_FORM.'''
-    return Hockey_player(form_dict['name'], form_dict['goals'],
-                         form_dict['image'])
+    name = form_dict[b'name'].decode('utf-8')
+    goals = form_dict[b'goals'].decode('utf-8')
+    image = form_dict[b'image'].decode('utf-8')
+    return Hockey_player(name, goals, image)
 
 # Use this template for both creation via POST and update via PUT.
 CREATION_FORM = '''
@@ -94,18 +96,18 @@ class Hockey_player:
         return HTML_TEMPLATE % (self.image, self.name, self.goals, self.uid, self.uid, self.uid)
 
     def HTML_update_form(self):
-        return UPDATE_TEMPLATE % (self.name, self.image, self.goals, self.author)
+        return UPDATE_TEMPLATE % (self.name, self.image, self.goals)
 
 if __name__ == '__main__':
     def bordered(s):
         return len(s)*'='+'\n'+s+'\n'+len(s)*'-'
     
-    print bordered('Testing __init__() and __str__()')
+    print(bordered('Testing __init__() and __str__()'))
     p = Hockey_player( 'Gordie Howe', '1071', 'http://www.doubleextrapoint.com/images/stories/gordie-howe-puck.jpg')
-    print 'The Hockey_player p is:'
-    print '\t', p
-    print
+    print('The Hockey_player p is:')
+    print('\t', p)
+    print()
 
-    print bordered('Testing HTML()')
-    print 'Here’s the HTMl representation of p:'
-    print p.HTML()
+    print(bordered('Testing HTML()'))
+    print('Here’s the HTMl representation of p:')
+    print(p.HTML())

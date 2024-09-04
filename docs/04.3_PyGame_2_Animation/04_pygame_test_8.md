@@ -10,5 +10,4 @@ decide what will happen. Let’s make it seem to bounce off the edge.
 
 ## Sample output:
 
-![Sample output.](04_pygame_test_8.py.output.png){width="605"
-height="424"}
+![Sample output.](04_pygame_test_8.py.output.png)

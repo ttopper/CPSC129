@@ -8,5 +8,4 @@ Run this to find out:
 
 Not much to look at, but it’s good news all the same.
 
-![Sample output.](03_pygame0_output.png){width="606"
-height="425"}
+![Sample output.](03_pygame0_output.png)

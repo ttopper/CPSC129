@@ -24,7 +24,7 @@ software running why not just write a customized web server in Python so
 that we have complete control _and_ good performance? Since Python will
 be running the whole time, the cost of running a script reduces from
 loading a 4+MB language interpreter to loading a (say) 2KB script.
-Furthermore the code will be streamlined compared to a complete server
+Furthermore, the code will be streamlined compared to a complete server
 because it will only contain code for things that it will actually do,
 and not code for anything that anyone, anywhere might conceivably want
 it to do (as a general purpose web server must provide).

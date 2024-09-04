@@ -8,7 +8,7 @@ compete in a territory-wide competition.
 
 The format of this competition is fairly straightforward. Students in
 each category are asked one at a time to spell a word. If they spell it
-correctly they continue into later rounds. If they spell it incorrectly
+correctly, they continue into later rounds. If they spell it incorrectly,
 they are eliminated. The process continues until only one speller is
 left. Sometimes the best spellers are quite good and the competition
 exhausts the words for that grade level. When that happens they use
@@ -24,7 +24,7 @@ happened that a single student has been asked the same word twice.
 Computers are good where humans are weak (and vice versa of course):
 they are fast and systematic in their processing where we are slow and
 unreliable, so the suggestion has been made that the process be
-automated. You have been voluntold” to help them out.
+automated. You have been “voluntold” to help them out.
 
 They have given you a text file of the test words
 ([spelling_list.txt](02_spelling_list.txt)), a CSV (Comma Separated

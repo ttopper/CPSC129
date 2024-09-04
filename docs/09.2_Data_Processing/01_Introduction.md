@@ -14,7 +14,7 @@ cash flow statements and balance sheets. From the programmer’s point of
 view the challenges usually arise in handling the data and especially
 from its occasional absence (due to missing values) or format
 inconsistency rather than from tricky algorithms or complicated data
-structures. As one former student put it, it’s a chance to just do
+structures. As one former student put it, “it’s a chance to just do
 good old-fashioned programming”.
 
 There will be some new techniques to put to work, but they are

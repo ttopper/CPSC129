@@ -13,14 +13,14 @@
 # 1 - Add stopping condition; discover infinite loop.
 
 def median(lst):
-    return _median(lst, len(lst)/2)
+    return _median(lst, len(lst)//2)
 
 def _median(lst, posn):
     # Re the leading underscore:
     # According to PEP 8 [http://www.python.org/dev/peps/pep-0008/]
     # we should use one leading underscore in the names of non-public methods,
     # i.e. ones that are for internal use only.
-    print lst, posn # Debugging
+    print(lst, posn) # Debugging
 
     # Stopping condition:
     if len(lst) == 1:
@@ -55,4 +55,4 @@ def _median(lst, posn):
 
 if __name__ == '__main__':
     lst = [37, 61, 42, 21, 19, 86, 95, 78, 54]
-    print median(lst)
+    print(median(lst))

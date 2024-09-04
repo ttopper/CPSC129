@@ -20,9 +20,9 @@ particular exception. Simple example:
 
 ``` python
 try:
-    x = int(raw_input("Please enter an integer value: "))
+    x = int(input("Please enter an integer value: "))
 except ValueError:
-    print "Give me an integer damnit!"
+    print("Give me an integer damnit!")
 ```
 
 If I run it,
@@ -36,11 +36,11 @@ And here it is dressed up a bit,
 done = False
 while not done:
     try:
-        x = int(raw_input('Please enter an integer value: '))
+        x = int(input('Please enter an integer value: '))
         done = True
     except ValueError:
-        print 'Give me an integer damnit!'
-print 'Thanks!'
+        print('Give me an integer damnit!')
+print('Thanks!')
 ```
 
 and its output when run (by an idiot),
@@ -57,12 +57,12 @@ and its output when run (by an idiot),
 Now how did I know to watch for a `ValueError` exception in that code?
 Because I’d seen it when running the code without exception handling:
 
-    >>> x = int(raw_input('Please enter an integer value: '))
+    >>> x = int(input('Please enter an integer value: '))
     Please enter an integer value: 4.5
 
     Traceback (most recent call last):
-      File "<          pyshell#22>", line 1, in <              module>
-        x = int(raw_input('Please enter an integer value: '))
+      File "<pyshell#0>", line 1, in <module>
+        x = int(input('Please enter an integer value: '))
     ValueError: invalid literal for int() with base 10: '4.5'
     >>> 
 
@@ -75,21 +75,21 @@ to us and offering us a handle to deal with the problem we had
     >>> 'tim'.sort()
 
     Traceback (most recent call last):
-      File "<          pyshell#26>", line 1, in <              module>
+      File "<pyshell#1>", line 1, in <module>
         'tim'.sort()
     AttributeError: 'str' object has no attribute 'sort'
     >>> 10/0
 
     Traceback (most recent call last):
-      File "<          pyshell#27>", line 1, in <              module>
+      File "<pyshell#2>", line 1, in <module>
         10/0
-    ZeroDivisionError: integer division or modulo by zero
+    ZeroDivisionError: division by zero
     >>> '1' + 1
 
     Traceback (most recent call last):
-      File "<          pyshell#28>", line 1, in <              module>
+      File "<pyshell#3>", line 1, in <module>
         '1' + 1
-    TypeError: cannot concatenate 'str' and 'int' objects
+    TypeError: can only concatenate str (not "int") to str
     >>> 
 
 The Python documentation provides [a complete list of built-in
@@ -104,20 +104,20 @@ can recover from,
 ``` python
 >>> b = 0
 >>> try:
-    print a/b
+    print(a/b)
 except NameError:
-    print 'Either a or b, or both, don’t exist.'
+    print('Either a or b, or both, don’t exist.')
 except ZeroDivisionError:
-    print 'Dang, b must be 0.'
+    print('Dang, b must be 0.')
 
 Either a or b, or both, don't exist.
 >>> a = 5
 >>> try:
-    print a/b
+    print(a/b)
 except NameError:
-    print 'Either a or b, or both, don’t exist.'
+    print('Either a or b, or both, don’t exist.')
 except ZeroDivisionError:
-    print 'Dang, b must be 0.'
+    print('Dang, b must be 0.')
 
 Dang, b must be 0.
 >>>

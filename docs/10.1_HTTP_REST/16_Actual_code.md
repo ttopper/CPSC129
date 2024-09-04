@@ -44,14 +44,13 @@ import model # Was named MVC_model
 
 HTML5_template = open('HTML5_template.html','r').read()
 
-# This will not be a CGI app, but we will use the CGI module's
-# facilities for parsing form data.
-import cgi
+# We will modify http.server to create our server.
+import http.server
 
-# We will modify BaseHTTPServer to create our custom server.
-import BaseHTTPServer
+# Needed to parse the arguments
+import urllib.parse
 
-class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+class myHTTPHandler(http.server.BaseHTTPRequestHandler):
     # BaseHTTPRequestHandler will call do_XXX when receiving
     # a request specifying method XXX.
     #
@@ -59,7 +58,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     # self contains all the request information in its instance attributes.
     
     def do_GET(self):
-        print 'GET for', self.path
+        print('GET for', self.path)
         # HTML forms will append a ? to the URL,
         # remove it when present to standardize URLs.
         self.path = self.path.rstrip('?')
@@ -77,7 +76,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # 1) GET /
         #    => return a page displaying all objects in the datastore.
         if self.path == '/':
-            print 'Handling /'
+            print('Handling /')
             # Open the datastore and get a list of all the objects in it.
             m = model.Model('test_model')
             obj_set = m.listall()
@@ -110,7 +109,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.end_headers()
             
             # Return the page.
-            self.wfile.write(page)
+            self.wfile.write(page.encode('utf-8'))
             
         # 2) GET /object_creation_form
         #    => return the form for creating objects.
@@ -127,7 +126,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.end_headers()
             
             # Return the page.
-            self.wfile.write(page)
+            self.wfile.write(page.encode('utf-8'))
 
         # 3) GET /uid/HTML_update_form
         #    => return the update form for object uid.
@@ -146,11 +145,11 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.end_headers()
                 
-                self.wfile.write(page)
+                self.wfile.write(page.encode('utf-8'))
             else:
                 self.send_response(404) # Not found.
                 self.end_headers()                
-                print 'Error: Object %s not found!' % (uid)
+                print('Error: Object %s not found!' % (uid))
         
         # 4) GET /uid
         #    => return HTML representation of object uid.
@@ -172,11 +171,11 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.end_headers()
                 
-                self.wfile.write(page)
+                self.wfile.write(page.encode('utf-8'))
             else:
                 self.send_response(404) # Not found.
                 self.end_headers()
-                print 'Error: Object %s not found!' % (uid)
+                print('Error: Object %s not found!' % (uid))
             
     def do_POST(self):
         # There are three legitimate possible uses of POST we have to
@@ -208,11 +207,11 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # Parse the query string to get method field which means first
         # parsing the form arguments into a dictionary.
         self.query_string = self.rfile.read(int(self.headers['Content-Length']))
-        self.args = dict(cgi.parse_qsl(self.query_string))
+        self.args = dict(urllib.parse.parse_qsl(self.query_string))
         
         # 1) Is it a genuine POST?
-        if self.args['_method'] == 'POST':
-            print 'Got a genuine POST'
+        if self.args[b'_method'] == b'POST':
+            print('Got a genuine POST')
             # Check that it is posting to a credible URL,
             # i.e. one with form /create/obj_type,
             # i.e. one that at least begins with /create/
@@ -238,27 +237,27 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 else:
                     self.send_response(500) # Internal server error.
                     self.end_headers()
-                    print 'POST Error: obj not created!'
+                    print('POST Error: obj not created!')
 
             # Otherwise POSTing to a disallowed URL.         
             else:
                 self.send_response(405) # Method not allowed by that resource.
                 self.end_headers()
-                print 'Error: Tried to POST to %s!' % (self.path)
+                print('Error: Tried to POST to %s!' % (self.path))
                     
         # 2) Is this POST tunneling a PUT?
-        elif self.args['_method'] == 'PUT':
+        elif self.args[b'_method'] == b'PUT':
             self.do_PUT()
             
         # 3) Is this POST tunneling a DELETE?
-        elif self.args['_method'] == 'DELETE':
+        elif self.args[b'_method'] == b'DELETE':
             self.do_DELETE()
 
         # 4) Got a bogus method.
         else:
             self.send_response(405) # Method not allowed.
             self.end_headers()
-            print 'POST Error: method %s not recognized!' % (self.args['_method'])
+            print('POST Error: method %s not recognized!' % (self.args[b'_method']))
                     
     def do_PUT(self):
         # Check if the query string has already been parsed
@@ -266,7 +265,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # If it wasn't then parse it now.
         if not self.args:
             self.query_string = self.rfile.read(int(self.headers['Content-Length']))
-            self.args = dict(cgi.parse_qsl(self.query_string))
+            self.args = dict(urllib.parse.parse_qsl(self.query_string))
                                  
         # Get the uid.  
         old_uid = self.path[1:] # Ignore the initial /
@@ -297,7 +296,7 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         else:
             self.send_response(500) # Internal server error.
             self.end_headers()
-            print 'UPDATE Error: obj not created!'
+            print('UPDATE Error: obj not created!')
             
     def do_DELETE(self):
         # Get the uid of the object to delete.
@@ -317,16 +316,17 @@ class myHTTPHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         else:
             self.send_response(500) # Internal server error.
             self.end_headers()
-            print 'DELETE failed'
+            print('DELETE failed')
         # In any event close the datastore.
         m.close()
       
 if __name__ == '__main__':
     PORT = 80
     server_address= ('', PORT)
-    httpd = BaseHTTPServer.HTTPServer(server_address, myHTTPHandler)
-    print 'Serving on port', PORT, '...'
+    httpd = http.server.HTTPServer(server_address, myHTTPHandler)
+    print('Serving on port', PORT, '...')
     httpd.serve_forever()
+
 ```
 
 ``` python
@@ -366,14 +366,16 @@ if __name__ == '__main__':
 
 def console_factory():
     '''Handles console interaction required to create a new Quote object.'''
-    author = raw_input('Who is the author of the quote? ')
-    text = raw_input('What did they say or write? ')
+    author = input('Who is the author of the quote? ')
+    text = input('What did they say or write? ')
     return Quote(author, text)
 
 def HTML_factory(form_dict):
     '''Builds a Quote from the data returned in the form
     CREATION_FORM.'''
-    return Quote(form_dict['author'], form_dict['text'])
+    author = form_dict[b'author'].decode('utf-8')
+    text = form_dict[b'text'].decode('utf-8')
+    return Quote(author, text)
 
 # Use this template for both creation via POST and update via PUT.
 CREATION_FORM = '''
@@ -457,50 +459,50 @@ class Quote:
     def console_update(self):
         '''Handles the console interaction required to modify a Quote object.'''
         
-        print 'The current author is:', self.author
-        change = raw_input('Modify author (y/n)? ')
+        print('The current author is:', self.author)
+        change = input('Modify author (y/n)? ')
         if change in ['y', 'Y']:
-            self.author = raw_input('Enter modified author: ')
-        print 'The current text is:', self.text
-        change = raw_input('Modify text (y/n)? ')
+            self.author = input('Enter modified author: ')
+        print('The current text is:', self.text)
+        change = input('Modify text (y/n)? ')
         if change in ['y', 'Y']:
-            self.text = raw_input('Enter modified text: ')
+            self.text = input('Enter modified text: ')
         self.uid = str(hash('Quote' + self.author + self.text))        
 
 if __name__ == '__main__':
     def bordered(s):
         return len(s)*'='+'\n'+s+'\n'+len(s)*'-'
     
-    print bordered('Testing __init__() and __str__()')
+    print(bordered('Testing __init__() and __str__()'))
     q = Quote( 'Kent Beck', 'Optimism is an occupational hazard of programming: testing is the treatment.')
     r = Quote( 'Brian Kernighan', 'Controlling complexity is the essence of computer programming.')
-    print 'The Quote q is:'
-    print '\t', q
-    print 'The Quote r is:'
-    print '\t', r
-    print
+    print('The Quote q is:')
+    print('\t', q)
+    print('The Quote r is:')
+    print('\t', r)
+    print()
 
-    print bordered('Testing HTML()')
-    print 'Here’s the HTMl representation of q:'
-    print q.HTML()
+    print(bordered('Testing HTML()'))
+    print('Here’s the HTMl representation of q:')
+    print(q.HTML())
 
-##    print bordered('Testing console_factory()')
+##    print(bordered('Testing console_factory()'))
 ##    s = console_factory()
-##    print 'Here’s the new Quote object:'
-##    print '\t', s
-##    print 'Did factory create a Quote object?',
-##    print type(s) == type(q) # Checks that factory is returning a Quote object.
-##    print
+##    print('Here’s the new Quote object:')
+##    print('\t', s)
+##    print('Did factory create a Quote object?',)
+##    print(type(s) == type(q)) # Checks that factory is returning a Quote object.
+##    print()
 ##
-##    print bordered('Testing console_update()')
-##    print 'The Quote q before:'
-##    print '\t', q
-##    print
-##    print 'Calling console_update():'
-##    print
+##    print(bordered('Testing console_update()'))
+##    print('The Quote q before:')
+##    print('\t', q)
+##    print()
+##    print('Calling console_update():')
+##    print()
 ##    q.console_update()
-##    print
-##    print 'The Quote q after:'
-##    print '\t', q
-##    print
+##    print()
+##    print('The Quote q after:')
+##    print('\t', q)
+##    print()
 ```

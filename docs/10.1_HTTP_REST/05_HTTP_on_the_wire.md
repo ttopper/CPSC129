@@ -2,33 +2,33 @@
 
 The HTTP protocol is a very simple one, a key to its widespread
 implementation and thus its eventual success. A request consists of a
-sequence of lines of text.The first one specifies the HTTP method
+sequence of lines of text. The first one specifies the HTTP method
 (verb), the resource (by its URL, or, rarely, its URI) being requested
 and the HTTP protocol version, e.g.
 
     GET /index.html HTTP/1.0
 
 There are four key HTTP
-methods<sup>[^*](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)</sup>,
+methods<sup>[^*](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)[^**](https://www.rfc-editor.org/rfc/rfc9110.html#name-methods)</sup>,
 ([all of them](http://en.wikipedia.org/wiki/Http#Request_methods))
 
 GET
-:   The GET method means retrieve whatever information ... is
+:   “The GET method means retrieve whatever information ... is
     identified by the Request-URI. If the Request-URI refers to a
     data-producing process, it is the produced data which shall be
     returned as the entity in the response...”
 
 PUT
-:   The PUT method requests that the enclosed entity be stored under
+:   “The PUT method requests that the enclosed entity be stored under
     the supplied Request-URI.”
 
 POST
-:   The POST method is used to ... [provide] a block of data, such
+:   “The POST method is used to ... [provide] a block of data, such
     as the result of submitting a form, to a data-handling process;
     extend a database though an append operation.”
 
 DELETE
-:   The DELETE method requests that the origin server delete the
+:   “The DELETE method requests that the origin server delete the
     resource identified by the Request-URI.”
 
 The remaining lines, if any, are optional header lines that modify the

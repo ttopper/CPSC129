@@ -197,7 +197,7 @@ class Maze:
             if visitable:
                 # pick a cell randomly from the list
                 new_r, new_c = random.choice(visitable)
-                # print 'Moving into', new_r, new_c # Debug
+                # print('Moving into', new_r, new_c) # Debug
                 # [TT: moved upwards] break wall between cells
                 if (new_r, new_c) == (current_r-1, current_c):
                     self.cells[current_r][current_c].north.state = DOOR
@@ -208,7 +208,7 @@ class Maze:
                 elif (new_r, new_c) == (current_r+1, current_c):
                     self.cells[current_r][current_c].south.state = DOOR
                 else:
-                    print 'BIG error: Invalid coords!'
+                    print('BIG error: Invalid coords!')
                 # make chosen cell be the current cell
                 # add this [TT: was "previous"] cell to visited list
                 visited_path.append([new_r, new_c])
@@ -240,7 +240,7 @@ def break_walls(m):
 
 if __name__ =='__main__':
     # Prepare maze.
-    m = Maze(1, 1)
+    m = Maze(25, 25)
     # break_walls(m)
     # print m
     m.carve()

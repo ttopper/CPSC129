@@ -37,13 +37,13 @@ U_COLS = 40 # cols in the Life universe.
 CELL_SIZE = 16
 GRID_SIZE = CELL_SIZE + 1 # + 1 allows for 1 pixel border on LHS of cell.
 MENU_HEIGHT = 16
-SCREEN_BORDER = 10
-SCREEN_HEIGHT = U_ROWS*GRID_SIZE + 1 + 2*SCREEN_BORDER + MENU_HEIGHT # + 1 allows for 1 pixel border on RHS of screen.
-SCREEN_WIDTH = U_COLS*GRID_SIZE + 1 + 2*SCREEN_BORDER
+BORDER_WIDTH = 10
+SCREEN_HEIGHT = U_ROWS*GRID_SIZE + 1 + 2*BORDER_WIDTH + MENU_HEIGHT # + 1 allows for 1 pixel border on RHS of screen.
+SCREEN_WIDTH = U_COLS*GRID_SIZE + 1 + 2*BORDER_WIDTH
 LIVE_CELL = pygame.image.load("Aqua-Ball-icon.png")
 
 # Game States:
-(PAUSE, STEP, PLAY) = range(3)
+(PAUSE, STEP, PLAY) = list(range(3))
 
 # Colour definitions.
 BLACK = (0, 0, 0)
@@ -66,25 +66,25 @@ def load():
     #
     # What to do if the size of the universe in the file is not the same
     # as ours? If it is smaller? If it is larger?
-    print 'Running load' # For debugging.
+    print('Running load') # For debugging.
     
 def save():
     # Set state to PAUSE,
     # conduct a dialogue about what file to save to,
     # and save it.
-    print 'Running save' # For debugging.
+    print('Running save') # For debugging.
     
 def pause():
     # Set state to PAUSE.
-    print 'Running pause' # For debugging.
+    print('Running pause') # For debugging.
     
 def step():
     # Set state to STEP.
-    print 'Running step' # For debugging.
+    print('Running step') # For debugging.
     
 def play():
     # Set state to PLAY.
-    print 'Running play' # For debugging.
+    print('Running play') # For debugging.
     
 def edit():
     # Set state to PAUSE.
@@ -92,16 +92,16 @@ def edit():
     #     Get mouse click coords.
     #     Convert to cell coords.
     #     Flip state of cell in universe AND onscreen.
-    print 'Running edit' # For debugging.
+    print('Running edit') # For debugging.
     
 def clear():
     # Set state to PAUSE.
     # Clear the universe, i.e. make all cells dead.
     # Clear the screen.
-    print 'Running clear' # For debugging.
+    print('Running clear') # For debugging.
     
 def null():
-    print 'Doing nothing' # For debugging.
+    print('Doing nothing') # For debugging.
     pass
 
 #...............................................................................
@@ -133,8 +133,8 @@ menu = [ [load, "folder.png"],
        ]
 
 # Define the onscreen menu area.
-menu_area = Rectangle(SCREEN_BORDER, SCREEN_BORDER, SCREEN_BORDER + MENU_HEIGHT,
-                      SCREEN_WIDTH - SCREEN_BORDER)
+menu_area = Rectangle(BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH + MENU_HEIGHT,
+                      SCREEN_WIDTH - BORDER_WIDTH)
 
 # Load the icon images from the files, appending them to the menu list entries,
 # and drawing them on the screen.
@@ -145,8 +145,8 @@ for i in range(len(menu)):
 #...............................................................................
 # Define the game area.
 #
-game_area = Rectangle(SCREEN_BORDER + MENU_HEIGHT, SCREEN_BORDER,
-                      SCREEN_HEIGHT - SCREEN_BORDER - 1, SCREEN_WIDTH - SCREEN_BORDER - 1)
+game_area = Rectangle(BORDER_WIDTH + MENU_HEIGHT, BORDER_WIDTH,
+                      SCREEN_HEIGHT - BORDER_WIDTH - 1, SCREEN_WIDTH - BORDER_WIDTH - 1)
 # Draw the Universe grid.
 #
 # Draw the horizontal lines:
@@ -191,7 +191,7 @@ while True:
             # print "mouse at (%d, %d)" % (x, y) # For debugging
             # print menu_area.inside(x, y) # For debugging
             if menu_area.inside(x, y):
-                menu_position = (x - menu_area.left)/GRID_SIZE
+                menu_position = (x - menu_area.left)//GRID_SIZE
                 # print 'Menu item: ', menu_position # For debugging
                 if menu_position < len(menu):
                     # Invoke the function at this position in the menu.

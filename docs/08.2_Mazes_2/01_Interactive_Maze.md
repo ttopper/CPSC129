@@ -3,13 +3,13 @@
 A couple of weeks ago we wrote code to create mazes. Let’s add code so
 that people can try to solve them. We’ll modify [maze_6.py](maze_6.py)
 so that our users can try to solve it by moving an icon (perhaps our
-standby Aqua-Ball-icon.png: ![](Aqua-Ball-icon.png){width="16"
-height="16"}) through it. They should be able to control the icon with
-either the mouse (by clicking in the cell they want it to move to) or
-the arrow keys (to try and move it up, down, left or right). The program
-should prevent them from moving the icon through walls, and should be
-able to tell when they have won and maybe play a triumphant sound --- or
-at least beep (cheerfully rather than gratingly!).
+standby Aqua-Ball-icon.png: ![](Aqua-Ball-icon.png) through it. They
+should be able to control the icon with either the mouse (by clicking in
+the cell they want it to move to) or the arrow keys (to try and move it
+up, down, left or right). The program should prevent them from moving
+the icon through walls, and should be able to tell when they have won
+and maybe play a triumphant sound --- or at least beep (cheerfully
+rather than gratingly!).
 
 The pseudocode is fairly straightforward:
 
@@ -54,11 +54,11 @@ Notes:
     to `tick()` so that Pygame resource usage does not spike, while
     keeping the game responsive.
 
-2.  Similarly we’ll use `pygame.event.wait()` both so that our program
+2.  Similarly, we’ll use `pygame.event.wait()` both so that our program
     will get along well with others, and so that our program will only
     ever handle one event per main event loop. According to [the pygame
     documentation](http://www.pygame.org/docs/ref/event.html#pygame.event.wait)
-    it: Returns a single event from the queue. If the queue is empty
+    it: "Returns a single event from the queue. If the queue is empty
     this function will wait until one is created. The event is removed
     from the queue once it has been returned. While the program is
     waiting it will sleep in an idle state. This is important for
@@ -85,14 +85,12 @@ Notes:
         # Check that pygame.mixer was imported successfully.
         if not pygame.mixer:
             return NoneSound()
-        # Build OS independent pathname to requested sound file.
-        fullname = os.path.join('data', name)
         # Now try loading the sound file.
         try:
-            sound = pygame.mixer.Sound(fullname)
-        except pygame.error, message:
-            print 'Cannot load sound:', wav
-            raise SystemExit, message
+            sound = pygame.mixer.Sound(name)
+        except:
+            print('Cannot load sound:', name)
+            raise SystemExit
         return sound
 
     sound = load_sound(filename)
@@ -102,11 +100,10 @@ Notes:
     small one with a decent selection for small programming projects for
     the undiscriminating user is
     <http://www.mediacollege.com/downloads/sound-effects/>. I use it
-    because it is small, and the sound effects are free (as in speech,
-    and less importantly, beer) to download.
+    because it is small, and the sound effects are free to download.
 
 4.  You can fade the maze away by redrawing it in increasingly dim
-    colours. You could dissolve” it by randomly removing walls until
+    colours. You could dissolve it by randomly removing walls until
     there are none left. Crumbling the maze is left as a challenge.
 
 Enhancements are possible and will be tested with great relish. For

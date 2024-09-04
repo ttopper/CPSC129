@@ -1,13 +1,4 @@
 # Demo: Testing object_server.py
 
-We can test object_server.py using an HTTP client. Two common
-possibilities are the comand line client [curl](http://curl.haxx.se/)
-and the Python-based client [RESTClient](http://restclient.org/).
-
-Demonstrate using curl.
-
--   curl localhost # Issue GET for homepage
--   curl -X method url, e.g. curl -X GET localhost is equivalent to
-    above.
-
-Demonstrate RESTClient.
+We can test our object_server.py using an internet browser. If you enter
+http://localhost in the address bar it will display our page.

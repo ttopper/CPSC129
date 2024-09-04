@@ -1,7 +1,7 @@
 1,Topper,Tim
-2,Findlay,Tara
-3,Lane,Chris
-4,Butler,Brian
-5,Rutherford,Doug
-6,Jakesta,Will
-7,Lansdowne,Bryan
+2,Turing,Alan
+3,Hopper,Grace
+4,von Neumann,John
+5,Lovelace,Ada
+6,Conway,John
+7,Chatfield-Reed,Kate

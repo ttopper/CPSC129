@@ -30,8 +30,8 @@
 
 def factory():
     '''Handles console interaction required to create a new Quote object.'''
-    author = raw_input('Who is the author of the quote? ')
-    text = raw_input('What did they say or write? ')
+    author = input('Who is the author of the quote? ')
+    text = input('What did they say or write? ')
     return Quote(author, text)
     
 class Quote:
@@ -46,45 +46,45 @@ class Quote:
     def update(self):
         '''Handles the console interaction required to modify a Quote object.'''
         
-        print 'The current author is:', self.author
-        change = raw_input('Modify author (y/n)? ')
+        print('The current author is:', self.author)
+        change = input('Modify author (y/n)? ')
         if change in ['y', 'Y']:
-            self.author = raw_input('Enter modified author: ')
-        print 'The current text is:', self.text
-        change = raw_input('Modify text (y/n)? ')
+            self.author = input('Enter modified author: ')
+        print('The current text is:', self.text)
+        change = input('Modify text (y/n)? ')
         if change in ['y', 'Y']:
-            self.text = raw_input('Enter modified text: ')
+            self.text = input('Enter modified text: ')
         self.uid = str(hash('Quote' + self.author + self.text))        
 
 if __name__ == '__main__':
     def bordered(s):
         return len(s)*'='+'\n'+s+'\n'+len(s)*'-'
     
-    print bordered('Testing __init__() and __str__()')
+    print(bordered('Testing __init__() and __str__()'))
     q = Quote( 'Kent Beck', 'Optimism is an occupational hazard of programming: testing is the treatment.')
     r = Quote( 'Brian Kernighan', 'Controlling complexity is the essence of computer programming.')
-    print 'The Quote q is:'
-    print '\t', q
-    print 'The Quote r is:'
-    print '\t', r
-    print
+    print('The Quote q is:')
+    print('\t', q)
+    print('The Quote r is:')
+    print('\t', r)
+    print()
 
-    print bordered('Testing factory()')
+    print(bordered('Testing factory()'))
     s = factory()
-    print 'Here’s the new Quote object:'
-    print '\t', s
-    print 'Did factory create a Quote object?',
-    print type(s) == type(q) # Checks that factory is returning a Quote object.
-    print
+    print('Here’s the new Quote object:')
+    print('\t', s)
+    print('Did factory create a Quote object?',end = ' ')
+    print(type(s) == type(q)) # Checks that factory is returning a Quote object.
+    print()
 
-    print bordered('Testing update()')
-    print 'The Quote q before:'
-    print '\t', q
-    print
-    print 'Calling update():'
-    print
+    print(bordered('Testing update()'))
+    print('The Quote q before:')
+    print('\t', q)
+    print()
+    print('Calling update():')
+    print()
     q.update()
-    print
-    print 'The Quote q after:'
-    print '\t', q
-    print
+    print()
+    print('The Quote q after:')
+    print('\t', q)
+    print()

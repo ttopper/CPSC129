@@ -4,7 +4,7 @@ def quicksort(lst):
     rqsort(lst, 0, len(lst)-1)
     
 def rqsort(lst, lo, hi):
-    print 'Before: ', lst[lo:hi+1]
+    print('Before: ', lst[lo:hi+1])
     pivot = lst[lo]
     bigger = lo+1
     smaller = hi
@@ -16,7 +16,7 @@ def rqsort(lst, lo, hi):
         if bigger < smaller:
             lst[smaller], lst[bigger] = lst[bigger], lst[smaller]
     lst[lo], lst[smaller] = lst[smaller], lst[lo]
-    print 'After: ', lst[lo:hi+1]
+    print('After: ', lst[lo:hi+1])
     rqsort(lst, lo, smaller-1)
     rqsort(lst, smaller+1, hi)
 

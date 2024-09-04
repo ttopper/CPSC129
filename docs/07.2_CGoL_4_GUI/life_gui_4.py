@@ -2,7 +2,6 @@
 #
 # Graphical user interface for Conway's Game of Life.
 import pygame
-import sys
 import time
 import random
 
@@ -42,18 +41,18 @@ U_COLS = 40 # cols in the Life universe.
 CELL_SIZE = 16
 GRID_SIZE = CELL_SIZE + 1 # + 1 allows for 1 pixel border on LHS of cell.
 MENU_HEIGHT = 16
-SCREEN_BORDER = 10
-SCREEN_HEIGHT = U_ROWS*GRID_SIZE + 1 + 2*SCREEN_BORDER + MENU_HEIGHT # + 1 allows for 1 pixel border on RHS of screen.
-SCREEN_WIDTH = U_COLS*GRID_SIZE + 1 + 2*SCREEN_BORDER
+BORDER_WIDTH = 10
+SCREEN_HEIGHT = U_ROWS*GRID_SIZE + 1 + 2*BORDER_WIDTH + MENU_HEIGHT # + 1 allows for 1 pixel border on RHS of screen.
+SCREEN_WIDTH = U_COLS*GRID_SIZE + 1 + 2*BORDER_WIDTH
 
-def load(): print 'Running load'
-def save():  print 'Running save'
-def pause():  print 'Running pause'
-def step():  print 'Running step'
-def play():  print 'Running play'
-def edit():  print 'Running edit'
-def clear():  print 'Running clear'
-def null(): print 'Doing nothing'
+def load(): print('Running load')
+def save():  print('Running save')
+def pause():  print('Running pause')
+def step():  print('Running step')
+def play():  print('Running play')
+def edit():  print('Running edit')
+def clear():  print('Running clear')
+def null(): print('Doing nothing')
 
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -70,14 +69,14 @@ menu = [ [load, "folder.png"], [save, "folder_add.png"],
          [null, "black_separator.png"],
          [edit, "pencil.png"],  [clear, "picture_empty.png"]
          ]
-menu_area = Rectangle(SCREEN_BORDER, SCREEN_BORDER, SCREEN_BORDER + MENU_HEIGHT,
-                      SCREEN_WIDTH - SCREEN_BORDER)
+menu_area = Rectangle(BORDER_WIDTH, BORDER_WIDTH, BORDER_WIDTH + MENU_HEIGHT,
+                      SCREEN_WIDTH - BORDER_WIDTH)
 for i in range(len(menu)):
     menu[i].append(pygame.image.load(menu[i][1]))
     screen.blit(menu[i][2], (menu_area.left + i*GRID_SIZE + 1, menu_area.top))
 
-game_area = Rectangle(SCREEN_BORDER + MENU_HEIGHT, SCREEN_BORDER,
-                      SCREEN_HEIGHT - SCREEN_BORDER - 1, SCREEN_WIDTH - SCREEN_BORDER - 1)
+game_area = Rectangle(BORDER_WIDTH + MENU_HEIGHT, BORDER_WIDTH,
+                      SCREEN_HEIGHT - BORDER_WIDTH - 1, SCREEN_WIDTH - BORDER_WIDTH - 1)
                       
 # Draw horizontal lines.
 for y in range(0, U_ROWS+1):
@@ -96,19 +95,19 @@ for i in range(1,100):
                             game_area.top + random.randint(0, U_ROWS-1)*GRID_SIZE+1))
 pygame.display.flip()
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            running = False
         elif event.type == pygame.MOUSEBUTTONUP:
             x = event.pos[0]
             y = event.pos[1]
-            print "mouse at (%d, %d)" % (x, y)
-            print menu_area.inside(x, y)
+            print(f"mouse at {x:d}, {y:d}")
+            print(menu_area.inside(x, y))
             if menu_area.inside(x, y):
-                menu_position = (x - menu_area.left)/GRID_SIZE
-                print 'Menu item: ', menu_position
+                menu_position = (x - menu_area.left)//GRID_SIZE
+                print('Menu item: ', menu_position)
                 if menu_position < len(menu):
                     menu[menu_position][0]()
-            
+pygame.quit()        

@@ -152,11 +152,11 @@ class Maze:
 if __name__ =='__main__':
     # Prepare maze.
     m = Maze(5,5)
-    print m
+    print(m)
     m.cells[1][1].east.state = DOOR
     m.cells[0][2].north.state = DOOR
     m.cells[2][3].south.state = DOOR
-    print m
+    print(m)
     
     m = Maze(25, 25)
     m.carve()
@@ -168,8 +168,8 @@ if __name__ =='__main__':
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            elif (event.type == KEYUP) or (event.type == KEYDOWN):
-                print event
+            elif (event.type == pygame.KEYUP) or (event.type == pygame.KEYDOWN):
+                print(event)
    
         
 ##  ==============

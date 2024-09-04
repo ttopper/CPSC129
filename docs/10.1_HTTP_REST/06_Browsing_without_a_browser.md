@@ -13,9 +13,9 @@ a terminal program. All you need is to know the protocol.
 If you want to follow along you can use the free program
 [PuTTYtel](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 Configure it as follows to access web servers, noting that connection
-type needs to be raw” not telnet”:
+type needs to be “raw” not “telnet”:
 
-![PuTTYtel configuration settings.](06_PuTTYtelConfig.gif)
+![PuTTYtel configuration settings.](06_PuTTYtelConfig.png)
 
 Then you can fetch the server’s index (or home) page by typing a GET
 request:

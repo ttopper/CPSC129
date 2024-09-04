@@ -37,29 +37,24 @@ if 'miles' in form:
     miles = float( form['miles'].value )
     km = miles * 1.609
     # and display the output.
-    print 'Content-type: text/html\n'
-    print output_template % (miles, km)
+    print('Content-type: text/html\n')
+    print(output_template % (miles, km))
 
-elif form.has_key('km'):
+elif 'km' in form:
     # If they filled in the km field, convert km to miles,
     km = float( form['km'].value )
     miles = km / 1.609
     # and display the output.
-    print 'Content-type: text/html\n'
-    print output_template % (miles, km)
+    print('Content-type: text/html\n')
+    print(output_template % (miles, km))
 
 else:
     # They filled in neither field so give them an input form to fill out.
-    print 'Content-type: text/html\n'
-    print input_template
+    print('Content-type: text/html\n')
+    print(input_template)
 ```
 
 ## Notes:
-
--   I have used two different ways of telling if a form field was filled
-    out so you could become aware of both. First, `if 'miles' in form:`
-    and second, `elif form.has_key('km'):` Both work, and I usually
-    prefer the first for its better readability.
 
 -   If you look carefully at
     [mi2km_output_v3.html](mi2km_output_v3.md) you will see that one

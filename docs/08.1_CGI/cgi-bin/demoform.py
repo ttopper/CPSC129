@@ -31,6 +31,6 @@ likes = form.getlist('likes')
 likes = ' &amp; '.join(likes)
 message = form.getvalue('message')
 
-print 'Content-type: text/html\n'
-print template % ( sex, name, language, likes, message)
+print('Content-type: text/html\n')
+print(template % ( sex, name, language, likes, message))
 

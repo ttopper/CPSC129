@@ -20,7 +20,7 @@ indicates they want to,
     -   Response: Homepage of site (Seems reasonable, but not the only
         possibility --- we could give them a successful deletion message
         --- but this seems reasonable because we need to send them
-        somewhere, and since the current object” just got deleted we
+        somewhere, and since the “current object” just got deleted we
         can’t send them to view it.)
 -   Update an object
     -   Request: GET http://localhost/*uid/update_form*

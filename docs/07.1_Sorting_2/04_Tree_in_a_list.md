@@ -3,7 +3,7 @@
 When _Sorting Out Sorting_ got to Heapsort your first thought on seeing
 the tree might be What is that thing?!”
 
-![.](04_Heapsort_1.png){width="169" height="121"}
+![.](04_Heapsort_1.png)
 
 Computer scientists call them trees --- even though they look more like
 root systems than tree branches! We apologize, but it’s all because we
@@ -41,7 +41,7 @@ how we might map one onto the other.
 
 `lst = [ 48, 32, 68, 18, 29, 71, 41 ]`
 
-![.](04_Heapsort_1.png){width="169" height="121"}
+![.](04_Heapsort_1.png)
 
 Working with the tree” means being able to follow the branches to get
 from node to node. Notice that at any instant at most three movements
@@ -103,7 +103,7 @@ from parents to children by multiplying by two and adding, we should be
 able to get back by subtracting and then dividing by two:
 
     def parent(node):
-        return (node-1)/2
+        return (node-1)//2
 
 These three functions, `left_child`, `right_child` and `parent` will let
 us move through a list as though it were a heap. Most often we move
