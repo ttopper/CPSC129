@@ -9,12 +9,17 @@ edit_uri: edit/main/docs/
 copyright:
   This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.
 
+watch:
+- custom_theme
+# It didn't seem to watch this automatically ?! so I added it here explicitly.
+
 theme:
-  name: mkdocs
+  name: null
   custom_dir: custom_theme/
   locale: en
   highlightjs: true
   hljs_languages:
+    - plaintext
     - python
 #    - django
 
