@@ -1,0 +1,43 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+div.navbar, footer {
+    font-family: "inter var", -apple-system, BlinkMacSystemFont, "helvetica neue", Helvetica, sans-serif;
+}
+
+footer {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: rgb(109, 109, 109);
+}
+
+pre code {
+    font-size: 100%;
+}
+
+h1 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+}
+
+h2 {
+    background-color: #eee;
+    padding: 0.5em;
+    font-size: 1.25em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+pre, pre code {
+    border: none;
+    background-color: rgba(234, 242, 251, 0);
+}
+
+.hljs {
+    background-color: rgba(234, 242, 251, 0);
+}

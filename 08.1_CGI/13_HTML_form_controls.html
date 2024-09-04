@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Title</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <link href="../css/CPSC129.css" rel="stylesheet" type="text/css">
+</head>
+
+<body><h1>The common HTML form controls</h1> 
+ 
+<p>Notes:</p> 
+<ul> 
+<li>The form is set up to run under <code>httpserver.py</code> (so pressing the submit
+button here will just get you errors).</li> 
+ 
+<li>View source to see how it's done.</li> 
+ 
+<li> Note: the optional use of the label tag
+&mdash; it can allow for better
+formatting control via CSS but is not required.</li> 
+</ul> 
+ 
+<form name="demo" action="cgi-bin/demoform.py" method="POST"> 
+ 
+<fieldset><legend>Highly personal information</legend> 
+ 
+<p><label>What is your name?</label> <input type="text" name="name" size="20" /> 
+ 
+<span class="annotation">"text" input elements for
+brief textual input.</span></p> 
+ 
+<p>Are you Young at Heart <input type="radio" name="age" value="young" /> or 
+are you An Old Soul <input type="radio" name="age" value="old" /> 
+ 
+<span class="annotation">"radio" buttons for mutually
+exclusive alternatives.</span></p> 
+ 
+<p><label>Which of these do you like?</label> 
+<span class="annotation"> "checkbox"es for multi-valued
+input. Note the preselected value.</span><br /> 
+
+<input type="checkbox" name="likes" value="Pie" checked="checked"/> Pie<br /> 
+<input type="checkbox" name="likes" value="Cake" /> Cake<br /> 
+<input type="checkbox" name="likes" value="Pickles" /> Pickles<br />
+<input type="checkbox" name="likes" value="Pretzels" /> Wumpus Pretzels<br /> </p> 
+ 
+<p>My favourite programming language is:
+ 
+<select name="language"> 
+<option value="Java">Java</option> 
+<option value="Python" selected="selected">Python</option> 
+<option value="R">R</option> 
+<option value="MATLAB">MATLAB</option> 
+</select> 
+ 
+<span class="annotation">"select" controls
+provide drop down lists for mutually exclusive selection from a predetermined
+list (like C++? Tough!). Note the preselected value.</span> 
+</p> 
+ 
+<p>OK now that that's out of the way what is your message for me?
+<span class="annotation">"textarea"s allow for long textual
+input.</span><br /> 
+ 
+<textarea name="message" rows="8" cols="60">Write it here!</textarea> </p> 
+ 
+</fieldset> 
+ 
+<p><input type="submit" value="Take my data!" /></p> 
+</form> 
+
+</body>
+</html>

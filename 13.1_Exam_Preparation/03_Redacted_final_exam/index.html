@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Tim Topper and Kate Chatfield-Reed">
+        <link rel="canonical" href="https://ttopper.github.io/CPSC129/13.1_Exam_Preparation/03_Redacted_final_exam/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Redacted Final Exam - CPSC 129</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CPSC 129</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../.." class="dropdown-item">CPSC 129: Object-oriented Programming 2</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">01.1 Course Information</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01.1_Course_Information/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../01.1_Course_Information/01_Course_schedule/" class="dropdown-item">Course Schedule</a>
+</li>
+            
+<li>
+    <a href="../../01.1_Course_Information/02_Marking_scheme/" class="dropdown-item">Marking Scheme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">01.2 Conway's Game of Life 1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../01.2_CGoL_1_Introduction/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../01.2_CGoL_1_Introduction/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../01.2_CGoL_1_Introduction/02_Algorithm_overview/" class="dropdown-item">Algorithm Overview</a>
+</li>
+            
+<li>
+    <a href="../../01.2_CGoL_1_Introduction/03_Create_and_initialize_U/" class="dropdown-item">Create and Initialize the Universe</a>
+</li>
+            
+<li>
+    <a href="../../01.2_CGoL_1_Introduction/04_Display/" class="dropdown-item">Display the Universe</a>
+</li>
+            
+<li>
+    <a href="../../01.2_CGoL_1_Introduction/05_Age/" class="dropdown-item">Age the Universe</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_01/" class="dropdown-item">Assignment 1</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">02.1 Searching</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../02.1_Searching/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../02.1_Searching/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../02.1_Searching/02_Linear_Search_Unordered_List/" class="dropdown-item">Linear Search, Unordered list</a>
+</li>
+            
+<li>
+    <a href="../../02.1_Searching/03_Linear_Search_Ordered_List/" class="dropdown-item">Linear Search, Ordered List</a>
+</li>
+            
+<li>
+    <a href="../../02.1_Searching/04_Binary_Search/" class="dropdown-item">Binary Search</a>
+</li>
+            
+<li>
+    <a href="../../02.1_Searching/05_Interpolative_Search/" class="dropdown-item">Interpolative Search</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">02.2 Algorithm Analysis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/02_Big_O_notation/" class="dropdown-item">Big O Notation</a>
+</li>
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/03_Linear_search/" class="dropdown-item">What Order is Linear Search?</a>
+</li>
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/04_Binary_search/" class="dropdown-item">What Order is Binary Search?</a>
+</li>
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/05_O_log_n_vs_O_n/" class="dropdown-item">O(log n) versus O(n)</a>
+</li>
+            
+<li>
+    <a href="../../02.2_Algorithm_Analysis/06_Algorithm_orders/" class="dropdown-item">Algorithm orders</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">02.3 PyGame 1 Drawing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/02_pygame_test_0/" class="dropdown-item">Getting started with Pygame</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/03_pygame_test_1/" class="dropdown-item">It’s installed but is Pygame actually working?</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/04_pygame_test_2/" class="dropdown-item">Exiting Pygame more gracefully</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/05_pygame_test_3/" class="dropdown-item">Drawing something</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/06_pygame_test_4/" class="dropdown-item">Drawing lots of a thing</a>
+</li>
+            
+<li>
+    <a href="../../02.3_PyGame_1_Drawing/07_pygame_test_5/" class="dropdown-item">Drawing lots of things</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_02/" class="dropdown-item">Assignment 2</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">03.1 Recursion</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03.1_Recursion/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/01_Recursion_by_example/" class="dropdown-item">Recursion by Example</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/02_Recursion_through_a_list/" class="dropdown-item">Recursion Through a List</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/03_Calculating_factorials/" class="dropdown-item">Caculating Factorials</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/04_Recursive_binary_search/" class="dropdown-item">Recursive Binary Search</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/05_Recursive_data_structures/" class="dropdown-item">Recursive Data Structures</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/06_recursion/" class="dropdown-item">recursion.py: Examples of recursive functions</a>
+</li>
+            
+<li>
+    <a href="../../03.1_Recursion/07_Notes/" class="dropdown-item">Recursion: Notes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">03.2 File Processing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03.2_File_Processing/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/01_Persistence/" class="dropdown-item">Persistence</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/02_Text_vs_binary_files/" class="dropdown-item">Text versus Binary Files</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/03_Reading_from_text_files/" class="dropdown-item">Reading from text files</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/04_Example_searching_log_files/" class="dropdown-item">Example: Searching log files</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/05_Files_are_sequential/" class="dropdown-item">Important note: Files are sequential</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/06_Is_there_more/" class="dropdown-item">Is there more?</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/07_Writing_to_text_files/" class="dropdown-item">Writing to text files</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/08_Appending_to_files/" class="dropdown-item">Appending to files</a>
+</li>
+            
+<li>
+    <a href="../../03.2_File_Processing/09_Reading_numeric_data/" class="dropdown-item">Reading numeric data</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">03.3 CGoL 2 Persistence</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/01_Introduction/" class="dropdown-item">Designing file formats</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/02_Goal/" class="dropdown-item">The goal</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/03_Option_1_Screenshot/" class="dropdown-item">Option 1: Store a screenshot of the universe</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/04_Option_2_Python_list/" class="dropdown-item">Option 2: Store the universe array using str(u)</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/05_Option_3_Coordinate_list/" class="dropdown-item">Option 3: Store only the coordinates of live cells</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/06_Option_4_Bits/" class="dropdown-item">Option 4: Use only 1 bit per cell</a>
+</li>
+            
+<li>
+    <a href="../../03.3_CGoL_2_Persistence/07_Pickling/" class="dropdown-item">Pickling</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">04.1 CRUD</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../04.1_CRUD/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../04.1_CRUD/01_Persistence/" class="dropdown-item">Persistence</a>
+</li>
+            
+<li>
+    <a href="../../04.1_CRUD/02_Pickling/" class="dropdown-item">Pickling</a>
+</li>
+            
+<li>
+    <a href="../../04.1_CRUD/03_Shelves/" class="dropdown-item">Shelves</a>
+</li>
+            
+<li>
+    <a href="../../04.1_CRUD/04_Shelve_gotcha/" class="dropdown-item">A bigger Gotcha: Shelves update on assignment not mutation</a>
+</li>
+            
+<li>
+    <a href="../../04.1_CRUD/05_Controller/" class="dropdown-item">A controller for our database</a>
+</li>
+            
+<li>
+    <a href="../../04.1_CRUD/06_The_main_event_loop/" class="dropdown-item">The main event loop</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_03/" class="dropdown-item">Assignment 3</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">04.2 MVC 1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../04.2_MVC_1/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/02_Step_1_Identify_model/" class="dropdown-item">Step 1: Identify the model</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/03_Step_2_Start_the_model/" class="dropdown-item">Step 2: Start the model</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/04_Step_3_The_quote_class/" class="dropdown-item">Step 3: The Quote class</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/05_UIDs/" class="dropdown-item">Unique identifiers</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/06_Step_4_Model_revisited_for_testing/" class="dropdown-item">Step 4: Model revisited for testing</a>
+</li>
+            
+<li>
+    <a href="../../04.2_MVC_1/07_Step_5_Controller_revisited/" class="dropdown-item">Step 5: Controller revisited</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">04.3 PyGame 2 Animation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/02_pygame_test_6/" class="dropdown-item">Making something move 1</a>
+</li>
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/03_pygame_test_7/" class="dropdown-item">Making something move 2</a>
+</li>
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/04_pygame_test_8/" class="dropdown-item">Making something move 3</a>
+</li>
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/05_pygame_test_9/" class="dropdown-item">Making something move 4</a>
+</li>
+            
+<li>
+    <a href="../../04.3_PyGame_2_Animation/06_pygame_test_10/" class="dropdown-item">Making something move 5</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_04/" class="dropdown-item">Assignment 4</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">05.1 Sorting 1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../05.1_Sorting_1/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../05.1_Sorting_1/01_Sorting_out_sorting/" class="dropdown-item">Sorting Out Sorting</a>
+</li>
+            
+<li>
+    <a href="../../05.1_Sorting_1/02_Straight_insertion_sort/" class="dropdown-item">Linear Insertion Sort</a>
+</li>
+            
+<li>
+    <a href="../../05.1_Sorting_1/03_Straight_selection_sort/" class="dropdown-item">Straight Selection Sort</a>
+</li>
+            
+<li>
+    <a href="../../05.1_Sorting_1/04_Straight_exchange_sort/" class="dropdown-item">Bubble Sort</a>
+</li>
+            
+<li>
+    <a href="../../05.1_Sorting_1/05_Shell_sort/" class="dropdown-item">Shell Sort</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">05.2 CGoL 3 Speed</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../05.2_CGoL_3_Speed/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../05.2_CGoL_3_Speed/01_Where_to_begin/" class="dropdown-item">Where to Begin?</a>
+</li>
+            
+<li>
+    <a href="../../05.2_CGoL_3_Speed/02_Measure_dont_guess/" class="dropdown-item">Measure, don’t guess</a>
+</li>
+            
+<li>
+    <a href="../../05.2_CGoL_3_Speed/03_Reworking_aging/" class="dropdown-item">Reworking Aging</a>
+</li>
+            
+<li>
+    <a href="../../05.2_CGoL_3_Speed/04_The_new_aging_scheme/" class="dropdown-item">The New Aging Scheme</a>
+</li>
+            
+<li>
+    <a href="../../05.2_CGoL_3_Speed/05_Measure_again/" class="dropdown-item">Is it better? Measure Again</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_05/" class="dropdown-item">Assignment 5</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">06.1 MVC 2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../06.1_MVC_2/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../06.1_MVC_2/01_The_issue/" class="dropdown-item">The Issue</a>
+</li>
+            
+<li>
+    <a href="../../06.1_MVC_2/02_The_payoff/" class="dropdown-item">The Payoff: An ObjectServer</a>
+</li>
+            
+<li>
+    <a href="../../06.1_MVC_2/03_Separating_controller_and_quote/" class="dropdown-item">Separating Controller and Quote</a>
+</li>
+            
+<li>
+    <a href="../../06.1_MVC_2/04_Quote_factory/" class="dropdown-item">A Quote Factory</a>
+</li>
+            
+<li>
+    <a href="../../06.1_MVC_2/05_Adding_more_object_types/" class="dropdown-item">Adding More Object Types</a>
+</li>
+            
+<li>
+    <a href="../../06.1_MVC_2/06_Your_turn/" class="dropdown-item">Your Turn</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">06.2 Mazes 1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../06.2_Mazes_1/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/01_The_problem/" class="dropdown-item">01 The problem</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/02_Approaches/" class="dropdown-item">02 Approaches</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/03_Step_1_From_english_to_pseudcode/" class="dropdown-item">Step 1: From English to Pseudocode</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/04_Step_2_Testing_our_pseudocode/" class="dropdown-item">Step 2: Testing our pseudocode</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/05_Step_3_Revise_pseudocode/" class="dropdown-item">Step 3: Revising our pseudocode</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/06_Step_4_OOP/" class="dropdown-item">Step 4: Data structures (OOP)</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/07_Step_5_Initializing_maze/" class="dropdown-item">Step 5: Initializing the maze</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/08_Step_6_Debugging_output/" class="dropdown-item">Step 6: Adding debugging output</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/09_Step_7_Sharing_walls/" class="dropdown-item">Step 7: Sharing walls</a>
+</li>
+            
+<li>
+    <a href="../../06.2_Mazes_1/10_Step_8_Put_the_pieces_together/" class="dropdown-item">Step 8: Putting the pieces together</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_06/" class="dropdown-item">Assignment 6</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">07.1 Sorting 2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../07.1_Sorting_2/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../07.1_Sorting_2/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../07.1_Sorting_2/02_Quicksort_1/" class="dropdown-item">Quicksort</a>
+</li>
+            
+<li>
+    <a href="../../07.1_Sorting_2/03_Quicksort_2/" class="dropdown-item">A more Pythonic Quicksort</a>
+</li>
+            
+<li>
+    <a href="../../07.1_Sorting_2/04_Tree_in_a_list/" class="dropdown-item">Representing a tree using a list</a>
+</li>
+            
+<li>
+    <a href="../../07.1_Sorting_2/05_Heapsort/" class="dropdown-item">Heapsort</a>
+</li>
+            
+<li>
+    <a href="../../07.1_Sorting_2/Heapsort_old/" class="dropdown-item">Heapsort</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">07.2 CGoL 4 GUI</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/01_The_goal/" class="dropdown-item">The Goal</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/02_Step_1_Make_a_plan/" class="dropdown-item">Step 1: Make a plan</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/03_Step_2_Review_existing_code/" class="dropdown-item">Step 2: Review existing code</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/04_Step_3_Test_existing_code/" class="dropdown-item">Step 3: Test existing code</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/05_Step_4_Make_room_for_the_menu/" class="dropdown-item">Step 4: Make room for the menu</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/06_Step_5_Refactoring_interlude/" class="dropdown-item">Step 5: Refactoring interlude</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/07_Step_6_Display_menu_icons/" class="dropdown-item">Step 6: Display the menu icons</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/08_Step_7_Map_clicks_to_actions/" class="dropdown-item">Step 7: Map mouse clicks to actions</a>
+</li>
+            
+<li>
+    <a href="../../07.2_CGoL_4_GUI/09_Step_8_Merge_ui_and_simulation/" class="dropdown-item">Step 8: Merge the UI and the simulation code</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_07/" class="dropdown-item">Assignment 7</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">08.1 CGI Programming</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../08.1_CGI/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/02_Software_distribution/" class="dropdown-item">Software Distribution</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/03_Web_computing/" class="dropdown-item">Web Computing</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/04_Introduction_to_CGI/" class="dropdown-item">Introduction to CGI</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/05_Your_first_web_server/" class="dropdown-item">Your first web server</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/06_Testing_static_serving/" class="dropdown-item">Testing static serving</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/07_Testing_CGI_serving/" class="dropdown-item">Testing CGI serving</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/08_Toward_a_real_CGI_program/" class="dropdown-item">Toward a real CGI program</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/09_The_input_form/" class="dropdown-item">The input form</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/10_The_processing_script/" class="dropdown-item">The processing script</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/11_Unifying_input_form_and_processing_script/" class="dropdown-item">Unifying the input form and the processing script</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/12_Fancier_input/" class="dropdown-item">Fancier input</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/14_Fancier_output/" class="dropdown-item">Fancier output</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/Mxx_Assignment/" class="dropdown-item">Assignment xx</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/Stupid/" class="dropdown-item">Stupid</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/mi2km_input_v3/" class="dropdown-item">Mi2km input v3</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/mi2km_output_v3/" class="dropdown-item">Mi2km output v3</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/pWeatherServer-input/" class="dropdown-item">Whitehorse Weather Server</a>
+</li>
+            
+<li>
+    <a href="../../08.1_CGI/pWeatherServer-output/" class="dropdown-item">Whitehorse Weather Server</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">08.2 Mazes 2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../08.2_Mazes_2/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../08.2_Mazes_2/01_Interactive_Maze/" class="dropdown-item">An Interactive Maze</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_08/" class="dropdown-item">Assignment 8</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">09.1 Median Finding</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../09.1_Median/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/01_Introduction/" class="dropdown-item">Introduction: median()</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/02_median_by_partn_0/" class="dropdown-item">Median by Partitioning: Version 0</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/03_median_by_partn_1/" class="dropdown-item">Median by Partitioning: Version 1</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/04_median_by_partn_2/" class="dropdown-item">Median by Partitioning: Version 2</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/05_median_by_partn_3/" class="dropdown-item">Median by Partitioning: Version 3</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/06_median_by_bounding_0/" class="dropdown-item">Median by Bounding: Version 0</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/07_median_by_bounding_1/" class="dropdown-item">Median by Bounding: Version 1</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/08_median_by_bounding_2/" class="dropdown-item">Median by Bounding: Version 2</a>
+</li>
+            
+<li>
+    <a href="../../09.1_Median/09_median_by_bounding_3/" class="dropdown-item">Median by Bounding: Version 3</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">09.2 Data Processing</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../09.2_Data_Processing/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../09.2_Data_Processing/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../09.2_Data_Processing/02_Spelling_bee_The_problem/" class="dropdown-item">Spelling Bee: The Problem</a>
+</li>
+            
+<li>
+    <a href="../../09.2_Data_Processing/03_Spelling_bee_Data_processing_view/" class="dropdown-item">Data Processing View</a>
+</li>
+            
+<li>
+    <a href="../../09.2_Data_Processing/04_Spelling_bee_Potential_problems/" class="dropdown-item">Potential Problems</a>
+</li>
+            
+<li>
+    <a href="../../09.2_Data_Processing/05_Python_exceptions/" class="dropdown-item">Python Exceptions</a>
+</li>
+            
+<li>
+    <a href="../../09.2_Data_Processing/06_EasyGUI/" class="dropdown-item">EasyGUI</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_09/" class="dropdown-item">Assignment 9</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">10.1 HTTP and REST</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../10.1_HTTP_REST/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/02_The_problem_with_CGI/" class="dropdown-item">The problem with CGI</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/03_The_world_wide_web/" class="dropdown-item">The World Wide Web</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/04_The_inner_nature_of_HTTP/" class="dropdown-item">The inner nature of HTTP</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/05_HTTP_on_the_wire/" class="dropdown-item">HTTP on the wire”</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/06_Browsing_without_a_browser/" class="dropdown-item">Browsing without a browser</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/07_CRUD_vs_HTTP/" class="dropdown-item">CRUD vs HTTP</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/08_A_minimal_HTTP_server_in_python/" class="dropdown-item">A minimal HTTP server in Python</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/09_Demo_Testing_object_server/" class="dropdown-item">Demo: Testing object_server.py</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/10_The_ugly_truth_about_browsers/" class="dropdown-item">The ugly truth about browsers</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/11_Translating_MVC_CRUD_to_HTTP/" class="dropdown-item">Translating MVC+CRUD to HTTP</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/12_Our_HTTP_request_response_cycles/" class="dropdown-item">Our HTTP Request-Response Cycles</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/13_Interaction_storyboard/" class="dropdown-item">Interaction Storyboard</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/14_Code_reuse/" class="dropdown-item">Code reuse</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/15_Mapping_actions_to_HTTP_method_URL_pairs/" class="dropdown-item">Mapping Actions to HTTP Method + URL pairs</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/16_Actual_code/" class="dropdown-item">Actual code</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/17_To_object_server_1/" class="dropdown-item">Towards an object server: #1 Identify couplings to quote class</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/18_To_object_server_2/" class="dropdown-item">Towards an object server: #2 Object creation menu requirements</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/19_To_object_server_3/" class="dropdown-item">Towards an object server: #3 Object creation menu Python code</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/20_To_object_server_4/" class="dropdown-item">Towards an object server: #4 Final steps</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/21_Something_we_re_not_doing/" class="dropdown-item">Something we’re not doing... ...but I thought you might notice, and so should explain.</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/22_Summary/" class="dropdown-item">Summary</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/HTML5_template/" class="dropdown-item">HTML5 template</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/create_a_Quote/" class="dropdown-item">Create form</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/home/" class="dropdown-item">QuoteServer Home Page</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/page_Object_Creation_Menu/" class="dropdown-item">Object Creation Menu</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/page_create_form/" class="dropdown-item">Create form</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/page_home/" class="dropdown-item">QuoteServer Home Page</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/page_update_form/" class="dropdown-item">Update form</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/page_view/" class="dropdown-item">View Quote</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/test/" class="dropdown-item">Test</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/test_form/" class="dropdown-item">Test form</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/update_form/" class="dropdown-item">Update form</a>
+</li>
+            
+<li>
+    <a href="../../10.1_HTTP_REST/view/" class="dropdown-item">View Quote</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">10.2 Image Processing 1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../10.2_IP_1/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../10.2_IP_1/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../10.2_IP_1/02_PIL/" class="dropdown-item">pillow: The Python Imaging Library</a>
+</li>
+            
+<li>
+    <a href="../../10.2_IP_1/03_Test_images/" class="dropdown-item">Test Images</a>
+</li>
+            
+<li>
+    <a href="../../10.2_IP_1/04_IPO/" class="dropdown-item">IPO Programming</a>
+</li>
+            
+<li>
+    <a href="../../10.2_IP_1/05_Point_vs_neighbourhood/" class="dropdown-item">Point vs Neighbourhood Processes</a>
+</li>
+            
+<li>
+    <a href="../../10.2_IP_1/06_Edge_detection/" class="dropdown-item">Edge Detection</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_10/" class="dropdown-item">Assignment 10</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">11.1 Pitcher Problems</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/01_The_problem/" class="dropdown-item">Pitcher problems</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/02_By_hand/" class="dropdown-item">First: Do it by hand</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/03_Notice_what_you_did/" class="dropdown-item">Second: Notice what you did</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/04_Identify_the_problem_type/" class="dropdown-item">Third: Identify the problem type</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/05_Formalize_the_algorithm/" class="dropdown-item">Formalize the Algorithm</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/06_Pseudocode/" class="dropdown-item">Pseudocode</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/07_Refinement/" class="dropdown-item">An edge case leads to a refinement</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/08_OOP/" class="dropdown-item">Towards Python: A little OOP</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/09_Pseudocode_translation/" class="dropdown-item">Further towards Python: Pseudocode translation</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/10_Debugging_is_goal/" class="dropdown-item">Debugging is_goal()</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/11_Bitwise_operations/" class="dropdown-item">Interlude: Bitwise operations (really just &amp;)</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/12_is_goal/" class="dropdown-item">Back to our program: is_goal()</a>
+</li>
+            
+<li>
+    <a href="../../11.1_Pitcher_Problems/13_Final_program/" class="dropdown-item">Final program</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">11.2 Reporting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../11.2_Reporting/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../11.2_Reporting/01_The_Problem/" class="dropdown-item">A Report Generation Problem</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_11.md" class="dropdown-item">Assignment 11</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">12.1 Image Processing 2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../12.1_IP_2/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../12.1_IP_2/01_Introduction/" class="dropdown-item">Introduction</a>
+</li>
+            
+<li>
+    <a href="../../12.1_IP_2/02_Dynamic_range/" class="dropdown-item">Dynamic Range</a>
+</li>
+            
+<li>
+    <a href="../../12.1_IP_2/03_Noise_filtering/" class="dropdown-item">Noise Filtering</a>
+</li>
+            
+<li>
+    <a href="../../12.1_IP_2/04_Sharpening/" class="dropdown-item">Sharpening</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">12.2 YG Emails</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../12.2_YG_Emails/00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../../12.2_YG_Emails/01_Algorithms_and_heuristics/" class="dropdown-item">Algorithms and Heuristics</a>
+</li>
+            
+<li>
+    <a href="../../12.2_YG_Emails/02_YG_Introduction/" class="dropdown-item">Introduction: We just want a list of their email addresses”</a>
+</li>
+            
+<li>
+    <a href="../../12.2_YG_Emails/03_YG_Goal/" class="dropdown-item">Your Goal</a>
+</li>
+            
+<li>
+    <a href="../../12.2_YG_Emails/04_YG_Complications/" class="dropdown-item">Complications</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_12.md" class="dropdown-item">Assignment 12</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">13.1 Exam Preparation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../00_index/" class="dropdown-item">Contents</a>
+</li>
+            
+<li>
+    <a href="../01_Examinable_topics/" class="dropdown-item">Examinable Topics</a>
+</li>
+            
+<li>
+    <a href="../02_Exam_study_guide/" class="dropdown-item">Exam Study Guide</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Redacted Final Exam</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Assignments <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Assignments/Assignment_01/" class="dropdown-item">1</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_02/" class="dropdown-item">2</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_03/" class="dropdown-item">3</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_04/" class="dropdown-item">4</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_05/" class="dropdown-item">5</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_06/" class="dropdown-item">6</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_07/" class="dropdown-item">7</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_08/" class="dropdown-item">8</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_09/" class="dropdown-item">9</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_10/" class="dropdown-item">10</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_11.md" class="dropdown-item">11</a>
+</li>
+                                    
+<li>
+    <a href="../../Assignments/Assignment_12.md" class="dropdown-item">12</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../02_Exam_study_guide/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Assignments/Assignment_01/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/ttopper/CPSC129/edit/main/docs/13.1_Exam_Preparation/03_Redacted_final_exam.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <!-- <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#redacted-final-exam" class="nav-link">Redacted Final Exam</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div> -->
+                    <div class="col-md-12" role="main">
+
+<h1 id="redacted-final-exam">Redacted Final Exam</h1>
+<p>(aka As much as I can tell you about without actually showing it all
+to you”)</p>
+<pre><code>Tara: Hello
+Tim Topper: Hi Tara. Don't have my headset on yet. Just need to upload some images.
+Tara: ok
+Tim Topper: Aah! The system doesn't see my headset. Here look at this while I fiddle.
+</code></pre>
+<p><img alt="" src="../03_1_Instructions.jpg" /></p>
+<p><img alt="" src="../03_2_Advice.jpg" /></p>
+<pre><code>Tara: where would we get python in a nutshell?
+Tim Topper: It's available as a printed book and an ebook from O'Reilly publishing.
+Tim Topper: It's an excellent compact reference to the language. Reference means it doesn't explain much.
+Tara: that is for part 2 only?
+Tim Topper: Just shows you the details, e.g. if you want to see a list of string methods.
+Tim Topper: Oh, I see why you are asking. Sorry that is an old instruction, from a term where it was a required text.
+Tim Topper: I'll remove that...
+Tim Topper: I'm going to try one more thing to get sound going. Be right back. (I hope).
+[...15 minutes later...]
+Tim Topper: There will be no audio today.
+Tim Topper: Dialogs that begin ''The filesystem is dirty'' do not lead to anything good.
+Tara: This adobe software is something eh
+Tim Topper: The crazy thing is that it works for weeks, then...bam.
+Tim Topper: Are you bored of looking at the instructions?  :-) Any questions?
+Chris Lane: looks all good
+Tara: Is there any material we can consult during the test then?
+Tim Topper: No. You can try things out in IDLE, but there shouldn't be anything you would want to look up.
+Tara: ok
+Tim Topper: I've got some redacted screen shots of my workign copy of the exam.
+Tim Topper: It's not finalized yet, but I thought we would go through them to give you an idea of what to expect.
+Tim Topper: The first three questiosn will be the classic ''what output does this produce'' to make sure you can step through code.
+Tim Topper: 3 x 10 marks each means they should take you around 30 minutes.
+Tim Topper: As you can see the bottom one may involve something graphical.
+</code></pre>
+<p><img alt="" src="../03_3_What_output.jpg" /></p>
+<pre><code>Tara: ok
+Tim Topper: Next up some short answer questions.
+Tim Topper: One about the sorting methods (to make sure you wouldn't use a bubble sort on a list with a million random elements!).
+Tim Topper: One on search.
+Tim Topper: One to check on some of the jargon we encountered, e.g. CRUD.
+Tim Topper: One on algorithmic complexity, just like the assignment problems.
+Tim Topper: Around 40 marks and thus 40 minutes.
+</code></pre>
+<p><img alt="" src="../03_4_Short_answer.jpg" /></p>
+<pre><code>Tim Topper: Quetions about those types?
+Tara: yes
+Tara: how do we know which sort to use?  Why would we use the 'slower' methods again?
+Tim Topper: You might use a slower method if the list was very short. Woudl you really invest the time to gte a quicksort going
+Tim Topper: to sort lists of 5 elements?
+Tim Topper: If you knew a list was mostly sorted already you might use an insertion sort.
+Tim Topper: If you only had to sort the first 1/4 of a list you might not be able to use some fo the fast sorts.
+Tim Topper: Remember that even the fast sorts can have worst cases that are pretty bad, so you have to watch out for situations that could give rise to that worst case.
+Tara: I am also not clear on how to figure out the O(...) for code, like what each sort method is considered to be On^2 or Log n?
+Tim Topper: You might want to break out the popcorn and rewatch sorting out sorting!
+Tim Topper: The short version is: for random lists the three slow ones are all O(n^2) and the three fast ones are all O(n log n)
+Tim Topper: That's n times log n, not just log n.
+Tara: right
+Tim Topper: Binary search was O(log n). Linear search is O(n).
+Tim Topper: (Bogosort was O(n!))
+Tim Topper: Does that help?
+Tara: yes, thanks
+Tim Topper: Don't overlook the preliminary clause ''for random data''.
+Tim Topper: For sorted data, and reversed data the results can be different as you hopefully found on an assignment.
+Tim Topper: Other questions on these?
+Tara: my data was too all over the place for me to really put it together
+Tim Topper: Aha! Your past comes back to haunt you.
+Tim Topper: Let's see...
+Tim Topper: You should have noticed that selection sort is very stable. Because it always does all the comparisons and
+Tim Topper: then one swap it doesn't speed up much if the list is already sorted or slow down much if it is in reverse order.
+Tim Topper: Insertion sort is really fast if the list is in order becasue it discovers that everything is in place and doesn't actually have to do any insertions.
+Tim Topper: By contrast a reversed list is its worst case.
+Tim Topper: Bubble/Shaker sort share that quality of insertion sort.
+Tara: right, it has to change everything
+Tim Topper: That's right.
+Tim Topper: Quicksort's worst case depends on the way the pivot is chosen, but it's worst case is O(n^2)
+Tara: sorry for 6 b, how do we calc how much bigger the image is, is it 3x as big ?
+Tim Topper: If you choose the first element to be the pivot as we did then either an in order or reversed list produces the worst case, and may even exhaust the recursion stack and lead to a crash.
+Tara: seen that happen
+Tim Topper: Good question. Images are tricky because they are rectangular (or in this case square).
+Tim Topper: That means this one is 3 times as wide AND 3x as high so it's area is 3x3=9 times as large.
+Tim Topper: Subtle eh?
+Tim Topper: Other Qs?
+Tara: I was thinking either 3 or 9.  Not from me
+Tim Topper: 9 it is.
+Tim Topper: The next questions will be some short code bits.
+</code></pre>
+<p><img alt="" src="../03_5_Small_code.jpg" /></p>
+<pre><code>Tara: will you be posting the images and chat session? or did you plan to record this session?
+Tim Topper: I will post the transcript and the images to D2L.
+Tara: thanks
+Tara: 7 looks like the ancestor/child problem
+Tim Topper: That will be easier to scan than a recording would be. (With audio I would have recorded).
+Tim Topper: One will get you to do something with binary trees stored in lists -- just like the ancestor-child problem, though not that exact problem.
+Tim Topper: The other question will get you to specify some tests AND write some code to implement them.
+Tim Topper: So you have to think of what would make godo test data and then write the code to apply the tests.
+Tara: so this someone is us?
+Tim Topper: The weight of the individual questions may change a bit, but together they should add to around 30.
+Tim Topper: No you won't have to write the function, but you won't get to see it either.
+Tara: ok
+Tim Topper: Imagine someone has told you they have written a sort function. That's all you know, but your job is to think how to test it.
+Tara: will we know attributes? or just guess
+Tara: or doesn't matter?
+Tim Topper: You will see a sample call to the function, e.g. sort(lst), or max(a,b)
+Tara: ah ok
+Tim Topper: Does that make sense? I am not trying to be mysterious.
+Tara: yes makes sense
+Tim Topper: Onward?
+Chris Lane: k
+Tara: ok
+Tim Topper: The last three problems will be substantial coding problems at around 30 mins each.
+Tim Topper: One will focus on class/representation issues.
+Tim Topper: One on coding methods we encountered in sorting or searching.
+Tim Topper: And the last one on general algorithm development.
+</code></pre>
+<p><img alt="" src="../03_6_Substantial_code.jpg" /></p>
+<pre><code>Tim Topper: Qs?
+Tara: will we be writing all the code for each?
+Tim Topper: Probably.
+Tim Topper: The last two will probably be short, but as you know short code can be tricky.
+Tim Topper: On the other hand I amot expecting working programs for each solution.
+Tara: 11 is that code or pseudocode you are looking for?
+Tim Topper: It's the algorithm that is most improtant.
+Tim Topper: I would defintiely start with and submit pseudocode.
+Tim Topper: Feel free to leave pseudocode in your file, or to print out multiple versions as it evolves.
+Tara: Is there something in class we have done that we could compare, with q9
+Tim Topper: Yes
+Tara: It seems quite different from the wumpus and other classes we've worked with, I am not connecting how to build an excel type output 
+Tim Topper: Don't worry about displaying it. Just think about representing it internally.
+Tim Topper: Internally it's not much different than a tic tac toe board.
+Tim Topper: Or a maze with walls...
+Tara: like is_filled, has_border
+Tim Topper: Exactly.
+Tara: ok
+Tara: are there more questions on the test?
+Tim Topper: That's it.
+Tim Topper: One thing that isn't apparent in this redacted version is that I am hoping to test recursion too.
+Tim Topper: i.e. your ability to write small recurve functions.
+Tim Topper: s/b recursive not ''recurve''
+Tara: small ones are not so bad :)
+Tim Topper: Don't worry, nothing large and recursive.
+Tara: nothing with html or cgi?
+Tara: pygame?
+Tim Topper: In fact recursive solutions even to large problems tend to be small pieces of code.
+Tim Topper: No pygame. Unless there is a short answer question about main event loops or something.
+Tim Topper: There's no way to ensure pygame would be on the machines you might have access to...
+Tim Topper: ... and I don't expect you to have memorized any of it.
+Tara: ok, yes it won't install at work, nor on my vista laptop
+Tim Topper: Similarly for CGI and HTTP servers.
+Tim Topper: Good thing to ask about though. Any other content you're wonderingbout?
+Tara: not anything I can think of right now
+Tim Topper: (Sorry to hear about pygame on Vista. It works for on Windows 7 and XP so I just assumed...)
+Tim Topper: Anything else helpful I can tell you about the exam?
+Tara: I think you already told us how long?
+Tara: Was the first page all of part 1?
+Tim Topper: 3 hours. 180 marks. So 1 mark per minute for planning.
+Tim Topper: Just that one page. Hand it to your invigilator and you can use the computer for all of part 2.
+Tara: ok
+Tim Topper: Any other questions? About the exam or anything else?
+Tara: not right now
+Tim Topper: Feel free to contact me if any occur to you later.
+Tim Topper: I'll be hearing who your invigilators are sometime soon?
+Tara: I sent an email to Penny to ask her and cc'd you, but she hasn't got back to me yet
+Tim Topper: Me neither. Are you sure she isn't on leave?
+Tara: I should call the library to confirm
+Tara: I know there is another invigilator, she is new here at NWCC on-call
+Tim Topper: OK Let me know when you have one lined up.
+Tara: will do
+Tim Topper: That's all I had planned for today. Minus the audio problems!
+Tim Topper: Maybe my computer has finished its disk check (I moved into one of our labs).
+Tara: do you have backups?
+Tim Topper: Of all my data absolutely. No image of the installed software though, so that could be time consuming IF I have to reinstall.
+Tim Topper: I'll let you know how it turns out.
+Tim Topper: Study hard _all_weekend_long_!
+Tara: I think I am done a11, my only question non-essential was if we could use local pictures for the 'hockey player'
+Tim Topper: And feel free to submit more or updated assignments...
+Tim Topper: You could if you used an upload field in your form, but then you'd need to save them on your ''server'' too. 
+Tim Topper: As you can see in the hockey player class, I instead just linked to images already available online.
+Tara: oh should we know doctest for the exam?
+Tara: right, that seemed to be the only way that worked
+Tim Topper: Re doctest. It's not something I'm setting out to test, but I'd hope you could read one.
+Tim Topper: I'm more interesting in you writing a small custom testing routine for correctness and/or speed.
+Tara: ok
+Tim Topper: Likewise I'm not setting out to test UML, but I wouldn't feel bad about providing a UML diagram as part of a problem description.
+Tim Topper: More good questions Tara!
+Tim Topper: Anything else?
+Tara: not from me
+Chris Lane: all good here
+Tim Topper: Well then, best of luck to you both on the exam, and wherever you head next.
+Tara: Will a 2nd year programming course be offered? and will you be teaching it?
+Tim Topper: Unfortunately there aren't any plans to offer further programming courses as part of the NCIT program.
+Tim Topper: You'll have to look to a specific College or University for more.
+Tara: ok, thanks, bye for now
+Tim Topper: Your welcome. Bye.
+Tim Topper: Bye Chris.
+Chris Lane: c ya
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</p>
+            <!-- <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+
+        <script>
+            function OneX() {
+                document.querySelector('video').playbackRate = 1.0;
+            }
+            function OnePointFiveX() {
+                document.querySelector('video').playbackRate = 1.5;
+            }
+            function TwoX() {
+                document.querySelector('video').playbackRate = 2.0;
+            }
+        </script>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

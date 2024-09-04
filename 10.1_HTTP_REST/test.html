@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Test page</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <link href="../css/CPSC129.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div>
+<p><img style="float: left; padding-right: 20px;" width="100"
+src="http://www.doubleextrapoint.com/images/stories/gordie-howe-puck.jpg">
+<span class="player-name"><em>Gordie Howe</em></span><br>
+<span class="goals">1071 career goals (regular season plus playoffs).</span>
+</p>
+<!-- View this object alone. -->
+
+<form method="get" action="http://localhost/-1245523570" class="view">
+
+  <input type="submit" value="View"> </form>
+<!-- Request the update form for this object. -->
+
+<form method="get" action="http://localhost/-1245523570/HTML_update_form"
+class="update">
+
+  <input type="submit" value="Update"> </form>
+<!-- Delete this object. -->
+
+<form method="post" action="http://localhost/-1245523570" class="delete">
+  <input type="hidden" name="_method" value="DELETE"> 
+  <input type="submit" value="Delete"> </form>
+</div>
+</body>
+</html>

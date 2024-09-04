@@ -1,0 +1,39 @@
+/* pWeatherServer.css
+ * Style sheet for Weather Server problem: pWeatherServer.html. 
+ */
+body {
+	font-family: sans-serif;
+}
+h1 {
+	text-align: center;
+	margin: 2em 0 1em 0;
+}
+/* This next declaration and the div it describes shouldn't be necessary,
+ * but there are enough bad versions of IE still in use to make me
+ * grimace and do it.
+ */
+div.centered {
+	text-align: center;
+} 
+div.centered table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 300px;
+}
+div.centered table caption {
+	font-style: italic;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 300px;
+}
+th {
+	background-color: #404040;
+	font-weight: bold;
+	color: white;
+	padding: 5px;
+}
+td{
+	background-color: #e0e0e0;
+}

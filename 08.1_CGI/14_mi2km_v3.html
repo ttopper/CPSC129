@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>mi2km version 3</title>
+
+        <!-- <link rel="stylesheet" type="text/css" href="xxx.css"> -->
+        <style type="text/css">
+            body {
+                background-color: #ccc;
+                font-family: "trebuchet ms", verdana, sans-serif;
+                font-size: smaller;
+                margin: 0 10%;
+            }
+            #content {
+                background-color: #ffffeb;
+                padding: 1em 2em;
+            }
+            h1 { margin-top: 1em; }
+            h1, a { color: #cc4040; }
+            a { text-decoration: none; }
+            a:hover { text-decoration: underline; }
+            p.header { color: #707070; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <p class="header">CPSC 129: Object-oriented programming II. Fall 2024.</p>
+        <h1>Convert miles to kilometres or vice versa!</h1>
+        <div id="content">
+
+        <form action="/cgi-bin/mi2km_v3.py" method="POST" style="font-size: 150%;">
+            <p>You enter one value and I'll show you the other...</p>
+            <table>
+                <tr><th>miles</th><th></th><th>kilometers</th></tr>
+                <tr><td><input type="text" name="miles" size="12" /></td>
+                    <td>=</td>
+                    <td><input type="text" name="km" size="12" /></td></tr>
+                <tr>
+            </table>
+            <p><input type="submit" value="Show me!" />
+        </form>
+
+        </div>
+    </body>
+</html>

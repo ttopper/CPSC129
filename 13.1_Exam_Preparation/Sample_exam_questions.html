@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <link href="../css/CPSC129.css" rel="stylesheet" type="text/css">
+</head>
+
+<body><h1>Sample Exam Questions</h1> 
+ 
+<ol> 
+<li>(<i>5 marks)</i> What does the acronym ___ stand for? What is the rationale
+for this design pattern?</li> 
+<li>(<i>2 marks</i>) True or False:<br /> 
+T F The first parameter in a class method's argument list must be called
+self.</li> 
+<li>(<i>5 marks each</i>) Which of the six main sorting methods we studied (straight insertion, straight selection, straight exchange/bubble, Shell sort, quicksort and heap sort) would you implement for each of the following applications? Why?</li> 
+<li>(<i>5 marks</i>) Here is an implementation of the ___ sort algorithm:<br /> 
+...<br /> 
+<ol type="a"> 
+<li>Will it sort the list in ascending or descending
+order?</li> 
+<li>If it takes 3 milliseconds to sort a list of 2,000 elements, how
+long would you expect it to take to sort a list of 8,000 elements?</li> 
+</ol> 
+</li> 
+<li>(<i>20 marks</i>) Someone has written a function called
+<code>eo</code> to place all
+the even values in a list before all the odd values. What would be a good
+set of test data to verify that this function works correctly? Provide a
+very brief (1 line) rationale for each test you propose.</li> 
+<li><p>(<i>45 marks</i>) Not the Smallest, Not the Largest, the
+Middle</p> 
+<p>(<i>We did this in class this year, but it was on last year's final
+exam. I include it here to give you an idea of the difficulty of the
+longer problems on the exam</i>).</li></p> 
+<p>The median value in a list is the value that would be in the middle
+if the list was sorted, i.e. the same number of values are smaller than
+the median as are larger than it*.</p> 
+<ol type="a"> 
+<li><p>Start with the simplest thing that could possibly work. Write a
+function that returns the median of a list of positive numbers using the
+following approach.</p> 
+<pre><code>consider each value in the list (until the median is found)
+    count how many values in the list are smaller than it
+    and how many values are larger
+    based on the counts above decide if it is the median
+</code></pre> 
+<p>If the test is carefully written this can work. Show the test cases
+you use in verifying your code.</p> 
+</li> 
+<li>What order is this algorithm?</li> 
+<li>While correct, the approach in a) above is inefficient. For example, if we&#xfffd;re working with the list
+[31, 18, 72, 91, 84, 53, 25]
+we will discover in the first step that 31 is not the median because
+there are 3 numbers less than or equal to it, but 5 numbers greater than
+or equal to it. From this we know not only that 31 is not the median,
+but that the median must be some number larger than 31. This means that
+when we get to the value 18 we can skip it, i.e. not bother counting how
+many values are larger or smaller than it, because we know it cannot be
+the median. Similarly once we discover that 72 is not the median we can
+skip 91 and 84. Modify your code from a) based on this insight.</li> 
+</ol> 
+<p>*Fine print: Actually it is the number of values smaller than or
+equal to it, and larger than or equal to it. Furthermore, if there is an
+even number of values in the list the median may not be easily defined,
+e.g. what is the median value in the list [1, 2, 3, 4]? In this case
+your code may return -1.</p> 
+</li> 
+</ol> 
+ 
+
+</body>
+</html>

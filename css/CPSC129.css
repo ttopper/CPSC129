@@ -1,0 +1,210 @@
+/* CPSC129.css 
+ *
+ * Author: Tim Topper
+ *
+ * If you see anything you like, by all means take it.
+ *
+ */
+
+body {
+	background-color: #ffffff;
+	color: #333;
+	padding: 2em 4em 10em 2em;
+	/*0 10% 0 10%;*/
+	margin: 0;
+	font-family: 'Bitter', 'Trebuchet MS', sans-serif;
+	font-size: 16px;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	/*font-family: Georgia, 'Bitter', Verdana, serif;*/
+}
+
+body>section>h1, body>h1, header>h1, nav>h1 {
+	margin: 0 0 1em 0;
+	text-align: center;
+	padding-bottom: 0.125em;
+	border-bottom: 1px solid #555;
+	font-size: 200%;
+}
+
+p {
+	margin: 1em 0 0 0;
+	font-family: 'Bitter', Georgia, "Trebuchet MS", verdana;
+	line-height: 150%;
+}
+
+p.img {
+	text-align: center;
+}
+
+p.codeimg {
+	margin-left: 2em;
+}
+
+p.attn {
+	background-color: #F6E9EB;
+	/* #EED3D8; */
+	border: 1px dotted #dc1436;
+	text-align: center;
+	font-weight: bold;
+	color: #dc1436;
+	width: 80%;
+	padding: 0.5em;
+	line-height: 150%;
+	margin: auto;
+}
+
+p.intro {
+	/* Box containing page introdution/abstract. */
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 1em;
+	background-color: #EED3D8;
+	/* #eee; */
+	/*border-style: dashed;*/
+	border-width: 1px;
+	padding: 1em 1em 1em 1em;
+	line-height: 120%;
+	text-align: center;
+	font-style: italic;
+}
+
+a {
+	color: #1C70DF;
+	/*#a00f27;*/
+	text-decoration: none;
+	/*border-bottom: 1px dotted;*/
+}
+
+a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+}
+
+/* 
+ * In-line formatting
+ */
+span.paratitle {
+	font-weight: bold;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	border-collapse: collapse;
+}
+
+table th {
+	border-top: 2px solid black;
+	padding: 0.5em;
+	margin: 0;
+	text-align: center;
+}
+
+table td {
+	border-top: 1px solid black;
+	padding: 0.5em;
+	margin: 0;
+	text-align: center;
+}
+
+table.dark th {
+	padding: 5px;
+	margin: 1px;
+	background-color: #666;
+	color: #fff;
+}
+
+table.dark td {
+	padding: 5px;
+	margin: 1px;
+	background-color: #ddd;
+}
+
+/*
+ * Displaying code
+ */
+code {
+	font-size: 100%;
+	/*font-weight: bold;*/
+	font-family: consolas, monospace;
+}
+
+p code {
+	/*color: #008080;*/
+	/*font-weight: bold;*/
+	font-size: 100%;
+}
+
+/* For inline code. */
+pre {
+	font-family: consolas, monospace;
+	background-color: #fff;
+	/*border: 1px solid #ccc;*/
+	padding: 1em 0;
+	/*1.5em;*/
+	overflow: auto;
+	/* To get scrollbars. */
+	margin-left: 2em;
+	font-size: 100%;
+}
+
+pre.pseudo {
+	font-style: italic;
+}
+
+pre code {
+	/*font-weight: bold;*/
+}
+
+pre code.python span.keyword {
+	/*color: orange;*/
+	font-weight: bold;
+}
+
+pre code.python span.comment {
+	color: #999;
+	font-style: italic;
+	font-weight: normal;
+}
+
+pre code.python span.string {
+	/*font-weight: bold;*/
+	font-style: italic;
+	/*color: green;*/
+}
+
+pre code.python span.number {
+	/*font-weight: bold;*/
+}
+
+span.change {
+	background-color: yellow;
+}
+
+dd p {
+	/*margin-bottom: 1em; margin-top: 0;*/
+}
+
+dt {
+	margin-bottom: 1em;
+}
+
+footer {
+	text-align: center;
+	margin: 2em auto;
+	padding: 1em;
+	background-color: #e0e0e0;
+	width: 70%;
+	/* Rounded corners */
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	/* Future proofing. */
+	-khtml-border-radius: 1em;
+	/* For old Konqueror browsers. */
+}
