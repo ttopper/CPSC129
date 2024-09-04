@@ -4,7 +4,7 @@
 
 ### Course Information
 
-1. [Course Description (PDF)](01.1_Course_Information/CPSC129F24.pdf)
+1. Course Description
 2. [Schedule](01.1_Course_Information/01_Course_schedule.md)
 3. [Addendum: Marking Scheme](01.1_Course_Information/02_Marking_scheme.md)
 
