@@ -75,7 +75,7 @@ class Universe:
                     next_cells[row][col] = 1
         
         # Replace universe with next universe
-        u.cells = next_cells
+        self.cells = next_cells
        
     def load(self, filename):
         ''' Load universe state from file filename. '''

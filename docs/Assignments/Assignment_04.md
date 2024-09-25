@@ -63,7 +63,7 @@
 
 -   Since it is a single-file application Problem 2 can use our 
     usual naming scheme for program files: 
-    `a`assignment#`p`problem#name`.py` . So Bob's solution to problem 2 
+    `a`assignment#`p`problem#name`.py`. So Bob's solution to problem 2 
     on this assignment will be named `a4p2bob.py`. For Problem 1 you can 
     use the names MVC_Model_name.py and MVC_Controller_name.py where 
     name is your name and keep using the model file test_model. For 
